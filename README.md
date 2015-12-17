@@ -20,6 +20,5 @@ wget https://github.com/dugalex/DA-Enhanced-Pro/archive/master.zip
 unzip master.zip  
 mv DA-Enhanced-Pro-master enhanced  
 chown -R diradmin:diradmin enhanced  
-rm -rf DA-Enhanced-Pro-master  
 rm -f master.zip  
 exit  
