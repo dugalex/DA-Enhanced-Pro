@@ -12,7 +12,7 @@ All colors on the top left and right are available. To change a color click on t
 <b>Installation:</b>
 
 --------------------------------------------------------------------
-!!!WARNING!!! This will change the default "enhanced" skin but will not overwrite any existing DirectAdmin files.
+!!! WARNING !!! This will change the default "enhanced" skin but will not overwrite any existing DirectAdmin files.
 --------------------------------------------------------------------
 
 cd /usr/local/directadmin/data/skins/  
@@ -31,7 +31,7 @@ exit
 --------------------------------------------------------------------  
 This will not change the default "enhanced" skin. It will create a new "enhanced-pro" skin.  
   
-Then, to update when directadmin is updated, get the latest enhanced.tar.gz skin from  [here](http://forum.directadmin.com/showthread.php?t=221&highlight=latest+enhanced) and install as "enhanced-pro" via Skin Manager at Reseller Level
+To update when directadmin has been updated, get the latest enhanced.tar.gz skin from  [here](http://forum.directadmin.com/showthread.php?t=221&highlight=latest+enhanced) and install as "enhanced-pro" via Skin Manager at Reseller Level. It will overwrite the default "enhanced" files but not the extra files that make the design work.
 
 --------------------------------------------------------------------
 
