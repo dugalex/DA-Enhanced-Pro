@@ -42,3 +42,18 @@ mv DA-Enhanced-Pro-master enhanced-pro
 chown -R diradmin:diradmin enhanced-pro  
 rm -f master.zip  
 exit 
+
+--------------------------------------------------------------------
+!!! Updating Skin !!!
+--------------------------------------------------------------------
+
+cd /usr/local/directadmin/data/skins/  
+wget https://github.com/dugalex/DA-Enhanced-Pro/archive/master.zip  
+unzip master.zip  
+cd DA-Enhanced-Pro-master  
+cp -pruf ../enhanced  
+cd ..  
+chown -R diradmin:diradmin enhanced  
+rm -rf DA-Enhanced-Pro-master  
+rm -f master.zip  
+exit  
