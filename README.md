@@ -27,7 +27,7 @@ exit
 !!! OR !!!
 --------------------------------------------------------------------  
 This will not replace the default "enhanced" skin.  
-You will have to manually copy the files from enhanced after directadmin update.  
+You will have to manually copy and overwrite the files from "enhanced" skin after directadmin update.  
 
 --------------------------------------------------------------------
 
