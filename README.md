@@ -8,24 +8,17 @@ If installed as "enhanced" skin, it will be automatically updated on DirectAdmin
 ![User](https://github.com/dugalex/DA-Enhanced-Pro/blob/master/images/skin-user.jpg)
 
 
-Installation:
+<b>Installation:</b>
 
 --------------------------------------------------------------------
 --- !!!WARNING!!! This will replace the default "enhanced" skin) ---
 --------------------------------------------------------------------
 
-cd /usr/local/directadmin/data/skins/
-
-wget https://github.com/dugalex/DA-Enhanced-Pro/archive/master.zip
-
-unzip master.zip
-
-mv DA-Enhanced-Pro-master enhanced
-
-chown -R diradmin:diradmin enhanced
-
-rm -rf DA-Enhanced-Pro-master
-
-rm -f master.zip
-
-exit
+cd /usr/local/directadmin/data/skins/\n
+wget https://github.com/dugalex/DA-Enhanced-Pro/archive/master.zip\n
+unzip master.zip\n
+mv DA-Enhanced-Pro-master enhanced\n
+chown -R diradmin:diradmin enhanced\n
+rm -rf DA-Enhanced-Pro-master\n
+rm -f master.zip\n
+exit\n
