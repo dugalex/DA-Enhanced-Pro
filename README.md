@@ -15,7 +15,6 @@ Installation:
 ----------------------------------------------------------------
 
 cd /usr/local/directadmin/data/skins/
-
 wget https://github.com/dugalex/DA-Enhanced-Pro/archive/master.zip
 unzip master.zip
 mv DA-Enhanced-Pro-master enhanced
