@@ -24,9 +24,10 @@ rm -f master.zip
 exit  
 
 --------------------------------------------------------------------
---- !!! OR !!! This will not replace the default "enhanced" skin ---
+--- !!! OR !!! ---
 --------------------------------------------------------------------  
-You will have to manually copy the files from enhanced on directadmin update.
+This will not replace the default "enhanced" skin  
+You will have to manually copy the files from enhanced after directadmin update.
 --------------------------------------------------------------------
 
 cd /usr/local/directadmin/data/skins/  
