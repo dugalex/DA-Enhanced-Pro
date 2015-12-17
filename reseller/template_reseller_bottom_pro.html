@@ -1,0 +1,78 @@
+|LF_STANDARD|
+|HTM_FOOTER_BAR_1|
+
+|HTM_MENU_RESELLER|
+
+				</div>
+			</div>
+
+			<div class="statst title"><i style="line-height:38px" class="fa fa-info-circle"></i>&nbsp; |LANG_TITLE_INFO|</div>
+			<div class="stats">
+				<div id="stats">
+					<span class="statsl">|LANG_USERNAME|</span>
+					<span class="statsr">|USERNAME|</span>
+|$/usr/local/bin/php
+<?php
+$d="|domain|";
+if ($d == "" || $d[0] == '|') { exit(0);}
+?>
+					<span class="statsl">|LANG_DOMAIN_NAME|</span>
+					<span class="statsr">|domain|</span>
+DONE|
+					<span class="statsl">|LANG_IP_ADDRESS|</span>
+					<span class="statsr">|DOMAIN_IP|</span>
+				</div>
+			</div>
+
+			<div class="statst title"><i style="line-height:38px" class="fa fa-bar-chart"></i>&nbsp; |LANG_TITLE_STATS|</div>
+			<div class="stats">
+				<div id="stats">
+					<span class="statsl">|LANG_DISK_SPACE| |LANG_MB|</span>
+					<span class="statsr">|RESELLERQUOTA| / |RESELLERQUOTAMAX|</span>
+|*if RESELLERQUOTAMAX="unlimited"|
+					<span class="statsm"><progress value="|RESELLERQUOTA|" max="100000"></progress></span>
+|*else|
+					<span class="statsm"><progress value="|RESELLERQUOTA|" max="|RESELLERQUOTAMAX|"></progress></span>
+|*endif|
+					<span class="statsl">|LANG_BANDWIDTH| |LANG_GB|</span>
+					<span class="statsr">|RESELLERBANDWIDTHGIG| / |RESELLERBANDWIDTHMAXGIG|</span>
+|*if RESELLERBANDWIDTHMAXGIG="unlimited"|
+					<span class="statsm"><progress value="|RESELLERBANDWIDTHGIG|" max="1000"></progress></span>
+|*else|
+					<span class="statsm"><progress value="|RESELLERBANDWIDTHGIG|" max="|RESELLERBANDWIDTHMAXGIG|"></progress></span>
+|*endif|
+					<span class="statsl">|LANG_DOMAINS|</span>
+					<span class="statsr">|RESELLERDOMAINS| / |RESELLERDOMAINSMAX|</span>
+|*if RESELLERDOMAINSMAX="unlimited"|
+					<span class="statsm"><progress value="|RESELLERDOMAINS|" max="1000"></progress></span>
+|*else|
+					<span class="statsm"><progress value="|RESELLERDOMAINS|" max="|RESELLERDOMAINSMAX|"></progress></span>
+|*endif|
+					<span class="statsl">|LANG_EMAILS|</span>
+					<span class="statsr">|RESELLEREMAIL| / |RESELLEREMAILMAX|</span>
+|*if RESELLEREMAILMAX="unlimited"|
+					<span class="statsm"><progress value="|RESELLEREMAIL|" max="1000"></progress></span>
+|*else|
+					<span class="statsm"><progress value="|RESELLEREMAIL|" max="|RESELLEREMAILMAX|"></progress></span>
+|*endif|
+					<span class="statsl">|LANG_DATABASES|</span>
+					<span class="statsr">|RESELLERDATABASE| / |RESELLERDATABASEMAX|</span>
+|*if RESELLERDATABASEMAX="unlimited"|
+					<span class="statsm"><progress value="|RESELLERDATABASE|" max="1000"></progress></span>
+|*else|
+					<span class="statsm"><progress value="|RESELLERDATABASE|" max="|RESELLERDATABASEMAX|"></progress></span>
+|*endif|
+					<span class="statsl">|LANG_FTP_ACCOUNTS|</span>
+					<span class="statsr">|RESELLERFTP| / |RESELLERFTPMAX|</span>
+|*if RESELLERFTPMAX="unlimited"|
+					<span class="statsm"><progress value="|RESELLERFTP|" max="1000"></progress></span>
+|*else|
+					<span class="statsm"><progress value="|RESELLERFTP|" max="|RESELLERFTPMAX|"></progress></span>
+|*endif|
+					<span class="statsl">|LANG_USERS|</span>
+					<span class="statsr">|RESELLERUSERS|</span>
+				</div>
+			</div>
+
+|HTM_FOOTER_BAR_2|
+|HTM_FOOTER|

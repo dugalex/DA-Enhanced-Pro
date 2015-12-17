@@ -1,0 +1,89 @@
+|LF_STANDARD|
+|LF_CREATE|
+|?TREE=&raquo; <a class=tree href="/CMD_USER_SHOW">`LANG_SHOW_USERS`</a> &raquo; <a class=tree href="/HTM_ACCOUNT_USER_CREATE">`LANG_CREATE_USER`</a>|
+|?HELP_SECTION=`RESELLER_HELPER`/create.html|
+|HTM_RESELLER_TOP|
+
+|?CHECK_NAME=checkName()|
+|?CHECK_PASS=|
+|?RANDOM_PASS=randomPass()|
+|?CHECK_DOMAIN=checkDomain()|
+
+|*if AJAX="1"|
+	|?CHECK_NAME=ajax_checkName()|
+	|?CHECK_PASS=onChange="ajax_checkPass()"|
+	|?RANDOM_PASS=ajax_randomPass('')|
+	|?CHECK_DOMAIN=ajax_checkDomain()|
+
+	<script type="text/javascript" src="JS_CREATION_CHECK"></script>
+|*endif|
+
+<script language="Javascript">
+<!--
+
+|HTM_JAVASCRIPT|
+
+function setText( textfld, checkbx)
+{
+	if (checkbx.checked)
+		textfld.disabled = true;
+	if (!checkbx.checked)
+		textfld.disabled = false;
+}
+
+function setTexts()
+{
+	with (document.reseller)
+	{
+		if (sharedip.checked) ip.disabled = true;
+		if (uquota.checked) quota.disabled = true;
+		if (ubandwidth.checked) bandwidth.disabled = true;
+		if (undomains.checked) ndomains.disabled = true;
+		if (unsqldbs.checked) nsqldbs.disabled = true;
+	}
+}
+
+function formOK()
+{
+	with (document.reseller)
+	{
+		if (checkName() && checkPass() && checkDomain() && checkEmail())
+			return true;
+	}
+	return false;
+}
+
+function showUserMessage()
+{
+	var message = window.open("CMD_EDIT_USER_MESSAGE","message","width=740,height=520,scrollbars=no,resizable=yes");
+}
+
+// -->
+</script>
+
+	<table class=list cellpadding=3 cellspacing=1>
+		<form name=reseller action="CMD_ACCOUNT_USER" method="post" onSubmit="return formOK()">
+
+|HTM_PREVENT_AUTOFILL|
+
+			<input type=hidden name=action value=create>
+
+			<tr ><td class=listtitle colspan=3>|LANG_CREATE_USER|</td ></tr >
+
+			<tr><td class=list>|LANG_USERNAME|:</td><td class=list><input type=text id=username name=username size=32 maxlength=|MAX_USERNAME_LENGTH| onChange="|CHECK_NAME|"><div id=username_result class=warning></div></td></tr>
+			<tr><td class=list>|LANG_EMAIL|:</td><td class=list><input type=text name=email size=32 onChange="checkEmail()"></td></tr>
+			<tr><td class=list>|LANG_ENTER_PASS|:</td><td class=list><input type=password id=passwd name=passwd size=32 |CHECK_PASS|> <input type=button value="|LANG_RANDOM|" onClick="|RANDOM_PASS|"><div id=passwd_result class=warning></div></td></tr>
+			<tr><td class=list>|LANG_RE-ENTER_PASS|:</td><td class=list><input type=password id=passwd2 name=passwd2 size=32 onChange="checkPass()"></td></tr>
+			<tr><td class=list>|LANG_DOMAIN|:</td><td class=list><input type=text id=domain name=domain size=32 onChange="|CHECK_DOMAIN|"><div id=domain_result class=warning></td></tr>
+			<tr><td class=list>|LANG_USE_USER_PACK|:</td><td class=list>|PACKAGES|</td></tr>
+			<tr><td class=list>|LANG_IP|:</td><td class=list>|IPSELECT|</td></tr>
+			<tr><td class=list>|LANG_EMAIL_NOTIFY|:</td><td class=list><input type=checkbox value="yes" name=notify checked> <a href="javascript:showUserMessage();">|LANG_EDIT_USER_MESS|</a></td></tr>
+
+			<tr><td class=listtitle colspan=2 align=right>
+				<input type=submit name=customize value="|LANG_CUSTOMIZE|">
+				<input type=submit name=add value="|LANG_SUBMIT|">
+			  </td></tr>
+		</form>
+	</table>
+
+|HTM_RESELLER_BOTTOM|

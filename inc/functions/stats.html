@@ -1,0 +1,94 @@
+|$/usr/local/bin/php
+
+<?php
+
+switch(PHP_OS) {
+	case "Linux":
+		$sysReShow = (false !== ($sysInfo = sys_linux()))?"show":"none";
+		break;
+	default:
+		break;
+}
+
+function sys_linux() {
+
+	if (false === ($str = @file("/proc/uptime"))) return false;
+	$str = explode(" ", implode("", $str));
+	$str = trim($str[0]);
+	$min = $str / 60;
+	$hours = $min / 60;
+	$days = floor($hours / 24);
+	$hours = floor($hours - ($days * 24));
+	$min = floor($min - ($days * 60 * 24) - ($hours * 60));
+	if ($days !== 0) $res['uptime'] = $days." |LANG_DAYS| & ";
+	if ($hours !== 0) $res['uptime'] .= $hours." |LANG_HOURS|";
+	#$res['uptime'] .= $min." & |LANG_MINUTES|";
+
+	if (false === ($str = @file("/proc/meminfo"))) return false;
+	$str = implode("", $str);
+	preg_match_all("/MemTotal\s{0,}\:+\s{0,}([\d\.]+).+?MemFree\s{0,}\:+\s{0,}([\d\.]+).+?Cached\s{0,}\:+\s{0,}([\d\.]+).+?SwapTotal\s{0,}\:+\s{0,}([\d\.]+).+?SwapFree\s{0,}\:+\s{0,}([\d\.]+)/s", $str, $buf);
+
+	$res['memTotal'] = round($buf[1][0]/1024, 2);
+	$res['memFree'] = round($buf[2][0]/1024, 2);
+	$res['memCached'] = round($buf[3][0]/1024, 2);
+	$res['memUsed'] = ($res['memTotal']-$res['memFree']);
+	$res['memPercent'] = (floatval($res['memTotal'])!=0)?round($res['memUsed']/$res['memTotal']*100,2):0;
+
+	$res['memRealUsed'] = ($res['memTotal'] - $res['memFree'] - $res['memCached']);
+	$res['memRealPercent'] = (floatval($res['memTotal'])!=0)?round($res['memRealUsed']/$res['memTotal']*100,2):0;
+	
+	$res['memCachedUsed'] = ($res['memUsed']-$res['memRealUsed']);
+	$res['memCachedPercent'] = (floatval($res['memTotal'])!=0)?round($res['memCachedUsed']/$res['memTotal']*100,2):0;
+
+	$res['swapTotal'] = round($buf[4][0]/1024, 2);
+	$res['swapFree'] = round($buf[5][0]/1024, 2);
+	$res['swapUsed'] = ($res['swapTotal']-$res['swapFree']);
+	$res['swapPercent'] = (floatval($res['swapTotal'])!=0)?round($res['swapUsed']/$res['swapTotal']*100,2):0;
+
+	if (false === ($str = @file("/proc/loadavg"))) return false;
+	$str = explode(" ", implode("", $str));
+	$str = array_chunk($str, 3);
+	$res['loadAvg'] = implode(" ", $str[0]);
+
+	return $res;
+	
+}
+
+$load_avg = sys_getloadavg();
+$core_nums = file_get_contents("grep -P '^processor' /proc/cpuinfo|wc -l");
+$load = round($load_avg[0]/($core_nums + 1)*25, 2);
+
+?>
+
+			<div class="statst title"><i style="line-height:38px" class="fa fa-cog"></i>&nbsp; |LANG_UPTIME|: <?php echo $sysInfo['uptime']; ?></div>
+			<div class="stats" style="100%">
+				<div id="stats" style="float:left;width:250px">
+					<span class="statsl">|LANG_SERVER_LOAD|</span>
+					<span class="statsr"><?php echo $sysInfo['loadAvg'];?></span>
+					<span class="statsm" style="width:250px"><progress style="width:247px" value="<?php echo $load;?>" max="100"></progress></span>
+				</div>
+				<div id="stats" style="float:right;width:250px">
+					<span>
+						<span class="statsl">|LANG_SERVER_RAM|</span>
+						<span class="statsr"><?php echo $sysInfo['memUsed'];?>MB</span>
+						<span class="statsm" style="width:250px"><progress style="width:247px" value="<?php echo $sysInfo['memUsed'];?>" max="<?php echo $sysInfo['memTotal'];?>"></progress></span>
+					</span>
+				</div>
+				<div id="stats" style="float:left;width:162px">
+						<span class="statsl" style="width:80px">|LANG_SERVER_REAL_RAM|</span>
+						<span class="statsr" style="width:80px"><?php echo $sysInfo['memRealUsed'];?>MB</span>
+						<span class="statsm" style="width:100%"><progress style="width:159px" value="<?php echo $sysInfo['memRealUsed'];?>" max="<?php echo $sysInfo['memTotal'];?>"></progress></span>
+				</div>
+				<div id="stats" style="float:left;width:162px">
+						<span class="statsl" style="width:80px">|LANG_SERVER_CACHED_RAM|</span>
+						<span class="statsr" style="width:80px"><?php echo $sysInfo['memCached'];?>MB</span>
+						<span class="statsm" style="width:100%"><progress style="width:159px" value="<?php echo $sysInfo['memCached'];?>" max="<?php echo $sysInfo['memTotal'];?>"></progress></span>
+				</div>
+				<div id="stats" style="float:right;width:162px">
+						<span class="statsl" style="width:80px">|LANG_SERVER_SWAP_RAM|</span>
+						<span class="statsr" style="width:80px"><?php echo $sysInfo['swapUsed'];?>MB</span>
+						<span class="statsm" style="width:100%; border:none"><progress style="width:159px" value="<?php echo $sysInfo['swapUsed'];?>" max="<?php echo $sysInfo['memTotal'];?>"></progress></span>
+				</div>
+			</div>
+
+DONE|

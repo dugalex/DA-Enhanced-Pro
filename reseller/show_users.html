@@ -1,0 +1,63 @@
+|?TREE=&raquo; <a class=tree href="/CMD_USER_SHOW">`LANG_SHOW_USERS`</a>|
+|?HELP_SECTION=`RESELLER_HELPER`/modify.html|
+|HTM_HEADER_FULL|
+
+<a href="HTM_ACCOUNT_USER_CREATE">|LANG_CREATE_USER|</a><br>
+<a href="HTM_ACCOUNT_USER_DELETE">|LANG_DELETE_USER|</a><br>
+<a href="HTM_USER_PASSWD">|LANG_CHANGE_A_PASS|</a><br>
+<br>
+<a href="/CMD_MODIFY_USER?user=|USERNAME|">|LANG_MODIFY_OWN_DATA|</a>
+
+<script language="Javascript">
+<!--
+
+function trimit(strobj)
+{
+	var str = strobj.value
+	while (str.substring(0,1) == ' ')
+	{
+		str = str.substring(1, str.length);
+	}
+	while (str.substring(str.length-1, str.length) == ' ')
+	{
+		str = str.substring(0,str.length-1);
+	}
+
+	strobj.value = str;
+
+	return true;
+}
+
+// -->
+</script>
+
+<table class=list cellpadding=3 cellspacing=1>
+<form action="" method="GET" name=searchform onSubmit="trimit(value7);">
+<tr><td class=listtitle>
+|LANG_SHOW_DOMAINS_THAT_CONTAIN| <input type=text size=12 class=inputclass name=value7
+|*if value7|
+value='|value7|'
+|*endif|
+>
+<input type=hidden name=comparison7 value="contains">
+<input type=hidden name=sort1 value="7">
+<input type=hidden name=sort1dir value="1">
+<input type=hidden name=sort2dir value="1">
+<input type=hidden name=ipp value="50">
+<input type=submit value="|LANG_SEARCH|">
+&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=button value="|LANG_CLEAR_SEARCH|" onClick="document.searchform.value7.value=''; document.searchform.submit();">
+</td></tr>
+</form>
+</table>
+
+<script language="javascript">
+document.searchform.value7.focus();
+document.searchform.value7.select();
+</script>
+
+	|TABLE|
+
+|LANG_CLICK_USERNAME|
+|HTM_FOOTER_FULL|
+

@@ -1,0 +1,148 @@
+*
+{
+	FONT-SIZE: 8pt;
+	FONT-FAMILY: verdana, arial, helvetica, sans-serif;
+	zoom: |ZOOM|%;
+}
+
+a
+{
+	TEXT-DECORATION: underline;
+	COLOR: black;
+}
+
+a:hover
+{
+	TEXT-DECORATION: underline;
+	COLOR: blue;
+}
+
+b
+{
+	FONT-WEIGHT: bold;
+}
+
+.toptext
+{
+	COLOR: #666666;
+}
+
+u
+{
+	TEXT-DECORATION: underline;
+}
+
+.tree
+{
+	COLOR: red;
+}
+
+.title
+{
+	COLOR: #000000;
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 12pt;
+}
+
+.header
+{
+	FONT-WEIGHT: 600;
+	FONT-SIZE: 10pt;
+	COLOR: #123456;
+}
+
+.menu
+{
+	border: 1px solid grey;
+	border-style: outset;
+}
+
+table.menu
+{
+	BACKGROUND: #E8F0FF;
+}
+
+td.menu
+{
+	BACKGROUND: #D4E5FF;
+}
+
+table.tabs
+{
+	width: 100%;
+	border-width: 1;
+	border-bottom-style:solid;
+	border-left-style: none;
+	border-top-style: none;
+	border-right-style: none;	
+	border-color: black;
+	border-collapse:collapse
+}
+
+td.tab
+{
+	BACKGROUND: #E8F0FF;
+	border: 1px solid grey;
+	border-style: outset;
+	white-space: nowrap;	
+}
+
+td.tabselected
+{
+	BACKGROUND: #D4E5FF;
+	border: 1px solid grey;
+	border-style: outset;
+	white-space: nowrap;	
+}
+
+td.tabspace
+{
+	width: 1%;
+}
+
+.highlighted
+{
+	BACKGROUND: #B7D3FF;
+	border: 1px solid grey;
+	border-style: outset;
+	white-space: nowrap;
+	cursor: hand;
+}
+
+a.tabtext
+{
+	TEXT-DECORATION: none
+}
+
+a.tabtext:hover
+{
+	COLOR: black;
+	TEXT-DECORATION: none
+}
+
+table.list
+{
+	width: 100%;
+}
+
+td.list
+{
+	BACKGROUND: #E8F0FF;
+	white-space: nowrap;
+}
+
+td.listwrap
+{
+	BACKGROUND: #E8F0FF;
+	white-space: wrap;
+}
+
+td.listtitle
+{
+	BACKGROUND: #D4E5FF;
+	border: 1px solid grey;
+	border-style: outset;	
+	white-space: nowrap;
+}
+
+

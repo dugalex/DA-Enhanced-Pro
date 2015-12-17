@@ -1,0 +1,70 @@
+|?SK_PHP=/usr/local/bin/php|
+|?SK_ROOT=getenv('DOCUMENT_ROOT')."/"|
+
+|$|SK_PHP|
+<?php
+
+define('ROOT', getenv("DOCUMENT_ROOT").'/');
+
+$sk = new skclass();
+
+class skclass {
+
+	function api_get($cmd,$post=false){
+		if(is_array($post)) {
+			$args = http_build_query($post,'','&');
+			$header  = "POST {$cmd} HTTP/1.1\r\n";
+			$header .= "Host: 127.0.0.1:{$_SERVER[SERVER_PORT]}\r\n";
+			$header .= "Cookie: session={$_SERVER[SESSION_ID]}; key={$_SERVER[SESSION_KEY]}\r\n";
+			$header .= "Content-type: application/x-www-form-urlencoded\r\n";
+			$header .= "Content-length: ".strlen($args)."\r\n\r\n";
+			$header .= $args;
+		} else {
+			$header  = "GET {$cmd} HTTP/1.1\r\n";
+			$header .= "Host: 127.0.0.1:{$_SERVER[SERVER_PORT]}\r\n";
+			$header .= "Cookie: session={$_SERVER[SESSION_ID]}; key={$_SERVER[SESSION_KEY]}\r\n\r\n";
+		}
+		if ($_SERVER['SSL'] == 1) $before = 'ssl://127.0.0.1'; else $before = '127.0.0.1';
+		$socket = @fsockopen($before, $_SERVER['SERVER_PORT'], $sock_errno, $sock_errstr, 2);
+		if ($sock_errno || $sock_errstr) return '';
+		fwrite($socket, $header, strlen($header));
+		$status = socket_get_status($socket);
+		if($status['timed_out']) return '';
+		$result = '';
+		while (!feof($socket)) {
+			$result .= fgets($socket,32768);
+		}
+		@fclose($socket);
+		$result = explode("\r\n\r\n",$result,2);
+		return $result[1];
+	}
+
+	function getServices() {
+		$str = $this->api_get('/CMD_API_SHOW_SERVICES');
+		if(strpos($str, 'httpd') == false) return false;
+		parse_str(urldecode($str), $servArr);
+		return $servArr;
+	}
+
+}
+
+function server_addr() {
+	return $_SERVER['SERVER_ADDR'] ? $_SERVER['SERVER_ADDR'] : $_SERVER['LOCAL_ADDR'];
+}
+
+$servArr=$sk->getServices();
+
+if(is_array($servArr) && count($servArr)>1) {
+	foreach($servArr as $service => $val) {
+		if(trim($val)=='on') {
+			$img = '<span class="service_on"></span>';
+		} else {
+			$img = '<span class="service_off"></span>';
+		}
+		echo '<span class="statsl">'.ucfirst($service).'</span><span class="statsr">'.$img.'</span>';
+	}
+}
+
+?>
+
+DONE|

@@ -1,0 +1,105 @@
+|LF_STANDARD|
+|LF_IMAGES|
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=|LANG_ENCODING|">
+	<title>|HOSTNAME| - |DEAMONNAME| v|VERSION|</title>
+	<script language="JavaScript">
+	<!-- // start preload code
+		home_image = new Image();
+		webmail_image = new Image();
+		password_image = new Image();
+		fileman_image = new Image();
+		help_image = new Image();
+		logout_image = new Image();
+		logout_image2 = new Image();
+
+		home_image.src = "/|LANG_IMG_SKIN_NAV_HOME_OVER|";
+		webmail_image.src = "/|LANG_IMG_SKIN_NAV_WEBMAIL_OVER|";
+		password_image.src = "/|LANG_IMG_SKIN_NAV_PASSWORD_OVER|";
+		fileman_image.src = "/|LANG_IMG_SKIN_NAV_FILEMAN_OVER|";
+		help_image.src = "/|LANG_IMG_SKIN_NAV_HELP_OVER|";
+		logout_image.src = "/|LANG_IMG_SKIN_NAV_LOGOUT_OVER|";
+		logout_image2.src = "/|LANG_IMG_SKIN_NAV_LOGOUT2_OVER|";
+
+	//timer for auto-logout
+		function log_me_out()
+		{
+			location.href = '/CMD_LOGOUT';
+		}
+		var logout_timeout = setTimeout('log_me_out();', |SESSION_MINUTES|*60*1000);
+
+	// done with preload code -->
+	</script>
+
+	<link href="/CSS_STYLE?v=|VERSION|" type="text/css" rel="stylesheet" />
+
+|*if TABLE_HIGHLIGHTING="1"|
+	<script type="text/javascript">
+	<!-- // start preload code
+	function tr_add_highlight()
+	{
+		add_highlight(this, 'list','listhighlight','list2','list2highlight','listwrap','listwraphighlight','listwrap2','listwrap2highlight');
+	}
+	function tr_remove_highlight()
+	{
+		add_highlight(this, 'listhighlight','list','list2highlight','list2','listwraphighlight','listwrap','listwrap2highlight','listwrap2');
+	}
+	function add_highlight(ob,h1,l1,h2,l2,h3,l3,h4,l4)
+	{
+		var tds = ob.getElementsByTagName('td');
+		for(var d=0; d<tds.length; d++)
+		{
+			switch (tds[d].className)
+			{
+				case h1	:	tds[d].className = l1; break;
+				case h2	:	tds[d].className = l2; break;
+				case h3	:	tds[d].className = l3; break;
+				case h4	:	tds[d].className = l4; break;
+
+			}
+		}
+	}
+	function make_tables_highlightable()
+	{
+		var tables = document.getElementsByTagName('table');
+		for (var tbl=0; tbl<tables.length; tbl++)
+		{
+			if (tables[tbl].className.indexOf('table-highlight') != -1)
+			{
+				var trs = tables[tbl].getElementsByTagName('tr');
+				for(var tr=0; tr<trs.length; tr++)
+				{
+					trs[tr].onmouseover = tr_add_highlight;
+					trs[tr].onmouseout = tr_remove_highlight;
+				}
+			}
+		}
+	}
+	// done with preload code -->
+	</script>
+|*endif|
+
+</head>
+
+<body |BODY| bgcolor="#FFFFFF" leftMargin=0 rightMargin=0 topMargin=0 bottomMargin=0>
+
+<table height=100% width=100% cellpadding=0 cellspacing=0>
+<tr>
+<td align=center>
+
+<table height=100% cellpadding=0 cellspacing=0>
+	<tr>
+		<td height=100% width=15 class=left_shadow valign=bottom>
+		</td>
+		<td  valign=top>
+			<table width=100% height=100% cellpadding=0 cellspacing=0>
+				<tr>
+					<td height=120 align=left background="/|LANG_IMG_SKIN_HEADER_NONAME|"><img src="/|LANG_IMG_SKIN_HEADER|"></td>
+				</tr>
+				<tr>
+
+
+
+

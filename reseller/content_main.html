@@ -1,0 +1,163 @@
+|LF_STANDARD|
+|LF_CREATE|
+
+<script language="javascript">
+<!--
+
+function trimit(strobj)
+{
+	var str = strobj.value
+	while (str.substring(0,1) == ' ')
+	{
+		str = str.substring(1, str.length);
+	}
+	while (str.substring(str.length-1, str.length) == ' ')
+	{
+		str = str.substring(0,str.length-1);
+	}
+
+	strobj.value = str;
+
+	return true;
+}
+
+function doSearch(type)
+{
+	if (document.searchform)
+		with (document.searchform)
+		{
+			trimit(value);
+
+			if (type == 'user')
+			{
+				value1.value=value.value
+				value7.value='';
+			}
+			else
+			{
+				value7.value=value.value.toLowerCase();
+				value1.value='';
+			}
+
+			submit();
+		}
+}
+
+// -->
+</script>
+
+<table width="100%" cellspacing=0 cellpadding=0>
+<form action="/CMD_USER_SHOW" method="GET" name=searchform onSubmit="doSearch('default');">
+<input type=hidden name=comparison1 value="contains">
+<input type=hidden name=comparison7 value="contains">
+<input type=hidden name=sort1 value="1">
+<input type=hidden name=value1 value="">
+<input type=hidden name=value7 value="">
+<tr><td align=center valign=center>
+|LANG_SEARCH|: <input type=text name=value placeholder="|LANG_CONTAINS|" value="" size=14 onClick="this.select()">
+<input class=button type=button value="|LANG_DOMAIN|" onClick="doSearch('domain')">
+<input class=button type=button value="|LANG_USER|" onClick="doSearch('user')">
+</td></tr>
+</form>
+</table>
+<script language="javascript">
+<!--
+if (document.searchform)
+{
+	with (document.searchform)
+	{
+		value.focus();
+		value.select();
+	}
+}
+function showUserMessage()
+{
+	var message = window.open("CMD_EDIT_USER_MESSAGE","message","width=740,height=520,scrollbars=no,resizable=yes");
+}
+// -->
+</script>
+
+
+<img src="|LANG_IMG_SKIN_CTRL_RACCOUNT|" width="500" height="68"><br>
+<table border="0" width="100%" cellspacing="0" cellpadding="3">
+	<tr>
+		<td width="50%" valign="top" class="left-pad">
+			<a href="/HTM_ACCOUNT_USER_CREATE">|LANG_ADD_NEW_USER|</a><br>
+			<a href="/CMD_USER_SHOW">|LANG_LIST_USERS|</a><br>
+			<a href="CMD_TICKET_MANAGE">|LANG_MANAGE_TICKETS|</a>|*if NEWTICKETS!="0"|<span class=count_notice>|NEWTICKETS|</span>|*endif|
+		</td>
+		<td width="50%" valign="top">
+			<a href="/CMD_SHOW_USER_PACKAGE">|LANG_ADD_PACKAGE|</a><br>
+			<a href="/CMD_MANAGE_USER_PACKAGES">|LANG_LIST_PACKAGES|</a><br>
+			<a href="javascript:showUserMessage();">|LANG_EDIT_USER_MESS|</a>
+		</td>
+	</tr>
+</table>
+
+<br>
+<img border="0" src="|LANG_IMG_SKIN_CTRL_RTOOLS|" width="500" height="68"><br>
+<table border="0" width="100%" cellspacing="0" cellpadding="3">
+	<tr>
+		<td width="50%" valign="top" class="left-pad">
+			<a href="/HTM_USER_PASSWD">|LANG_CHANGE_PASSWORDS|</a><br>
+			<a href="/CMD_RESELLER_STATS">|LANG_RESELLER_STATS|</a><br>
+			<a href="/CMD_IP_CONFIG">|LANG_IP_MANAGER|</a><br>
+		</td>
+		<td width="50%" valign="top">
+			<a href="/CMD_SKINS">|LANG_SKIN_MANAGER|</a><br>
+			<a href="/CMD_USER_BACKUP">|LANG_USER_BACKUPS|</a><br>
+		</td>
+	</tr>
+</table>
+
+<br>
+<img border="0" src="|LANG_IMG_SKIN_CTRL_RFEATURES|" width="500" height="68"><br>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="3">
+	<tr>
+		<td width="50%" valign="top" class="left-pad">
+			<a href="/CMD_SYSTEM_INFO">|LANG_SYSTEM_INFO|</a><br>
+			<a href="/CMD_NAME_SERVER">|LANG_NAMESERVERS|</a><br>
+|$/usr/local/bin/php
+<?php
+$data = <<<END
+|PLUGIN_0_RESELLER_TXT|
+END;
+if (strlen($data) > 1)
+{
+echo <<<END
+|PLUGIN_0_RESELLER_TXT|<br>
+|PLUGIN_1_RESELLER_TXT|<br>
+|PLUGIN_4_RESELLER_TXT|<br>
+|PLUGIN_6_RESELLER_TXT|<br>
+|PLUGIN_8_RESELLER_TXT|
+END;
+}
+?>
+DONE|
+		</td>
+		<td width="50%" valign="top">
+			<a href="/CMD_TICKET_CREATE?TYPE=Message&amp;who=all">|LANG_MESSSAGE_ALL_USERS|</a><br>
+			<a href="/CMD_TICKET_CREATE?TYPE=Ticket">|LANG_CONTACT_ADMIN|</a><br>
+|$/usr/local/bin/php
+<?php
+$data = <<<END
+|PLUGIN_2_RESELLER_TXT|
+END;
+if (strlen($data) > 1)
+{
+echo <<<END
+|PLUGIN_2_RESELLER_TXT|<br>
+|PLUGIN_3_RESELLER_TXT|<br>
+|PLUGIN_5_RESELLER_TXT|<br>
+|PLUGIN_7_RESELLER_TXT|<br>
+|PLUGIN_9_RESELLER_TXT|
+END;
+}
+?>
+DONE|
+		</td>
+	</tr>
+</table>
+
+

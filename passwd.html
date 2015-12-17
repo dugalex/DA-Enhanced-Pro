@@ -1,0 +1,33 @@
+|LF_STANDARD|
+|?TREE=&raquo; <a class=tree href="/HTM_PASSWD">`LANG_CHANGE_YOUR_PASS`</a>|
+|?HELP_SECTION=`USER_HELPER`/gettingstarted.html#password|
+|HTM_USER_TOP|
+<br><br><br><center>
+			<table cellspacing=1 cellpadding=3>
+			<tr><td class=listtitle colspan=2 align=center>|LANG_CHANGE_YOUR_PASS|</td></tr>
+      		<form action="CMD_PASSWD" method="post">
+      		<tr><td class=list align=right>|LANG_ENTER_OLD_PASS|:</td><td class=list><input type=password name=oldpass></td></tr>
+      		<tr><td class=list align=right>|LANG_ENTER_PASS|:</td><td class=list><input type=password name=passwd></td></tr>
+			<tr><td class=list align=right>|LANG_RE-ENTER_PASS|:</td><td class=list><input type=password name=passwd2></td></tr>
+
+			<input type=hidden name="options" value="yes">
+			<tr><td class=list align=right>|LANG_PASS_DA|</td><td class=list><input type=checkbox name="system" value="yes" checked></td></tr>
+			<tr><td class=list align=right>|LANG_PASS_FTP|</td><td class=list><input type=checkbox name="ftp" value="yes" checked></td></tr>
+			<tr><td class=list align=right>|LANG_PASS_DB|</td><td class=list><input type=checkbox name="database" value="yes" checked></td></tr>
+
+			<tr><td class=listtitle align=right colspan=2>
+                <input type=submit value="|LANG_SUBMIT|">
+              </td></tr>
+			</form>
+			</table>
+|*if HAVE_SECURITY_QUESTIONS="yes"|
+<br>
+<a href="CMD_SECURITY_QUESTIONS">|LANG_MANAGE_SECURITY_QUESTIONS|</a>
+|*endif|
+|*if HAVE_TWOSTEP_AUTH="yes"|
+<br>
+<a href="CMD_TWOSTEP_AUTH">|LANG_TWO_STEP_AUTH|</a>
+|*endif|
+			</center>
+
+|HTM_USER_BOTTOM|

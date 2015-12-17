@@ -1,0 +1,482 @@
+*
+{
+	FONT-SIZE: 8.5pt;
+	FONT-FAMILY: verdana, arial, helvetica, sans-serif;
+	line-height:16px;
+}
+
+a
+{
+	TEXT-DECORATION: none;
+	COLOR: black;
+}
+
+a:hover
+{
+	COLOR: #9999CC;
+	TEXT-DECORATION: underline;
+}
+
+.toptext
+{
+	COLOR: #666666;
+}
+
+u
+{
+	TEXT-DECORATION: underline;
+}
+
+input
+{
+	line-height: 12px
+	
+}
+.tree
+{
+	
+	COLOR: #C0C0C0;
+}
+
+.title
+{
+	COLOR: #000000;
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 12pt;
+}
+
+td.header
+{
+	FONT-WEIGHT: 600;
+	FONT-SIZE: 10pt;
+	COLOR: #EEEEEE;
+	BACKGROUND: #425984;
+}
+
+.menu
+{
+	border: 1px solid grey;
+	border-style: outset;
+}
+
+table.menu
+{
+	BACKGROUND: #FFFFFF;
+}
+
+td.menu
+{
+	BACKGROUND: #EEEEEE;
+	COLOR: #000000;
+}
+
+table.tabs
+{
+	width: 100%;
+	border-width: 1;
+	border-bottom-style:solid;
+	border-left-style: none;
+	border-top-style: none;
+	border-right-style: none;	
+	border-color: black;
+	border-collapse:collapse
+}
+
+td.tab
+{
+	BACKGROUND: #6A85B5;
+	border: 1px solid grey;
+	border-style: outset;
+	white-space: nowrap;	
+}
+
+td.tabselected
+{
+	BACKGROUND: #425984;
+	border: 1px solid grey;
+	border-style: outset;
+	white-space: nowrap;	
+}
+
+td.tabspace
+{
+	width: 1%;
+}
+
+.highlighted
+{
+	BACKGROUND: #8CA0C6;
+	border: 1px solid grey;
+	border-style: outset;
+	white-space: nowrap;
+	cursor: hand;
+}
+
+a.tabtext
+{
+	COLOR: #EEEEEE;
+	TEXT-DECORATION: none
+}
+
+a.tabtext:hover
+{
+	COLOR: #EEEEEE;
+	TEXT-DECORATION: none
+}
+
+table.list
+{
+	BACKGROUND: #FFFFFF;
+	width: 100%;
+}
+
+td.list
+{
+	//BACKGROUND: #EEEEEE;
+	white-space: nowrap;
+}
+td.list2
+{
+	//BACKGROUND: #E3E3E3;
+	white-space: nowrap;
+}
+td.list, td.listwrap
+{
+	background: #EEEEEE;
+	background: -webkit-linear-gradient(#f5f5f5, #eeeeee); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#f5f5f5, #eeeeee); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#f5f5f5, #eeeeee); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#f5f5f5, #eeeeee); /* Standard syntax */
+}
+td.list2, td.listwrap2
+{
+	background: #E3E3E3;
+	background: -webkit-linear-gradient(#e4e4e4, #ebebeb); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#e4e4e4, #ebebeb); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#e4e4e4, #ebebeb); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#e4e4e4, #ebebeb); /* Standard syntax */
+}
+
+td.greenlist, td.greenlistwrap,
+td.greenlist2, td.greenlistwrap2
+{
+	background: #B2FFB2;
+	background: -webkit-linear-gradient(#C1FFC1, #B2FFB2); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#C1FFC1, #B2FFB2); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#C1FFC1, #B2FFB2); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#C1FFC1, #B2FFB2); /* Standard syntax */
+}
+
+td.redlist, td.redlistwrap,
+td.redlist2, td.redlistwrap2
+{
+	background: #FFB9B9;
+	background: -webkit-linear-gradient(#FFCDCD, #FFB9B9); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#FFCDCD, #FFB9B9); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#FFCDCD, #FFB9B9); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#FFCDCD, #FFB9B9); /* Standard syntax */
+}
+
+.listhighlight
+{
+	//BACKGROUND: #b8c0e2;
+	white-space: nowrap;
+}
+
+.list2highlight
+{
+	//BACKGROUND: #b8c0e2;
+	white-space: nowrap;
+}
+
+.listhighlight, .list2highlight, .listwraphighlight, .listwrap2highlight
+{
+	background: #b8c0e2;
+	background: -webkit-linear-gradient(#97b4df, #c6cef1, #c6cef1, #c6cef1); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#97b4df, #c6cef1, #c6cef1, #c6cef1); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#97b4df, #c6cef1, #c6cef1, #c6cef1); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#97b4df, #c6cef1, #c6cef1, #c6cef1); /* Standard syntax */
+}
+
+
+td.listwrap
+{
+	//BACKGROUND: #EEEEEE;
+	white-space: wrap;
+}
+td.listwrap2
+{
+	//BACKGROUND: #E3E3E3;
+	white-space: wrap;
+}
+
+.listwraphighlight
+{
+	//BACKGROUND: #b8c0e2;
+	white-space: wrap;
+}
+
+.listwrap2highlight
+{
+	//BACKGROUND: #b8c0e2;
+	white-space: wrap;
+}
+
+.listtitle
+{
+	COLOR: #EEEEEE;
+	white-space: nowrap;
+}
+
+td.listtitle
+{
+	//BACKGROUND: #425984;
+	border: 1px solid grey;
+	border-style: outset;
+	//background-image: url("/IMG_SKIN_GRADIENT");
+	border-radius: 3px;
+	box-shadow: 1px 1px 3px #727272;
+	
+}
+.blue_gradient, td.listtitle
+{
+	background: #425984;
+	background: -webkit-linear-gradient(#406e99, #6d8ba8, #345b80, #2c4a67); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#406e99, #6d8ba8, #345b80, #2c4a67); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#406e99, #6d8ba8, #345b80, #2c4a67); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#406e99, #6d8ba8, #345b80, #2c4a67); /* Standard syntax */
+}
+
+.white
+{
+	COLOR: white;
+}
+
+.off_white
+{
+	COLOR: #CCCCCC;
+}
+
+.trim
+{
+	border: 1px solid #8CB7D0;
+}
+
+.left-pad
+{
+	padding-left: 70px;
+}
+
+.right-pad
+{
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.bar-row1
+{
+	BACKGROUND: #3D6C98;
+	line-height:12px;
+	white-space: nowrap;
+	//FONT-SIZE: 8pt;
+	//letter-spacing:-0.1em
+}
+
+.bar-row2
+{
+	line-height:12px;
+	white-space: nowrap;
+	//FONT-SIZE: 8pt;
+	//letter-spacing:-0.1em
+}
+
+.top-border
+{
+	border: 0px solid white;
+	border-top: 1px solid grey;
+}
+
+.highlighted-good
+{
+	COLOR: green;
+}
+.highlighted-bad
+{
+	COLOR: red;
+	FONT-WEIGHT: bold;
+}
+.highlighted-neutral
+{
+	COLOR: #DBA24D;
+}
+
+#livesearch
+{
+		text-align: left;
+		margin: 0px;
+		width:  auto;
+		background: #EFF5FF;
+		position: absolute;
+		//left: -136;
+		border-style: double;
+		border-width: 5px;
+}
+#livecontainer
+{
+		width: 0;
+		position: relative;
+		visibility: hidden;
+		text-align: center;
+}
+
+.hoverin
+{
+		background: #AFCEFF;
+		padding: 1px;
+}
+.hoverout
+{
+		background: #EFF5FF;
+		padding: 1px;
+}
+
+.code_edit
+{
+	FONT-FAMILY: courier new;
+	FONT-SIZE: 10pt;
+}
+
+textarea.ssl_text
+{
+	width: 540px;
+	height: 600px;
+}
+.warning
+{
+	COLOR: #b10000;
+	FONT-WEIGHT: bold;
+}
+.right_shadow
+{
+	border-left: 1px solid #85a2bf;
+	background: -webkit-linear-gradient(left, #dddddd, #ffffff); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, #dddddd, #ffffff); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, #dddddd, #ffffff); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, #dddddd, #ffffff); /* Standard syntax */
+}
+.left_shadow
+{
+	border-right: 1px solid #85a2bf;
+	background: -webkit-linear-gradient(left, #ffffff, #dddddd); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, #ffffff, #dddddd); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, #ffffff, #dddddd); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, #ffffff, #dddddd); /* Standard syntax */
+}
+.path_hidden
+{
+	visibility: hidden;
+}
+.path_visible
+{
+	visibility: visible;
+}
+
+.count_notice
+{
+	background: #008a0d;
+	color: white;
+	margin-left: 10px;
+	padding: 1px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-radius: 5px;
+	border: 1px outset #58b761;
+	box-shadow: 1px 1px 3px #004506;
+}
+
+.expand_toggle_neg
+{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.expand_toggle_plus
+{
+	padding-left: 3px;
+	padding-right: 3px;
+}
+.expand_toggle_neg:active, .expand_toggle_plus:active
+{
+	background: #666e8a;
+	border: 1px inset #c5cff1;
+	box-shadow: none;
+}
+.expand_toggle_neg, .expand_toggle_plus
+{
+	background: #98a5d2;
+	color: white;
+	margin-right: 10px;
+	#padding: 1px;
+	border-radius: 3px;
+	border: 1px outset #c5cff1;
+	box-shadow: 1px 1px 3px #969696;
+	
+	cursor:pointer;
+}
+
+.not_selectable, .expand_toggle_neg, .expand_toggle_plus
+{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.message
+{
+	padding: 15px;
+}
+
+.message, td.message_info
+{
+	box-shadow: 1px 1px 3px #727272;
+}
+
+td.message_info_round_top
+{
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+td.message_info_round_bottom, .message_round
+{
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+td.message_info
+{
+	padding: 5px;
+}
+
+.message_info
+{
+	COLOR: #777777;
+}
+
+.good_twostep_auth_code, .bad_twostep_auth_code
+{
+	display: inline-block;
+	text-align: center;
+
+	background-repeat: no-repeat;
+	background-position: bottom;
+
+	min-width: 50px;
+	padding-bottom: 50px;
+}
+.good_twostep_auth_code {
+	background-image: url(IMG_CHECKBOX);
+}
+.bad_twostep_auth_code {
+	background-image: url(IMG_INCORRECT);
+}

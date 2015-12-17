@@ -1,0 +1,119 @@
+|LF_STANDARD|
+|LF_CUSTOM|
+|LF_IMAGES|
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=|LANG_ENCODING|">
+	<title>|HOSTNAME| - |DEAMONNAME| v|VERSION|</title>
+	<script language="JavaScript">
+	<!-- // start auto-logout timer code
+		function log_me_out()
+		{
+			location.href = '/CMD_LOGOUT';
+		}
+		var logout_timeout = setTimeout('log_me_out();', |SESSION_MINUTES|*60*1000);
+	// done with auto-logout timer code -->
+	</script>
+
+	<link href="/CSS_FONT" type="text/css" rel="stylesheet" media="screen" />
+	<link href="/CSS_STYLE?v=|VERSION|" type="text/css" rel="stylesheet" media="screen" />
+	<link href="/CSS_STYLE_BLUE" type="text/css" rel="stylesheet" media="screen" title="blue"/>
+	<link href="/CSS_STYLE_GREEN" type="text/css" rel="alternate stylesheet" media="screen" title="green"/>
+	<link href="/CSS_STYLE_YELLOW" type="text/css" rel="alternate stylesheet" media="screen" title="yellow"/>
+	<link href="/CSS_STYLE_ORANGE" type="text/css" rel="alternate stylesheet" media="screen" title="orange" />
+	<link href="/CSS_STYLE_BROWN" type="text/css" rel="alternate stylesheet" media="screen" title="brown"/>
+	<link href="/CSS_STYLE_RED" type="text/css" rel="alternate stylesheet" media="screen" title="red"/>
+	<link href="/CSS_STYLE_PURPLE" type="text/css" rel="alternate stylesheet" media="screen" title="purple"/>
+	<link href="/CSS_STYLE_PINK" type="text/css" rel="alternate stylesheet" media="screen" title="pink"/>
+	<link href="/CSS_STYLE_WHITE" type="text/css" rel="alternate stylesheet" media="screen" title="white"/>
+	<link href="/CSS_STYLE_GRAY" type="text/css" rel="alternate stylesheet" media="screen" title="gray"/>
+	<link href="/CSS_STYLE_BLACK" type="text/css" rel="alternate stylesheet" media="screen" title="black"/>
+	<script type="text/javascript" language="javascript" src="/JS_SWITCH"></script>
+
+|*if TABLE_HIGHLIGHTING="1"|
+	<script type="text/javascript">
+	<!-- // start preload code
+	function tr_add_highlight()
+	{
+		add_highlight(this, 'list','listhighlight','list2','list2highlight','listwrap','listwraphighlight','listwrap2','listwrap2highlight');
+	}
+	function tr_remove_highlight()
+	{
+		add_highlight(this, 'listhighlight','list','list2highlight','list2','listwraphighlight','listwrap','listwrap2highlight','listwrap2');
+	}
+	function add_highlight(ob,h1,l1,h2,l2,h3,l3,h4,l4)
+	{
+		var tds = ob.getElementsByTagName('td');
+		for(var d=0; d<tds.length; d++)
+		{
+			switch (tds[d].className)
+			{
+				case h1	:	tds[d].className = l1; break;
+				case h2	:	tds[d].className = l2; break;
+				case h3	:	tds[d].className = l3; break;
+				case h4	:	tds[d].className = l4; break;
+
+			}
+		}
+	}
+	function make_tables_highlightable()
+	{
+		var tables = document.getElementsByTagName('table');
+		for (var tbl=0; tbl<tables.length; tbl++)
+		{
+			if (tables[tbl].className.indexOf('table-highlight') != -1)
+			{
+				var trs = tables[tbl].getElementsByTagName('tr');
+				for(var tr=0; tr<trs.length; tr++)
+				{
+					trs[tr].onmouseover = tr_add_highlight;
+					trs[tr].onmouseout = tr_remove_highlight;
+				}
+			}
+		}
+	}
+	// done with preload code -->
+	</script>
+|*endif|
+
+</head>
+
+<body |BODY| leftMargin=0 rightMargin=0 topMargin=0 bottomMargin=0>
+
+<table height=100% width=100% cellpadding=0 cellspacing=0>
+<tr>
+<td align=center>
+
+<table class=main height=100% cellpadding=0 cellspacing=0>
+	<tr>
+		<td width=100% valign=top class=footer>
+			<a href="javascript:chooseStyle('blue', 999)" title="blue"><span class="theme blue"></span></a>
+			<a href="javascript:chooseStyle('green', 999)" title="green"><span class="theme green"></span></a>
+			<a href="javascript:chooseStyle('yellow', 999)" title="gold"><span class="theme yellow"></span></a>
+			<a href="javascript:chooseStyle('orange', 999)" title="orange"><span class="theme orange"></span></a>
+			<a href="javascript:chooseStyle('brown', 999)" title="brown"><span class="theme brown"></span></a>
+			<a href="javascript:chooseStyle('red', 999)" title="red"><span class="theme red"></span></a>
+			<a href="javascript:chooseStyle('purple', 999)" title="purple"><span class="theme purple"></span></a>
+			<a href="javascript:chooseStyle('pink', 999)" title="pink"><span class="theme pink"></span></a>
+			
+			<a href="javascript:chooseStyle('black', 999)" title="black" style="float:right"><span class="theme black"></span></a>
+			<a href="javascript:chooseStyle('gray', 999)" title="gray" style="float:right"><span class="theme gray"></span></a>
+			<a href="javascript:chooseStyle('white', 999)" title="white" style="float:right"><span class="theme white2"></span></a>
+		</td>
+	</tr>
+	<tr>
+		<td height=120 align=center class=header></td>
+	</tr>
+	<tr>
+		<td class=menu>
+			<a href="/|HOME_MEMORY|"><i style="font-size:30px" class="fa fa-home"></i><br/>|LANG_HOME|</a>
+			<a href="|WEBAPPS_SSL|://|HOSTNAME|/webmail" target=_blank><i style="font-size:30px" class="fa fa-envelope"></i><br/>|LANG_WEBMAIL|</a>
+			<a href="/CMD_FILE_MANAGER"><i style="font-size:30px" class="fa fa-folder-open"></i><br/>|LANG_FILES|</a>
+			<a href="/HTM_PASSWD"><i style="font-size:30px" class="fa fa-key"></i><br/>|LANG_PASSWORD|</a>
+			<a href="http://|HELP_SECTION|" target=_blank><i style="font-size:30px" class="fa fa-question"></i><br/>|LANG_HELP|</a>
+			<a href="/CMD_LOGOUT" style="float:right"><i style="font-size:30px" class="fa fa-sign-out"></i><br/>|LANG_LOGOUT|</a>
+		</td>
+	</tr>
+	<tr>
+		<td class=content>

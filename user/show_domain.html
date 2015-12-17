@@ -1,0 +1,178 @@
+|?TREE=&raquo; `ALL_DOMAINS_SELECT`|
+|?HELP_SECTION=`USER_HELPER`|
+|HTM_USER_TOP|
+<img src="|LANG_IMG_SKIN_BODY_ACCOUNT|" width="500" height="68"><br>
+<table border="0" width="100%" cellspacing="0" cellpadding="3">
+	<tr>
+		<td width="50%" valign="top" class="left-pad">
+|*if ALLOWED_CMD_DOMAIN!="no"|
+			<a href="/CMD_ADDITIONAL_DOMAINS?domain=|domain|">|LANG_DOMAIN_SETUP|</a><br><br>
+|*endif|
+			<a href="/HTM_PASSWD?domain=|domain|">|LANG_CHANGE_PASSWORD|</a><br>
+			<a href="/CMD_LOGIN_HISTORY?domain=|domain|">|LANG_LOGIN_HISTORY|</a><br>
+|*if USERDNSCONTROL="ON"|
+			<a href="/CMD_DNS_CONTROL?domain=|domain|">|LANG_DNS_MANAGEMENT|</a><br>
+|*endif|
+			<a href="/CMD_TICKET?domain=|domain|">|LANG_SUPPORT_CENTER|</a><br>
+			<a href="/CMD_PERL_MODULES?domain=|domain|">|LANG_INSTALLED_PERL_MODULES|</a><br>
+			<a href="/CMD_SITE_BACKUP?domain=|domain|">|LANG_CREATE_RESTORE_BACKUPS|</a><br>
+		</td>
+		<td width="50%" valign="top">
+			<a href="/CMD_USER_STATS?domain=|domain|">|LANG_SITE_SUM_STATS_LOGS|</a><br><br>
+
+|*if USERFTPMAX!="0"|
+			<a href="/CMD_FTP?domain=|domain|">|LANG_FTP_MANAGEMENT|</a><br>
+|*endif|
+|*if NUSERSUBDOMAINSMAX!="0"|
+			<a href="/CMD_SUBDOMAIN?domain=|domain|">|LANG_SUBDOMAIN_MANAGEMENT|</a><br>
+|*endif|
+|*if FRONTPAGE_ON="yes"|
+			<a href="/CMD_FRONTPAGE?domain=|domain|">|LANG_FRONTPAGE_EXTENSIONS|</a><br>
+|*endif|
+|*if USERDATABASEMAX!="0"|
+			<a href="/CMD_DB?domain=|domain|">|LANG_MYSQL_MANAGEMENT|</a><br>
+|*endif|
+			<a href="/CMD_PROTECTED_DIRECTORIES?domain=|domain|">|LANG_PASS_PROC_DIRS|</a><br>
+
+			<a href="/CMD_FILE_MANAGER?domain=|domain|">|LANG_FILE_MANAGER|</a><br>
+		</td>
+	</tr>
+
+</table>
+<br>
+<img border="0" src="|LANG_IMG_SKIN_BODY_EMAIL|" width="500" height="68"><br>
+<table border="0" width="100%" cellspacing="0" cellpadding="3">
+	<tr>
+		<td width="50%" valign="top" class="left-pad">
+|*if USEREMAILMAX!="0"|
+			<a href="/CMD_EMAIL_POP?domain=|domain|">|LANG_POP_EMAIL_ACCOUNTS|</a><br>
+|*endif|
+|*if USERCATCHALL="ON"|
+			<a href="/CMD_EMAIL_CATCH_ALL?domain=|domain|">|LANG_CATCH_ALL_EMAIL|</a><br>
+|*endif|
+|*if USERFORWARDERMAX!="0"|
+			<a href="/CMD_EMAIL_FORWARDER?domain=|domain|">|LANG_FORWARDERS|</a><br>
+|*endif|
+|*if USERRESPONDERMAX!="0"|
+			<a href="/CMD_EMAIL_AUTORESPONDER?domain=|domain|">|LANG_AUTORESPONDERS|</a><br>
+|*endif|
+|*if USEREMAILMAX!="0"|
+			<a href="/CMD_EMAIL_VACATION?domain=|domain|">|LANG_VAC_MESSAGES|</a><br>
+|*endif|
+|*if USERSPAM="ON"|
+			<a href="/CMD_SPAMASSASSIN?domain=|domain|">|LANG_SPAMASSASSIN|</a><br>
+|*endif|
+		</td>
+		<td width="50%" valign="top">
+|*if USERMLISTMAX!="0"|
+			<a href="/CMD_EMAIL_LIST?domain=|domain|">|LANG_MAILING_LISTS|</a><br>
+|*endif|
+
+|?SHOW_LINKS=yes|
+|*if USEREMAILMAX!="0"|
+			<a href="/CMD_EMAIL_FILTER?domain=|domain|">|LANG_SPAM_FILTERS|</a><br>
+|*else|
+	|?SHOW_LINKS=no|
+|*endif|
+|*if HIDE_WEBMAIL_LINKS="yes"|
+	|?SHOW_LINKS=no|
+|*endif|
+|*if SHOW_LINKS="no"|
+	|?HAVE_SQUIRRELMAIL=no|
+	|?HAVE_WEBMAIL=no|
+	|?HAVE_ROUNDCUBE=no|
+	|?HAVE_ATMAIL=no|
+|*endif|
+
+|*if HAVE_SQUIRRELMAIL="yes"|
+<a href="|WEBAPPS_SSL|://|HOSTNAME|/squirrelmail" target="_blank">|LANG_WEBMAIL_SM|</a><br>
+|*endif|
+
+|*if HAVE_WEBMAIL="yes"|
+<a href="|WEBAPPS_SSL|://|HOSTNAME|/webmail" target="_blank">|LANG_WEBMAIL_UEBI|</a><br>
+|*endif|
+
+|*if HAVE_ROUNDCUBE="yes"|
+<a href="|WEBAPPS_SSL|://|HOSTNAME|/roundcube" target="_blank">|LANG_WEBMAIL_ROUNDCUBE|</a><br>
+|*endif|
+
+|*if HAVE_ATMAIL="yes"|
+<a href="|WEBAPPS_SSL|://|HOSTNAME|/atmail" target="_blank">|LANG_WEBMAIL_ATMAIL|</a><br>
+|*endif|
+
+|*if USERDNSCONTROL="ON"|
+			<a href="/CMD_DNS_MX?domain=|domain|">|LANG_MX_RECORDS|</a><br>
+|*endif|
+		</td>
+	</tr>
+</table>
+<br>
+<img border="0" src="|LANG_IMG_SKIN_BODY_ADVANCED|" width="500" height="68"><br>
+<table border="0" width="100%" cellspacing="0" cellpadding="3">
+	<tr>
+		<td width="50%" valign="top" class="left-pad">
+|*if USERSYSINFO="ON"|
+			<a href="/CMD_SYSTEM_INFO?domain=|domain|">|LANG_SERVER_INFO|</a><br>
+|*endif|
+|*if USERSSL="ON"|
+			<a href="/CMD_SSL?domain=|domain|">|LANG_SSL_CERTS|</a><br>
+|*endif|
+|*if USERCRON="ON"|
+			<a href="/CMD_CRON_JOBS?domain=|domain|">|LANG_CRONJOBS|</a><br>
+|*endif|
+			<a href="/CMD_MIME_TYPES?domain=|domain|">|LANG_MIMETYPES|</a><br>
+			<a href="/CMD_HANDLERS?domain=|domain|">|LANG_APACHE_HANDLERS|</a><br>
+|$/usr/local/bin/php
+<?php
+$data = <<<END
+|PLUGIN_2_TXT|
+END;
+if (strlen($data) > 1)
+{
+echo <<<END
+|PLUGIN_2_TXT|<br>
+|PLUGIN_3_TXT|<br>
+|PLUGIN_4_TXT|<br>
+|PLUGIN_6_TXT|<br>
+|PLUGIN_8_TXT|
+END;
+}
+?>
+DONE|
+		</td>
+		<td width="50%" valign="top">
+			<a href="/HTM_ERROR_PAGES?domain=|domain|">|LANG_CUSTOM_ERROR_PAGES|</a><br>
+			<a target="_blank" href="|HTTP|://|HOSTNAME|/phpmyadmin">|LANG_PHPMYADMIN|</a><br>
+			<a href="/CMD_REDIRECT?domain=|domain|">|LANG_SITE_REDIRECTION|</a><br>
+|*if USERPOINTERSMAX!="0"|
+			<a href="/CMD_DOMAIN_POINTER?domain=|domain|">|LANG_DOMAIN_POINTERS|</a><br>
+|*endif|
+|*if LOGIN_KEYS_ENABLED="0"|
+|?USERLOGINKEYS=OFF|
+|*endif|
+|*if USERLOGINKEYS="ON"|
+			<a href="/CMD_LOGIN_KEYS">|LANG_LOGIN_KEYS|</a><br>
+|*endif|
+|$/usr/local/bin/php
+<?php
+$data = <<<END
+|PLUGIN_0_TXT|
+END;
+if (strlen($data) > 1)
+{
+echo <<<END
+|PLUGIN_0_TXT|<br>
+|PLUGIN_1_TXT|<br>
+|PLUGIN_5_TXT|<br>
+|PLUGIN_7_TXT|<br>
+|PLUGIN_9_TXT|
+END;
+}
+?>
+DONE|
+		</td>
+	</tr>
+</table>
+
+<!-- Softaculous --><div id="soft_div1"></div><script src="/CMD_PLUGINS/softaculous/index.raw?act=top"></script><!-- Softaculous -->
+|HTM_USER_BOTTOM|

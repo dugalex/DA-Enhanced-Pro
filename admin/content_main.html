@@ -1,0 +1,188 @@
+|LF_STANDARD|
+
+|*if AJAX="1"|
+	<script type="text/javascript" src="JS_CREATION_CHECK"></script>
+|*endif|
+<script language="Javascript">
+<!--
+
+function trimit(strobj)
+{
+	var str = strobj.value
+	while (str.substring(0,1) == ' ')
+	{
+		str = str.substring(1, str.length);
+	}
+	while (str.substring(str.length-1, str.length) == ' ')
+	{
+		str = str.substring(0,str.length-1);
+	}
+
+	strobj.value = str;
+
+	return true;
+}
+
+function doSearch(type)
+{
+	if (document.searchform)
+		with (document.searchform)
+		{
+			trimit(value);
+
+			if (type == 'user')
+			{
+				value1.value=value.value
+				value8.value='';
+			}
+			else
+			{
+				value8.value=value.value.toLowerCase();
+				value1.value='';
+			}
+
+			submit();
+		}
+}
+
+// -->
+</script>
+
+<table width="100%" cellspacing=0 cellpadding=0>
+<form action="/CMD_ALL_USER_SHOW" method="GET" name=searchform onSubmit="doSearch('default');">
+<input type=hidden name=comparison1 value="contains">
+<input type=hidden name=comparison8 value="contains">
+<input type=hidden name=sort1 value="1">
+<input type=hidden name=value1 value="">
+<input type=hidden name=value8 value="">
+<tr><td align=center valign=center>
+|LANG_SEARCH|: <input type=text name=value placeholder="|LANG_CONTAINS|" value="" size=14 onClick="this.select()">
+<input class=button type=button value="|LANG_DOMAIN|" onClick="doSearch('domain')">
+<input class=button type=button value="|LANG_USER|" onClick="doSearch('user')">
+</td></tr>
+</form>
+</table>
+<script language="javascript">
+if (document.searchform)
+{
+	with (document.searchform)
+	{
+		value.focus();
+		value.select();
+	}
+}
+</script>
+
+<img src="/|LANG_IMG_SKIN_CTRL_ASERVER|" width="500" height="68">
+<table border="0" width="100%" cellspacing="0" cellpadding="3">
+	<tr>
+		<td width="50%" valign="top" class="left-pad">
+
+				<a href="/HTM_ACCOUNT_ADMIN_CREATE">|LANG_CREATE_ADMIN|</a><br>
+				<a href="/CMD_ADMIN_SHOW">|LANG_LIST_ADMINS|</a><br>
+				<a href="/HTM_USER_PASSWD">|LANG_CHANGE_PASS|</a><br>
+				<a href="CMD_TICKET_MANAGE">|LANG_MANAGE_TICKETS|</a>|*if NEWTICKETS!="0"|<span class=count_notice>|NEWTICKETS|</span>|*endif|
+		</td>
+		<td width="50%" valign="top">
+				<a href="/HTM_ACCOUNT_RESELLER_CREATE">|LANG_CREATE_RESELLER|</a><br>
+				<a href="/CMD_RESELLER_SHOW">|LANG_LIST_RESELLERS|</a><br>
+				<a href="/CMD_MANAGE_RESELLER_PACKAGES">|LANG_RESELLER_PACKAGES|</a><br>
+				<a href="/CMD_ALL_USER_SHOW">|LANG_SHOW_ALL_USERS|</a>
+		</td>
+	</tr>
+</table>
+<br>
+<img src="|LANG_IMG_SKIN_CTRL_ATOOLS|" width="500" height="68">
+<table border="0" width="100%" cellspacing="0" cellpadding="3">
+	<tr>
+		<td width="50%" valign="top" class="left-pad">
+			<a href="/CMD_IP_MANAGER">|LANG_IP_MANAGEMENT|</a><br>
+			<a href="/CMD_DNS_ADMIN">|LANG_DNS_ADMIN|</a><br>
+			<a href="/CMD_ADMIN_BACKUP">|LANG_ADMIN_BACKUPS|</a><br>
+			<a href="/CMD_MULTI_SERVER">|LANG_MULTI_SERVER|</a><br>
+			<a href="/CMD_MAIL_QUEUE?sort1=2">|LANG_MAIL_Q_ADMIN|</a><br>
+			<a href="/CMD_MOVE_USERS">|LANG_MOVE_USERS|</a><br>
+		</td>
+		<td width="50%" valign="top">
+			<a href="/CMD_SYSTEM_INFO">|LANG_SYSTEM_INFO|</a><br>
+			<a href="/CMD_SHOW_SERVICES">|LANG_SERVICE_MONITOR|</a><br>
+			<a href="/CMD_SYSTEM_BACKUP">|LANG_SYS_BACKUP|</a><br>
+			<a href="/CMD_LOG_VIEWER">|LANG_LOG_VIEWER|</a><br>
+			<a href="/CMD_ADMIN_FILE_EDITOR">|LANG_FILE_EDITOR|</a><br>
+|?PMSORT=-9||*if OS_TYPE="FreeBSD"||?PMSORT=-10||*endif|
+			<a href="/CMD_PROCESS_MONITOR?sort1=|PMSORT|">|LANG_PROCESS_MONITOR|</a><br>
+		</td>
+	</tr>
+</table>
+
+
+<br>
+<img border="0" src="|LANG_IMG_SKIN_CTRL_AFEATURES|" width="500" height="68">
+<table border="0" width="100%" cellspacing="0" cellpadding="3">
+	<tr>
+		<td width="50%" valign="top" class="left-pad">
+			<a href="CMD_ADMIN_STATS">|LANG_COMPLETE_USAGE_STATS|</a><br>
+			<a href="CMD_CUSTOM_HTTPD">|LANG_CUSTOM_HTTPD|</a><br>
+			<a href="CMD_PHP_SAFE_MODE">|LANG_PHP_SAFEMODE|</a><br>
+			<a href="CMD_BRUTE_FORCE_MONITOR?sort1=-1&seek_value=-500000">|LANG_BRUTE_FORCE_MONITOR|</a><br>
+|$/usr/local/bin/php
+<?php
+$data = <<<END
+|PLUGIN_0_ADMIN_TXT|
+END;
+if (strlen($data) > 1)
+{
+echo <<<END
+|PLUGIN_0_ADMIN_TXT|<br>
+|PLUGIN_2_ADMIN_TXT|<br>
+|PLUGIN_4_ADMIN_TXT|<br>
+|PLUGIN_6_ADMIN_TXT|<br>
+|PLUGIN_8_ADMIN_TXT|
+END;
+}
+?>
+DONE|
+		</td>
+		<td width="50%" valign="top">
+			<a href="CMD_ADMIN_SETTINGS">|LANG_ADMIN_SETTINGS|</a><br>
+			<a href="CMD_LICENSE">|LANG_LICENSE_UPDATES|</a><span id=program_updates class=count_notice style='visibility: hidden;'></span><br>
+			<a href="CMD_PLUGIN_MANAGER">|LANG_PLUGIN_MANAGER|</a><span id=plugin_updates class=count_notice style='visibility: hidden;'></span><br>
+			<a href="CMD_ADMIN_CRON_JOBS">|LANG_ADMIN_CRON_JOBS|</a><br>
+|$/usr/local/bin/php
+<?php
+$data = <<<END
+|PLUGIN_1_ADMIN_TXT|
+END;
+if (strlen($data) > 1)
+{
+echo <<<END
+|PLUGIN_1_ADMIN_TXT|<br>
+|PLUGIN_3_ADMIN_TXT|<br>
+|PLUGIN_5_ADMIN_TXT|<br>
+|PLUGIN_7_ADMIN_TXT|<br>
+|PLUGIN_9_ADMIN_TXT|
+END;
+}
+?>
+DONE|
+		</td>
+	</tr>
+</table>
+
+|*if AJAX="1"|
+	<script type="text/javascript">
+		set_admin_level_updates();
+	</script>
+|*endif|
+
+
+
+
+
+
+
+
+
+
+
+
