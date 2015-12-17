@@ -30,9 +30,8 @@ exit
 !!! OR !!!
 --------------------------------------------------------------------  
 This will not change the default "enhanced" skin. It will create a new "enhanced-pro" skin.  
-You will have to manually copy and overwrite the files from "enhanced" skin after directadmin update.  
   
-Then, to update when directadmin is updated, get the latest enhanced.tar.gz skin from  http://forum.directadmin.com/showthread.php?t=221&highlight=latest+enhanced and install as enhanced-pro via Skin Manager at reseller level
+Then, to update when directadmin is updated, get the latest enhanced.tar.gz skin from  ![here](http://forum.directadmin.com/showthread.php?t=221&highlight=latest+enhanced) and install as "enhanced-pro" via Skin Manager at Reseller Level
 
 --------------------------------------------------------------------
 
