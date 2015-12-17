@@ -12,7 +12,7 @@ All colors on the top left and right are available. To change a color click on t
 <b>Installation:</b>
 
 --------------------------------------------------------------------
---- !!!WARNING!!! This will replace the default "enhanced" skin) ---
+--- !!!WARNING!!! This will replace the default "enhanced" skin ---
 --------------------------------------------------------------------
 
 cd /usr/local/directadmin/data/skins/  
@@ -22,3 +22,17 @@ mv DA-Enhanced-Pro-master enhanced
 chown -R diradmin:diradmin enhanced  
 rm -f master.zip  
 exit  
+
+--------------------------------------------------------------------
+--- !!! OR !!! This will not replace the default "enhanced" skin ---
+--------------------------------------------------------------------  
+You will have to manually copy the files from enhanced on directadmin update.
+--------------------------------------------------------------------
+
+cd /usr/local/directadmin/data/skins/  
+wget https://github.com/dugalex/DA-Enhanced-Pro/archive/master.zip  
+unzip master.zip  
+mv DA-Enhanced-Pro-master enhanced-pro  
+chown -R diradmin:diradmin enhanced-pro  
+rm -f master.zip  
+exit 
