@@ -1,7 +1,7 @@
 # DA-Enhanced-Pro
 DA-Enhanced-Pro - Free DirectAdmin Skin by dugalex
 
-If installed as "enhanced" skin, it will be automatically updated on DirectAdmin updates and will retain it's original design.
+If installed as "enhanced" skin, it will be automatically updated on DirectAdmin updates and will retain it's original design.  
 All colors on the top left and right are available. To change a color click on the desired color box. 
 
 ![Admin](https://github.com/dugalex/DA-Enhanced-Pro/blob/master/images/skin-admin.jpg)
