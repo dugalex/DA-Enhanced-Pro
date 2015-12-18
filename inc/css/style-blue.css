@@ -241,12 +241,18 @@ td.footer a {
 	display:inline-block;
 }
 td.content {
-	background:-webkit-linear-gradient(left, #aaa, #fff 1%, #fff 99%, #aaa);
 	background:
 		url('/IMG_SKIN_CONTENT_BOTTOM') bottom center no-repeat,
 		url('/IMG_SKIN_CONTENT_TOP') top center no-repeat,
-		-moz-linear-gradient(left, #aaa, #fff 1%, #fff 99%, #aaa);
-	background:linear-gradient(left, #aaa, #fff 1%, #fff 99%, #aaa);
+		-webkit-linear-gradient(left, #aaa, #fff 1%, #fff 99%, #aaa);
+	background:
+		url('/IMG_SKIN_CONTENT_BOTTOM') bottom center no-repeat,
+		url('/IMG_SKIN_CONTENT_TOP') top center no-repeat,
+		-webkit-linear-gradient(left, #aaa, #fff 1%, #fff 99%, #aaa);
+	background:
+		url('/IMG_SKIN_CONTENT_BOTTOM') bottom center no-repeat,
+		url('/IMG_SKIN_CONTENT_TOP') top center no-repeat,
+		linear-gradient(left, #aaa, #fff 1%, #fff 99%, #aaa);
 	margin:10px;
 }
 td.stats {
