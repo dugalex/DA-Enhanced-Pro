@@ -248,7 +248,7 @@ td.content {
 	background:
 		url('/IMG_SKIN_CONTENT_BOTTOM') bottom center no-repeat,
 		url('/IMG_SKIN_CONTENT_TOP') top center no-repeat,
-		-webkit-linear-gradient(left, #aaa, #fff 1%, #fff 99%, #aaa);
+		-moz-linear-gradient(left, #aaa, #fff 1%, #fff 99%, #aaa);
 	background:
 		url('/IMG_SKIN_CONTENT_BOTTOM') bottom center no-repeat,
 		url('/IMG_SKIN_CONTENT_TOP') top center no-repeat,
