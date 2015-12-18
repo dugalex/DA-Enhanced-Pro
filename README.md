@@ -51,7 +51,7 @@ cd /usr/local/directadmin/data/skins/
 wget https://github.com/dugalex/DA-Enhanced-Pro/archive/master.zip  
 unzip master.zip  
 cd DA-Enhanced-Pro-master  
-cp -pruf ../enhanced  
+cp -pruf * ../enhanced  
 cd ..  
 chown -R diradmin:diradmin enhanced  
 rm -rf DA-Enhanced-Pro-master  
