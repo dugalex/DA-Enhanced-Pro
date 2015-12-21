@@ -406,7 +406,8 @@ td.list2, td.listwrap2
 	padding-left:40px;
 }
 .service_on, .service_off {
-	margin:4px;
+	margin-bottom:4px;
+	margin-top:4px;
 	float:right;
 	width:10px;
 	height:10px;
