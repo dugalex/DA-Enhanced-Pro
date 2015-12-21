@@ -41,7 +41,7 @@ class skclass {
 
 	function getServices() {
 		$str = $this->api_get('/CMD_API_SHOW_SERVICES');
-		if(strpos($str, 'httpd') == false) return false;
+		if(strpos($str, 'directadmin') == false) return false;
 		parse_str(urldecode($str), $servArr);
 		return $servArr;
 	}
