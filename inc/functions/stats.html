@@ -70,14 +70,14 @@ $load = round($load_avg[0]/($core_nums + 1)*25, 2);
 				<div id="stats" style="float:right;width:250px">
 					<span>
 						<span class="statsl">|LANG_SERVER_RAM|</span>
-						<span class="statsr"><?php echo $sysInfo['memUsed'];?>MB</span>
-						<span class="statsm" style="width:250px"><progress style="width:247px" value="<?php echo $sysInfo['memUsed'];?>" max="<?php echo $sysInfo['memTotal'];?>"></progress></span>
+						<span class="statsr"><?php echo $sysInfo['memRealUsed'];?>MB</span>
+						<span class="statsm" style="width:250px"><progress style="width:247px" value="<?php echo $sysInfo['memRealUsed'];?>" max="<?php echo $sysInfo['memTotal'];?>"></progress></span>
 					</span>
 				</div>
 				<div id="stats" style="float:left;width:162px">
-						<span class="statsl" style="width:80px">|LANG_SERVER_REAL_RAM|</span>
-						<span class="statsr" style="width:80px"><?php echo $sysInfo['memRealUsed'];?>MB</span>
-						<span class="statsm" style="width:100%"><progress style="width:159px" value="<?php echo $sysInfo['memRealUsed'];?>" max="<?php echo $sysInfo['memTotal'];?>"></progress></span>
+						<span class="statsl" style="width:80px">|LANG_SERVER_TOTAL_RAM|</span>
+						<span class="statsr" style="width:80px"><?php echo $sysInfo['memUsed'];?>MB</span>
+						<span class="statsm" style="width:100%"><progress style="width:159px" value="<?php echo $sysInfo['memUsed'];?>" max="<?php echo $sysInfo['memTotal'];?>"></progress></span>
 				</div>
 				<div id="stats" style="float:left;width:162px">
 						<span class="statsl" style="width:80px">|LANG_SERVER_CACHED_RAM|</span>
