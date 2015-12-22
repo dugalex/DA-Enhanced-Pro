@@ -17,7 +17,7 @@ All colors on the top left and right are available. To change a color click on t
 cd /usr/local/directadmin/data/skins/
 wget https://github.com/dugalex/DA-Enhanced-Pro/archive/master.zip
 unzip master.zip
-\cp -pruf DA-Enhanced-Pro-master/* enhanced
+\cp -pru DA-Enhanced-Pro-master/* enhanced
 chown -R diradmin:diradmin enhanced
 rm -rf DA-Enhanced-Pro-master
 rm -f master.zip
@@ -47,7 +47,7 @@ exit
 cd /usr/local/directadmin/data/skins/
 wget https://github.com/dugalex/DA-Enhanced-Pro/archive/master.zip
 unzip master.zip
-\cp -pruf DA-Enhanced-Pro-master/* enhanced-pro
+\cp -pru DA-Enhanced-Pro-master/* enhanced-pro
 rm -rf DA-Enhanced-Pro-master
 rm -f master.zip
 exit
