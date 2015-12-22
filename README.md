@@ -11,7 +11,8 @@ All colors on the top left and right are available. To change a color click on t
 
 #Installation & Update:
 
-!!! WARNING !!! This will change the default "enhanced" skin but will not overwrite any existing DirectAdmin files. Use the same command to update.
+#!!! WARNING !!! This will change the default "enhanced" skin but will not overwrite any existing DirectAdmin files. 
+Use the same command to update.
 
 ```
 cd /usr/local/directadmin/data/skins/
@@ -24,7 +25,7 @@ rm -f master.zip
 exit
 ```
 
-!!! OR !!!
+#!!! OR !!!
   
 This will not change the default "enhanced" skin. It will create a new "enhanced-pro" skin.  
   
