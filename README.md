@@ -11,9 +11,9 @@ All colors on the top left and right are available. To change a color click on t
 
 #Installation & Update:
 
-#!!! WARNING !!! This will change the default "enhanced" skin but will not overwrite any existing DirectAdmin files. 
+!!! WARNING !!! This will change the default "enhanced" skin but will not overwrite any existing DirectAdmin files. 
 Use the same command to update.
-
+------------------------------------------------------------------------------------------
 ```
 cd /usr/local/directadmin/data/skins/
 wget https://github.com/dugalex/DA-Enhanced-Pro/archive/master.zip
@@ -28,7 +28,7 @@ exit
 #!!! OR !!!
   
 This will not change the default "enhanced" skin. It will create a new "enhanced-pro" skin.  
-  
+------------------------------------------------------------------------------------------
 To update when directadmin has been updated, get the latest enhanced.tar.gz skin from  [here](http://forum.directadmin.com/showthread.php?t=221&highlight=latest+enhanced) and install as "enhanced-pro" via Skin Manager at Reseller Level. It will overwrite the default "enhanced" files but not the extra files that make up the skins look.
 
 
@@ -43,7 +43,7 @@ exit
 ```
 
 !!! Updating (if saved as enhanced-pro) !!!
-
+------------------------------------------------------------------------------------------
 ```
 cd /usr/local/directadmin/data/skins/
 wget https://github.com/dugalex/DA-Enhanced-Pro/archive/master.zip
