@@ -9,22 +9,21 @@ All colors on the top left and right are available. To change a color click on t
 ![User](https://github.com/dugalex/DA-Enhanced-Pro/blob/master/images/skin-user.jpg)
 
 
-<b>Installation:</b>
+<b>Installation & Update:</b>
 
 --------------------------------------------------------------------
-!!! WARNING !!! This will change the default "enhanced" skin but will not overwrite any existing DirectAdmin files.
+!!! WARNING !!! This will change the default "enhanced" skin but will not overwrite any existing DirectAdmin files.  
+Use the same command to update if saved as enhanced skin.
 --------------------------------------------------------------------
 
 cd /usr/local/directadmin/data/skins/  
 wget https://github.com/dugalex/DA-Enhanced-Pro/archive/master.zip  
 unzip master.zip  
-cd DA-Enhanced-Pro-master  
-cp -rn * ../enhanced  
-cd ..  
+\cp -pruf DA-Enhanced-Pro-master/* enhanced  
 chown -R diradmin:diradmin enhanced  
 rm -rf DA-Enhanced-Pro-master  
 rm -f master.zip  
-exit  
+exit    
 
 --------------------------------------------------------------------
 !!! OR !!!
@@ -44,16 +43,13 @@ rm -f master.zip
 exit 
 
 --------------------------------------------------------------------
-!!! Updating Skin !!!
+!!! Updating enhanced-pro !!!
 --------------------------------------------------------------------
 
 cd /usr/local/directadmin/data/skins/  
 wget https://github.com/dugalex/DA-Enhanced-Pro/archive/master.zip  
 unzip master.zip  
-cd DA-Enhanced-Pro-master  
-\cp -pruf * ../enhanced  
-cd ..  
-chown -R diradmin:diradmin enhanced  
+\cp -pruf DA-Enhanced-Pro-master/* enhanced-pro  
 rm -rf DA-Enhanced-Pro-master  
 rm -f master.zip  
 exit  
