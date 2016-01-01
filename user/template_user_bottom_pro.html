@@ -37,11 +37,6 @@
 |*else|
 					<span class="statsm"><progress value="|USERBANDWIDTH|" max="|USERBANDWIDTHMAX|"></progress></span>
 |*endif|
-|*if HAVE_INODE="yes" && USERINODEMAX="unlimited"|
-					<span class="statsl">|LANG_INODES|</span>
-					<span class="statsr">|USERINODE| / |USERINODEMAX|</span>
-					<span class="statsm"><progress value="|USERINODE|" max="1000000"></progress></span>
-|*else|
 |*if HAVE_INODE="yes"|
 					<span class="statsl">|LANG_INODES|</span>
 					<span class="statsr">|USERINODE| / |USERINODEMAX|</span>
