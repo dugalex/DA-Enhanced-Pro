@@ -32,7 +32,7 @@
 32=Your account for |domain| is now ready for use.
 33=<b>Username must be Alphanumeric (a-z, A-Z, 0-9), with the first character being a letter</b>
 34=<b>Username is too short.  It must be at least 2 characters long</b>
-35=<b>Reseller only got %s of his/her %s ips.</b>
+35=<b>Reseller only got %s of their %s ips.</b>
 36=<b>Reseller is assigned zero IP's. Cannot create a domain without an ip</b>
 37=<b>Unable to assign the Reseller ANY ips.  Make sure to have free, un-assigned ips.</b>
 38=<b>Not enough IP's to create nameservers.  It requires at least 2 free, un-assigned ips</b>
@@ -50,7 +50,7 @@
 50=User %s did not exist on the server.  Removing it from your list.
 51=Error reading user files for %s, continuing anyway.
 52=Error Removing User %s
-53=<b>User %s not deleted.  Unable to delete all of his/her users.</b>
+53=<b>User %s not deleted.  Unable to delete all of their users.</b>
 54=<b>User %s was not created by you-> Not Deleted.</b>
 55=Your message is empty. Users might appreciate knowing what they're getting.
 56=Your subject contains invalid characters.

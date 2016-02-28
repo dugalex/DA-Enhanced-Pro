@@ -68,7 +68,7 @@ td.header {
 	background-size: 240px 120px, 190px 190px, 100% 100%, 100% 100%;
 	border-bottom:1px solid transparent;
 }
-td.menu, td.footer, .blue_gradient {
+td.head, td.menu, td.footer, .blue_gradient {
 	background:-webkit-linear-gradient(left, rgb(0,67,32), rgb(0,145,70) 1%, rgb(0,145,70) 99%, rgb(0,67,32));
 	background:-moz-linear-gradient(left, rgb(0,67,32), rgb(0,145,70) 1%, rgb(0,145,70) 99%, rgb(0,67,32));
 	background:linear-gradient(left, rgb(0,67,32), rgb(0,145,70) 1%, rgb(0,145,70) 99%, rgb(0,67,32));

@@ -22,7 +22,7 @@ body {
 		-moz-linear-gradient(135deg, transparent 33%, rgba(0,0,0,0.1) 33%, rgba(0,0,0,0.1) 66%, transparent 66% ),
 		-moz-linear-gradient(45deg, transparent 33%, rgba(0,0,0,0.1) 33%, rgba(0,0,0,0.1) 66%, transparent 66% ),
 		-moz-linear-gradient(top, rgba(255,255,255,0.15), rgba(175,175,175,0.25)),
-		-moz-linear-gradient(left, rgb(200,200,200), rgb(255,255,255), rgb(255,255,255), rgb(200,200,200));
+		-moz-linear-gradient(left, rgb(175,175,175), rgb(255,255,255), rgb(255,255,255), rgb(175,175,175));
 	background:
 		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.15) 30%, rgba(255,255,255,.3) 32%, rgba(255,255,255,0) 33%) 0 0,
 		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.3) 13%, rgba(255,255,255,0) 14%) 0 0,
@@ -37,19 +37,16 @@ body {
 	background-size: 470px 470px, 970px 970px, 410px 410px, 610px 610px, 530px 530px, 730px 730px, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
 	background-attachment: fixed;
 }
-a, td.listtitle a:hover, .stats a:hover {
+a, td.menu a:hover, td.listtitle a, .stats a {
 	color:rgb(88,137,174);
 }
-a:hover, td.footer a:hover, td.listtitle a, .stats a, .listhighlight a:hover, .list2highlight a:hover, .listwraphighlight a:hover, .listwrap2highlight a:hover
- {
+a:hover, td.footer a:hover, td.listtitle a:hover, .stats a:hover, .listhighlight a:hover, .list2highlight a:hover, .listwraphighlight a:hover, .listwrap2highlight a:hover {
+	text-shadow:0px 0px 5px rgb(175,175,175);
 	color:rgb(26,72,105);
 }
 input[type=button]:hover, input[type=submit]:hover, input[type=checkbox]:hover, td.listtitle input[type=button]:hover, td.listtitle input[type=submit]:hover, td.listtitle input[type=checkbox]:hover {
 	background:rgba(175,175,175,.75);
 	color:#222;
-}
-table.main {
-	border:1px solid transparent;
 }
 td.header {
 	background:
@@ -70,25 +67,15 @@ td.header {
 	background-size: 240px 120px, 190px 190px, 100% 100%, 100% 100%;
 	border-bottom:1px solid transparent;
 }
-td.menu, td.footer {
-	background:-webkit-linear-gradient(left, rgb(175,175,175), rgb(250,250,250) 1%, rgb(250,250,250) 99%, rgb(175,175,175));
-	background:-moz-linear-gradient(left, rgb(175,175,175), rgb(250,250,250) 1%, rgb(250,250,250) 99%, rgb(175,175,175));
-	background:linear-gradient(left, rgb(175,175,175), rgb(250,250,250) 1%, rgb(250,250,250) 99%, rgb(175,175,175));
-	color:#333;
+td.head, td.menu, td.footer, .blue_gradient {
+	background:-webkit-linear-gradient(left, rgb(175,175,175), rgb(252,252,252) 1%, rgb(252,252,252) 99%, rgb(175,175,175));
+	background:-moz-linear-gradient(left, rgb(175,175,175), rgb(252,252,252) 1%, rgb(252,252,252) 99%, rgb(175,175,175));
+	background:linear-gradient(left, rgb(175,175,175), rgb(252,252,252) 1%, rgb(252,252,252) 99%, rgb(175,175,175));
 }
 td.menu a {
-	color:#333;
+	color:rgb(75,75,75);
 }
-td.menu a:hover {
-	text-shadow:0px 0px 10px #aaa;
-	color:#222;
-}
-td.listtitle, .stats, td.list, td.listwrap, td.list2, td.listwrap2 {
-	box-shadow:inset 0px 0px 1px 0px #000;
-	-moz-box-shadow:inset 0px 0px 1px 0px #000;
-	-webkit-box-shadow:inset 0px 0px 1px 0px #000;
-}
-td.listtitle input:hover, td.listtitle textarea:hover, td.listtitle select:hover,td.footer, td.footer a,  td.stats, .stats, .stats a .white, .tree {
+td.listtitle input:hover, td.listtitle textarea:hover, td.listtitle select:hover,td.footer, td.footer a,  td.stats, .stats, .white, .tree {
 	color:#222;
 }
 td.listtitle, .stats {
@@ -103,9 +90,6 @@ td.list2, td.listwrap2 {
 	background:rgb(255,255,255);
 }
 .listhighlight, .list2highlight, .listwraphighlight, .listwrap2highlight {
-	box-shadow:inset 0px 0px 1px 0px #000;
-	-moz-box-shadow:inset 0px 0px 1px 0px #000;
-	-webkit-box-shadow:inset 0px 0px 1px 0px #000;
 	background:rgba(0,0,0,.05);
 }
 progress, meter {

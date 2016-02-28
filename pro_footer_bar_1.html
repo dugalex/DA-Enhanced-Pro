@@ -2,8 +2,9 @@
 									</td></tr>
 									</table>
 								</td>
+
 								<td valign=top align=right>
 									<div class="statst title"><i style="line-height:38px" class="fa fa-envelope"></i>&nbsp; <a href="/CMD_TICKET?sort1=-1">|LANG_MESS_SYS|</a>|*if NEWMESSAGES!="0"|<span class=count_notice>|NEWMESSAGES|</span>|*endif|</div>
 										<div class="stats">
 											<div id="stats">
-											|*if NEWMESSAGES!="0"|<span class="statsm">You have <a href="/CMD_TICKET?sort1=-1">|NEWMESSAGES|</a> new message/s.</span><br/>|*else|<span class="statsm">You have no new messages.</span><br/>|*endif|
+											|*if NEWMESSAGES="1"|<span class="statsm">You have <a href="/CMD_TICKET?sort1=-1">|NEWMESSAGES| new message</a>.</span><br/>|*endif| |*if NEWMESSAGES>"1"|<span class="statsm">You have <a href="/CMD_TICKET?sort1=-1">|NEWMESSAGES| new messages</a>.</span><br/>|*endif| |*if NEWMESSAGES="0"|<span class="statsm">You have no new messages.</span><br/>|*endif|

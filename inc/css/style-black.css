@@ -46,10 +46,7 @@ input[type=button]:hover, input[type=submit]:hover, input[type=checkbox]:hover, 
 	background:rgba(0,0,0,.75);
 }
 .black {
-background:rgb(34,34,34);
-}
-table.main {
-	border:1px solid transparent;
+	background:rgb(34,34,34);
 }
 td.header {
 	background:
@@ -70,13 +67,13 @@ td.header {
 	background-size: 240px 120px, 190px 190px, 100% 100%, 100% 100%;
 	border-bottom:1px solid transparent;
 }
-td.menu, td.footer {
+td.head, td.menu, td.footer, .blue_gradient {
 	background:-webkit-linear-gradient(left, rgb(0,0,0), rgb(34,34,34) 1%, rgb(34,34,34) 99%, rgb(0,0,0));
 	background:-moz-linear-gradient(left, rgb(0,0,0), rgb(34,34,34) 1%, rgb(34,34,34) 99%, rgb(0,0,0));
 	background:linear-gradient(left, rgb(0,0,0), rgb(34,34,34) 1%, rgb(34,34,34) 99%, rgb(0,0,0));
 }
 td.listtitle, .stats {
-	background:rgba(34,34,34,.85);
+	background:rgba(34,34,34,.95);
 }
 td.list, td.listwrap {
 	background:rgba(34,34,34,.15);

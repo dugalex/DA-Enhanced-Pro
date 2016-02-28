@@ -81,7 +81,7 @@
 81=Reseller
 82=All Users Except:
 83=%s is not chowned to %s which is a likely cause for extraction failure
-84=User %s has one or more hard links in his path:
+84=User %s has one or more hard links in their path:
 85=Backup Abort (%d): A hard link was found under User %s's path
 86=The following hard links have been found under User %s:
 87=Error writing %s : %s

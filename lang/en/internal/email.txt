@@ -169,7 +169,7 @@
 169=%sClean Forwarders Values%s
 170=Until the cache is created, the values may not be correct.  Refresh the page in 1 minute.
 171=The cache is being updated. Please refresh the page in 1 minute.
-172=User %s has one or more hard links in his path:
+172=User %s has one or more hard links in their path:
 173=Backup Abort (%d): A hard link was found under User %s's path
 174=(%d) The following hard links have been found under User %s:
 175=Archive Size

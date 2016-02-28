@@ -19,7 +19,17 @@
 	<td class=listtitle>|*if HAVE_NGINX="yes"||LANG_NGINX_CUST_FOR||*else||LANG_CUST_FOR||*endif| <b>|domain|</b></td>
 </tr>
 <tr>
-	<td class=list align=center>|*if HAVE_NGINX="yes"||LANG_NGINX_WARNING||*else||LANG_WARNING||*endif|<br><textarea class="code_edit" cols=120 rows=10 wrap=off name=config>|CONFIG|</textarea></td>
+	<td class=list align=center>|*if HAVE_NGINX="yes"||LANG_NGINX_WARNING||*else||LANG_WARNING||*endif|
+	|*if CUSTOM_PRE|
+		<div><textarea class="code_edit" cols=120 rows=2 wrap=off readonly>|CUSTOM_PRE|</textarea></div>
+	|*endif|
+
+	<div><textarea class="code_edit" cols=120 rows=10 wrap=off name=config>|CONFIG|</textarea></div>
+
+	|*if CUSTOM_POST|
+		<div><textarea class="code_edit" cols=120 rows=2 wrap=off readonly>|CUSTOM_POST|</textarea></div>
+	|*endif|
+	</td>
 </tr>
 
 <script type="text/javascript" src="JS_VISIBILITY"></script>
@@ -68,8 +78,16 @@ function trigger_toggle()
 </tr>
 <tr id=custom1_tr style="display: none;">
 	<td class=list align=center>
-		|LANG_TOP_OF_TEMPLATE|<br>
-		<textarea class="code_edit" cols=120 rows=4 wrap=off name=custom1>|CUSTOM1|</textarea>
+		|LANG_TOP_OF_TEMPLATE|
+		|*if CUSTOM1_PRE|
+			<div><textarea class="code_edit" cols=120 rows=2 wrap=off readonly>|CUSTOM1_PRE|</textarea></div>
+		|*endif|
+
+		<div><textarea class="code_edit" cols=120 rows=4 wrap=off name=custom1>|CUSTOM1|</textarea></div>
+
+		|*if CUSTOM1_POST|
+			<div><textarea class="code_edit" cols=120 rows=2 wrap=off readonly>|CUSTOM1_POST|</textarea></div>
+		|*endif|
 	</td>
 </tr>
 <tr id=custom2_toggle_tr style="display: none;">
@@ -77,8 +95,16 @@ function trigger_toggle()
 </tr>
 <tr id=custom2_tr style="display: none;">
 	<td class=list align=center>
-		|*if HAVE_NGINX="yes"||LANG_ALL_LOCATIONS||*else||LANG_BEFORE_DIRECTORY||*endif|<br>
-		<textarea class="code_edit" cols=120 rows=4 wrap=off name=custom2>|CUSTOM2|</textarea>
+		|*if HAVE_NGINX="yes"||LANG_ALL_LOCATIONS||*else||LANG_BEFORE_DIRECTORY||*endif|
+		|*if CUSTOM2_PRE|
+			<div><textarea class="code_edit" cols=120 rows=2 wrap=off readonly>|CUSTOM2_PRE|</textarea></div>
+		|*endif|
+
+		<div><textarea class="code_edit" cols=120 rows=4 wrap=off name=custom2>|CUSTOM2|</textarea></div>
+
+		|*if CUSTOM2_POST|
+			<div><textarea class="code_edit" cols=120 rows=2 wrap=off readonly>|CUSTOM2_POST|</textarea></div>
+		|*endif|
 	</td>
 </tr>
 <tr id=custom3_toggle_tr style="display: none;">
@@ -86,8 +112,16 @@ function trigger_toggle()
 </tr>
 <tr id=custom3_tr style="display: none;">
 	<td class=list align=center>
-		|*if HAVE_NGINX="yes"||LANG_BEFORE_WEBAPPS||*else||LANG_FIRST_DIRECTORY||*endif|<br>
-		<textarea class="code_edit" cols=120 rows=4 wrap=off name=custom3>|CUSTOM3|</textarea>
+		|*if HAVE_NGINX="yes"||LANG_BEFORE_WEBAPPS||*else||LANG_FIRST_DIRECTORY||*endif|
+		|*if CUSTOM3_PRE|
+			<div><textarea class="code_edit" cols=120 rows=2 wrap=off readonly>|CUSTOM3_PRE|</textarea></div>
+		|*endif|
+
+		<div><textarea class="code_edit" cols=120 rows=4 wrap=off name=custom3>|CUSTOM3|</textarea></div>
+
+		|*if CUSTOM3_POST|
+			<div><textarea class="code_edit" cols=120 rows=2 wrap=off readonly>|CUSTOM3_POST|</textarea></div>
+		|*endif|
 	</td>
 </tr>
 <tr id=custom4_toggle_tr style="display: none;">
@@ -95,8 +129,16 @@ function trigger_toggle()
 </tr>
 <tr id=custom4_tr style="display: none;">
 	<td class=list align=center>
-		|LANG_LAST_ENTRY|<br>
-		<textarea class="code_edit" cols=120 rows=4 wrap=off name=custom4>|CUSTOM4|</textarea>
+		|LANG_LAST_ENTRY|
+		|*if CUSTOM4_PRE|
+			<div><textarea class="code_edit" cols=120 rows=2 wrap=off readonly>|CUSTOM4_PRE|</textarea></div>
+		|*endif|
+
+		<div><textarea class="code_edit" cols=120 rows=4 wrap=off name=custom4>|CUSTOM4|</textarea></div>
+
+		|*if CUSTOM4_POST|
+			<div><textarea class="code_edit" cols=120 rows=2 wrap=off readonly>|CUSTOM4_POST|</textarea></div>
+		|*endif|
 	</td>
 </tr>
 <script language="Javascript">

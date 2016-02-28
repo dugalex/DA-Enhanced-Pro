@@ -119,7 +119,7 @@
 119=could not be freed, it must first have zero domain if it is shared, or must be reserved.
 120=Unable to create a Reseller
 121=You must first create some packages
-122=Your reseller has reached his/her assigned limit
+122=Your reseller has reached their assigned limit
 123=Your reseller account has reached its assigned limit
 124=You have already reached your assigned limit
 125=Unable to create a User

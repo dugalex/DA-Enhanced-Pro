@@ -30,7 +30,7 @@
 30=User %s has been updated.  Use the following values:
 31=You require the name and user
 32=That user does not belong to you
-33=That user does not exist, please create the user before changing his/her privileges
+33=That user does not exist, please create the user before changing their privileges
 34=That database does not exist
 35=That database does not belong to you
 36=All Users deleted successfully
@@ -89,3 +89,4 @@
 89=Download
 90=Your database username (%s) contains invalid characters (%s).  MySQL account will not be created on %s.
 91=Your database name (%s) contains invalid characters (%s).
+92=Error Granting Main Username access to database:

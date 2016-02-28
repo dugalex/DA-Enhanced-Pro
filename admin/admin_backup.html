@@ -483,12 +483,20 @@ function submitRestore()
 			|LANG_LOCAL_NS|
 		</td>
 	</tr>
-|*if CLUSTER_ENABLED="1"|
 	<tr>
 		<td class=list align=center>
-			<input type=checkbox name=confirm_with_domainowners value="yes" |CONFIRM_WITH_DOMAINOWNERS|>
+			<input type=checkbox name="restore_spf" value="yes" |RESTORE_SPF|>
 		</td>
 		<td class=list>
+			|LANG_RESTORE_SPF|
+		</td>
+	</tr>
+|*if CLUSTER_ENABLED="1"|
+	<tr>
+		<td class=list2 align=center>
+			<input type=checkbox name=confirm_with_domainowners value="yes" |CONFIRM_WITH_DOMAINOWNERS|>
+		</td>
+		<td class=list2>
 			|LANG_CONFIRM_WITH_DOMAINOWNERS|
 		</td>
 	</tr>
