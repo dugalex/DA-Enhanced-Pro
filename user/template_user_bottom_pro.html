@@ -32,10 +32,10 @@
 |*endif|
 					<span class="statsl">|LANG_BANDWIDTH| |LANG_GB|</span>
 					<span class="statsr">|USERBANDWIDTHGIG| / |USERBANDWIDTHMAXGIG|</span>
-|*if USERBANDWIDTHMAX="unlimited"|
-					<span class="statsm"><progress value="|USERBANDWIDTH|" max="1000"></progress></span>
+|*if USERBANDWIDTHMAXGIG="unlimited"|
+					<span class="statsm"><progress value="|USERBANDWIDTHGIG|" max="1000"></progress></span>
 |*else|
-					<span class="statsm"><progress value="|USERBANDWIDTH|" max="|USERBANDWIDTHMAX|"></progress></span>
+					<span class="statsm"><progress value="|USERBANDWIDTHGIG|" max="|USERBANDWIDTHMAXGIG|"></progress></span>
 |*endif|
 |*if HAVE_INODE="yes"|
 					<span class="statsl">|LANG_INODES|</span>
