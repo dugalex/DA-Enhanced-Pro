@@ -1,0 +1,142 @@
+.default {
+	background:rgb(5,140,200);
+}
+
+.light-white {
+	background:rgb(255,255,255);
+}
+.light-silver {
+	background:rgb(225,225,225);
+}
+.light-ivory {
+	background:rgb(255,255,240);
+}
+.light-peach {
+	background:rgb(255,218,185);
+}
+.light-brown {
+	background:rgb(238,223,204);
+}
+.light-red {
+	background:rgb(255,200,200);
+}
+.light-yellow {
+	background:rgb(255,255,224);
+}
+.light-green {
+	background:rgb(200,250,200);
+}
+.light-blue {
+	background:rgb(175,225,255);
+}
+.light-purple {
+	background:rgb(235,200,255);
+}
+.light-pink {
+	background:rgb(255,225,235);
+}
+
+.gray {
+	background:rgb(150,150,150);
+}
+.black {
+	background:rgb(34,34,34);
+}
+.brown {
+	background:rgb(128,64,0);
+}
+.red {
+	background:rgb(176,23,31);
+}
+.orange {
+	background:rgb(255,128,0);
+}
+.yellow {
+	background:rgb(247,188,91);
+}
+.green {
+	background:rgb(0,139,69);
+}
+.blue {
+	background:rgb(61,89,171);
+}
+.purple {
+	background:rgb(128,0,128);
+}
+.pink {
+	background:rgb(255,105,180);
+}
+.raspberry {
+	background:rgb(135,38,87);
+}
+
+.bsilver {
+	background:url('/IMG_SKIN_BRUSHED_SILVER') center;
+}
+.bivory {
+	background:url('/IMG_SKIN_BRUSHED_IVORY') center;
+}
+.bgold {
+	background:url('/IMG_SKIN_BRUSHED_GOLD') center;
+}
+.bbronze {
+	background:url('/IMG_SKIN_BRUSHED_BRONZE') center;
+}
+.bsteel {
+	background:url('/IMG_SKIN_BRUSHED_STEEL') center;
+}
+.bblack {
+	background:url('/IMG_SKIN_BRUSHED_BLACK') center;
+}
+.bblue {
+	background:url('/IMG_SKIN_BRUSHED_BLUE') center;
+}
+.bgreen {
+	background:url('/IMG_SKIN_BRUSHED_GREEN') center;
+}
+
+.abstract-nebula {
+	background:url('/IMG_SKIN_ABSTRACT_NEBULA') center;
+}
+.blue-snowflakes {
+	background:url('/IMG_SKIN_BLUE_SNOWFLAKES') center;
+}
+.clouds {
+	background:url('/IMG_SKIN_CLOUDS') center;
+}
+.dark-wood {
+	background:url('/IMG_SKIN_DARK_WOOD') center;
+}
+.fiery-red {
+	background:url('/IMG_SKIN_FIERY_RED') center;
+}
+.icy-blue {
+	background:url('/IMG_SKIN_ICY_BLUE') center;
+}
+.metal-mesh {
+	background:url('/IMG_SKIN_METAL_MESH') center;
+}
+.peacock-blues {
+	background:url('/IMG_SKIN_PEACOCK_BLUES') center;
+}
+.rainbow-patern {
+	background:url('/IMG_SKIN_RAINBOW_PATERN') center;
+}
+.red-starfield {
+	background:url('/IMG_SKIN_RED_STARFIELD') center;
+}
+.rusted-metal {
+	background:url('/IMG_SKIN_RUSTED_METAL') center;
+}
+.turbulent-blue {
+	background:url('/IMG_SKIN_TURBULENT_BLUE') center;
+}
+.water-blues {
+	background:url('/IMG_SKIN_WATER_BLUES') center;
+}
+.worm-amber {
+	background:url('/IMG_SKIN_WORM_AMBER') center;
+}
+.worm-copper {
+	background:url('/IMG_SKIN_WORM_COPPER') center;
+}

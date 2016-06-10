@@ -1,0 +1,67 @@
+body {
+	background:
+		linear-gradient(top, rgba(255,255,255,0.25), rgba(0,0,0,0.25)),
+		url('/IMG_SKIN_BLUE_SNOWFLAKES') center;
+	background:
+		-moz-linear-gradient(top, rgba(255,255,255,0.25), rgba(0,0,0,0.25)),
+		url('/IMG_SKIN_BLUE_SNOWFLAKES') center;
+	background:
+		-webkit-linear-gradient(top, rgba(255,255,255,0.25), rgba(0,0,0,0.25)),
+		url('/IMG_SKIN_BLUE_SNOWFLAKES') center;
+	background-size:100% 100%, 512px 512px;
+	background-attachment:fixed;
+}
+a, td.menu a, td.listtitle, td.listtitle a, .stats, .stats a, .welcome, .messages,
+input[type=button]:hover, input[type=submit]:hover, input[type=checkbox]:hover, td.listtitle input[type=button]:hover, td.listtitle input[type=submit]:hover, td.listtitle input[type=checkbox]:hover,
+td.listtitle input:hover, td.listtitle textarea:hover, td.listtitle select:hover, td.footer, td.footer a, td.stats, .stats, .white, .tree
+{
+	color:rgba(0,0,0,.75);
+}
+a:hover, td.menu a:hover, td.footer a:hover, td.listtitle a:hover, .stats a:hover, .listhighlight a:hover, .list2highlight a:hover, .listwraphighlight a:hover, .listwrap2highlight a:hover {
+	color:rgb(65,140,200);
+}
+input[type=button]:hover, input[type=submit]:hover, input[type=checkbox]:hover, td.listtitle input[type=button]:hover, td.listtitle input[type=submit]:hover, td.listtitle input[type=checkbox]:hover {
+	background:url('/IMG_SKIN_BLUE_SNOWFLAKES') center;
+}
+td.head, td.menu, td.footer, .blue_gradient {
+	background:
+		-webkit-linear-gradient(left, rgba(0,0,0,.40), rgba(0,0,0,.0) 1%, rgba(0,0,0,.0) 99%, rgba(0,0,0,.40)),
+		url('/IMG_SKIN_BLUE_SNOWFLAKES') center;
+	background:
+		-moz-linear-gradient(left, rgba(0,0,0,.40), rgba(0,0,0,.0) 1%, rgba(0,0,0,.0) 99%, rgba(0,0,0,.40)),
+		url('/IMG_SKIN_BLUE_SNOWFLAKES') center;
+	background:
+		linear-gradient(left, rgba(0,0,0,.40), rgba(0,0,0,.0) 1%, rgba(0,0,0,.0) 99%, rgba(0,0,0,.40)),
+		url('/IMG_SKIN_BLUE_SNOWFLAKES') center;
+	text-shadow:0px 0px 2px rgba(255,255,255,1);
+}
+td.listtitle, .stats {
+	background:url('/IMG_SKIN_BLUE_SNOWFLAKES') center;
+	text-shadow:0px 0px 2px rgba(255,255,255,1);
+}
+td.list, td.listwrap {
+	background:url('/IMG_SKIN_BLUE_SNOWFLAKES_L1') center top;
+}
+td.list2, td.listwrap2 {
+	background:url('/IMG_SKIN_BLUE_SNOWFLAKES_L2') center bottom;
+}
+.listhighlight, .list2highlight, .listwraphighlight, .listwrap2highlight {
+	background:url('/IMG_SKIN_BLUE_SNOWFLAKES_LH') center;
+}
+progress {
+	color:rgb(220,250,255);
+}
+progress::-webkit-progress-value {
+	background-image:
+		-webkit-linear-gradient(-45deg, transparent 33%, rgba(0,0,0,.1) 33%, rgba(0,0,0,.1) 66%, transparent 66%),
+		-webkit-linear-gradient(top, rgba(255,255,255,.25), rgba(0,0,0,.25)),
+		-webkit-linear-gradient(left, rgb(220,250,255), rgb(130,190,235));
+	background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+progress::-moz-progress-bar {
+	background-image:
+		-moz-linear-gradient(135deg, transparent 33%, rgba(0,0,0,.1) 33%, rgba(0,0,0,.1) 66%, transparent 66%),
+		-moz-linear-gradient(top, rgba(255,255,255,.25), rgba(0,0,0,.25)),
+		-moz-linear-gradient(left, rgb(220,250,255), rgb(130,190,235));
+	background-size:35px 20px, 100% 100%, 100% 100%; 
+}

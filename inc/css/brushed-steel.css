@@ -1,0 +1,83 @@
+body {
+	background:
+		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.15) 30%, rgba(255,255,255,.3) 32%, rgba(255,255,255,0) 33%) 0 0,
+		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.3) 13%, rgba(255,255,255,0) 14%) 0 0,
+		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 17%, rgba(255,255,255,.43) 19%, rgba(255,255,255,0) 20%) 0 110px,
+		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) -130px -170px,
+		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) 130px 370px,
+		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.2) 13%, rgba(255,255,255,0) 14%) 0 0,
+		linear-gradient(top, rgba(255,255,255,0.50), rgba(0,0,0,0.25)),
+		url('/IMG_SKIN_BRUSHED_STEEL') center;
+	background:
+		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.15) 30%, rgba(255,255,255,.3) 32%, rgba(255,255,255,0) 33%) 0 0,
+		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.3) 13%, rgba(255,255,255,0) 14%) 0 0,
+		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 17%, rgba(255,255,255,.43) 19%, rgba(255,255,255,0) 20%) 0 110px,
+		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) -130px -170px,
+		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) 130px 370px,
+		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.2) 13%, rgba(255,255,255,0) 14%) 0 0,
+		-moz-linear-gradient(top, rgba(255,255,255,0.50), rgba(0,0,0,0.25)),
+		url('/IMG_SKIN_BRUSHED_STEEL') center;
+	background:
+		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.15) 30%, rgba(255,255,255,.3) 32%, rgba(255,255,255,0) 33%) 0 0,
+		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.3) 13%, rgba(255,255,255,0) 14%) 0 0,
+		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 17%, rgba(255,255,255,.43) 19%, rgba(255,255,255,0) 20%) 0 110px,
+		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) -130px -170px,
+		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) 130px 370px,
+		radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.2) 13%, rgba(255,255,255,0) 14%) 0 0,
+		-webkit-linear-gradient(top, rgba(255,255,255,0.50), rgba(0,0,0,0.25)),
+		url('/IMG_SKIN_BRUSHED_STEEL') center;
+	background-size:470px 470px, 970px 970px, 410px 410px, 610px 610px, 530px 530px, 730px 730px, 100% 100%;
+	background-attachment:fixed;
+}
+a, td.menu a, td.listtitle, td.listtitle a, .stats, .stats a, .welcome, .messages,
+input[type=button]:hover, input[type=submit]:hover, input[type=checkbox]:hover, td.listtitle input[type=button]:hover, td.listtitle input[type=submit]:hover, td.listtitle input[type=checkbox]:hover,
+td.listtitle input:hover, td.listtitle textarea:hover, td.listtitle select:hover, td.footer, td.footer a, td.stats, .stats, .white, .tree
+{
+	color:rgba(0,0,0,.75);
+}
+a:hover, td.menu a:hover, td.footer a:hover, td.listtitle a:hover, .stats a:hover, .listhighlight a:hover, .list2highlight a:hover, .listwraphighlight a:hover, .listwrap2highlight a:hover {
+	color:rgb(42,100,150);
+}
+input[type=button]:hover, input[type=submit]:hover, input[type=checkbox]:hover, td.listtitle input[type=button]:hover, td.listtitle input[type=submit]:hover, td.listtitle input[type=checkbox]:hover {
+	background:rgb(195,200,205);
+}
+td.head, td.menu, td.footer, .blue_gradient {
+	background:
+		-webkit-linear-gradient(left, rgba(0,0,0,.40), rgba(0,0,0,.0) 1%, rgba(0,0,0,.0) 99%, rgba(0,0,0,.40)),
+		url('/IMG_SKIN_BRUSHED_STEEL') center;
+	background:
+		-moz-linear-gradient(left, rgba(0,0,0,.40), rgba(0,0,0,.0) 1%, rgba(0,0,0,.0) 99%, rgba(0,0,0,.40)),
+		url('/IMG_SKIN_BRUSHED_STEEL') center;
+	background:
+		linear-gradient(left, rgba(0,0,0,.40), rgba(0,0,0,.0) 1%, rgba(0,0,0,.0) 99%, rgba(0,0,0,.40)),
+		url('/IMG_SKIN_BRUSHED_STEEL') center;
+}
+td.listtitle, .stats {
+	background:url('/IMG_SKIN_BRUSHED_STEEL') center;
+}
+td.list, td.listwrap {
+	background:url('/IMG_SKIN_BRUSHED_STEEL_L1') center top;
+}
+td.list2, td.listwrap2 {
+	background:url('/IMG_SKIN_BRUSHED_STEEL_L2') center bottom;
+}
+.listhighlight, .list2highlight, .listwraphighlight, .listwrap2highlight {
+	background:url('/IMG_SKIN_BRUSHED_STEEL_LH') center;
+}
+progress {
+	color:rgb(195,200,205);
+}
+progress::-webkit-progress-value {
+	background-image:
+		-webkit-linear-gradient(-45deg, transparent 33%, rgba(0,0,0,.1) 33%, rgba(0,0,0,.1) 66%, transparent 66%),
+		-webkit-linear-gradient(top, rgba(255,255,255,.25), rgba(0,0,0,.25)),
+		-webkit-linear-gradient(left, rgba(195,200,205,.50), rgb(195,200,205));
+	background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+progress::-moz-progress-bar {
+	background-image:
+		-moz-linear-gradient(135deg, transparent 33%, rgba(0,0,0,.1) 33%, rgba(0,0,0,.1) 66%, transparent 66%),
+		-moz-linear-gradient(top, rgba(255,255,255,.25), rgba(0,0,0,.25)),
+		-moz-linear-gradient(left, rgba(195,200,205,.50), rgb(195,200,205));
+	background-size:35px 20px, 100% 100%, 100% 100%; 
+}
