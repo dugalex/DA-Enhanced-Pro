@@ -126,7 +126,7 @@ table.main {
 	text-align:right;
 }
 .logo {
-	background:url('/IMG_SKIN_LOGO') center center no-repeat;
+	background:url('/IMG_SKIN_HEADER') center center no-repeat;
 	height:100px;
 	width:250px;
 	float:left;

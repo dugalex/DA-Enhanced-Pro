@@ -166,7 +166,7 @@
 166=You cannot set an unlimited send limit.
 167=Please set a limit between 1 and %d
 168=your new send limit is: %s
-169=%sClean Forwarders Values%s
+169=%sClean Forwarders%s
 170=Until the cache is created, the values may not be correct.  Refresh the page in 1 minute.
 171=The cache is being updated. Please refresh the page in 1 minute.
 172=User %s has one or more hard links in their path:
@@ -208,3 +208,4 @@
 208=%s is not a valid exim date.
 209=minutes
 210=hours
+211=Purge

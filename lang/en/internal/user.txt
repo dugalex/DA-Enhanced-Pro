@@ -112,3 +112,9 @@
 112=You cannot delete yourself (%s)
 113=ns1 or ns2 are not valid nameservers
 114=No changes have been made
+115=User
+116=Reseller
+117=Admin
+118=E-Mail
+119=FTP
+120=Database

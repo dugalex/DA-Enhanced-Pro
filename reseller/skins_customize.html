@@ -1,0 +1,37 @@
+|LF_SKINS|
+|?TREE=&raquo; <a class=tree href="/CMD_SKINS">`LANG_MANAGE_SKINS`</a> &raquo; <a class=tree href="/CMD_SKINS?action=edit_customization&name=`name`">`LANG_CUSTOMIZE_SKIN`</a>|
+|?HELP_SECTION=`RESELLER_HELPER`/skins.html|
+|HTM_HEADER_FULL|
+
+
+<table class=list cellpadding=3 cellspacing=1>
+	<tr><td class=listtitle colspan=2>|LANG_CURRENT_SETTINGS| <b>|name|</b></td></tr>
+
+	<tr>
+		<td class=list>|*if HAS_CUSTOM_LOGO="1"|
+				|LANG_CUSTOM_LOGO|
+				<form name=uploadform action="CMD_SKINS" method="POST">
+					<input type=hidden name="action" value="clear_custom_logo">
+					<input type=hidden name="name" value="|name|">
+					<input type=submit value="|LANG_DELETE|">
+				</form>
+			|*else|
+				|LANG_DEFAULT_LOGO|
+			|*endif|
+		</td>
+		<td class=list>
+				<div class="show_logo"><a target=_blank href="CMD_SKINS?action=view_custom_logo&name=|name|"><img src="CMD_SKINS?action=view_custom_logo&name=|name|"></a></div>
+		</td>
+	</tr>
+
+	<form name=uploadform action="CMD_SKINS" enctype="multipart/form-data" method="POST">
+		<input type="hidden" name="MAX_FILE_SIZE" value="10485760">
+		<input type="hidden" name="action" value="upload_logo">
+		<input type="hidden" name="name" value="|name|">
+		<tr><td class=list colspan=2>|LANG_UPLOAD_LOGO|: |CUSTOM_LOGO_TOKEN|</td></tr>
+		<tr><td class=list>|LANG_FILE|:</td><td class=list><input type=file name="file" size=40> <input type=submit name=save value="|LANG_UPLOAD|"></td></tr>
+		<tr><td class=listtitle align=right colspan=2>&nbsp;</td></tr>
+	</form>
+</table>
+
+|HTM_FOOTER_FULL|

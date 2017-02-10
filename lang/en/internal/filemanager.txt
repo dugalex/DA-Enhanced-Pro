@@ -47,7 +47,7 @@
 48=Click %s%s%s here%s to go back
 49=has been saved as
 50=Cannot rename a directory onto an existing file or directory
-51=The filename %s already exists
+51=The path %s already exists
 52=has been renamed to
 53=has been copied to
 54=You must enter a folder 'name'. eg: images
@@ -75,3 +75,11 @@
 76=Ensure %s exists and is chmod to 1777.
 77=No files have been selected for upload.
 78=The directory %s seems to be owned by 'apache'.  Try using the 'Reset Owner' option, then try again.
+79=The path already exists, but is not a directory
+80=Clipboard
+81=Filename
+82=OK
+83=Unable to open directory
+84=Recursive search at max depth on %s
+85=Uploaded file is not valid for copy
+86=Script Output

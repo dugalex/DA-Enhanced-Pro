@@ -7,7 +7,7 @@
 7=Warning from named-checkzone:
 8=Added record <b>%s %s %s</b> to satisfy <b>%s NS %s</b>
 9=Please check the zone for %s to ensure the nameserver A records are correct.
-10=DNSSSEC - DNS Security
+10=DNSSEC - DNS Security
 11=Keys
 12=Not yet generated
 13=Signed
@@ -25,3 +25,7 @@
 25=%sZone Keys are newer than the Zone Signinging.  Re-sign your zone.%s
 26=%sZone Signing has expired.  Re-sign your zone.%s
 27=Expiry
+28=Unable to read DS file %s
+29=Unable to read zonefile for %s
+30=Unable to write zonefile for %s
+31=DNSSEC Keys generated

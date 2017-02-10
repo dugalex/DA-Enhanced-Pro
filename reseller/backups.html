@@ -18,6 +18,14 @@ function submitBackup()
 	document.tableform1.submit();
 
 }
+
+function set_custom_path()
+{
+	if (document.getElementById('append_path').value == 'custom')
+		document.getElementById('custom_path').className = 'path_visible';
+	else
+		document.getElementById('custom_path').className = 'path_hidden';
+}
 //-->
 </script>
 
@@ -142,8 +150,19 @@ function submitBackup()
 						</table>
 					</td>
 				</tr>
+				<tr><td class=listtitle>&nbsp;</td>
+					<td class=listtitle>
+						- |LANG_APPEND_TO_PATH| |PATH_APPEND|
+					</td>
+				</tr>
+				<tr class="|CUSTOM_PATH_CLASS|" id="custom_path"><td></td>
+					<td class=list>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						|LANG_APPEND|: /<input type=text name="custom_append" value="|CUSTOM_APPEND_VALUE|" size=21>
+						<a target=_blank href="http://help.directadmin.com/item.php?id=539">(?)</a>&nbsp;
+					</td>
+				</tr>
 			</table>
-
 
 	</td>
 </tr>

@@ -1,0 +1,10 @@
+<table class=list cellpadding=3 cellspacing=1>
+<tr><td class=listtitle colspan=4>Upload Files to <b>/</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Max Filesize : 10.0 MB</td></tr>
+	<form name=uploadform action="/CMD_API_FILE_MANAGER" enctype="multipart/form-data" method="POST">
+		<input type="hidden" name="MAX_FILE_SIZE" value="10485760">
+		<input type=hidden name="action" value="upload">
+		<input type=hidden name="path" value="/test/upload">
+<tr><td class=list colspan=1>1: <input type=file name="file[]" size=40 multiple="multiple"></td>
+<tr><td class=listtitle colspan=4 align=center><input type=submit value="Upload Files"></tr>
+	</form>
+</table>

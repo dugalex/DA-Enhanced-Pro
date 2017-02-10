@@ -48,3 +48,4 @@
 48=Provided value is not valid. Provide either an IP, an IP range, domain, or wildcard domain (*.domain.com)<br><a target=_blank href='http://www.directadmin.com/features.php?id=1252'>More Info</a>
 49=Blocked
 50=user_brutecount disabled
+51=Stopped

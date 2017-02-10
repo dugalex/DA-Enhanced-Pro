@@ -18,3 +18,10 @@
 18=at most
 19=contains
 20=starts with
+21=selected
+22=Show
+23=Results
+24=<b>|</b>
+25=Sort
+26=Column in
+27=Sub Sort

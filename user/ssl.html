@@ -54,6 +54,15 @@ function setRequest(onoff)
 	}
 }
 
+function setPaste(onoff)
+{
+	var paste = document.getElementById('paste_visibility');
+	if (onoff == 'on')
+		paste.style.display = '';
+	else
+		paste.style.display = 'none';
+}
+
 function set_letsencrypt_other_options(disp)
 {
 	document.getElementById('country_visibility').style.display = disp;
@@ -168,10 +177,10 @@ function init_letsencrypt_options()
 		<input type=hidden name=domain value="|DOMAIN|">
 		<input type=hidden name=action value="save">
 
-	<tr><td class=listtitle align=center><input type=radio name=type value="server" |SERVERCHECKED| onClick="setRequest('off');"></td><td class=listtitle colspan=2>|LANG_USE_SERVERS|</td></tr>
+	<tr><td class=listtitle align=center><input type=radio name=type value="server" |SERVERCHECKED| onClick="setRequest('off'); setPaste('off');"></td><td class=listtitle colspan=2>|LANG_USE_SERVERS|</td></tr>
 	<tr><td class=list>&nbsp;</td><td class=list colspan=2>|LANG_USE_SHARED|</td></tr>
 
-	<tr><td class=listtitle align=center><input type=radio name=type value="create" onClick="setRequest('on');"></td>
+	<tr><td class=listtitle align=center><input type=radio name=type value="create" onClick="setRequest('on'); setPaste('off');"></td>
 		<td class=listtitle colspan=2>
 			<input type=radio name=request value="no" checked disabled onClick="set_letsencrypt_options();">|LANG_CREATE_SELF_SIGNED|<br>
 			<input type=radio name=request value="yes" disabled onClick="set_letsencrypt_options();">|LANG_CREATE_CSR|
@@ -204,18 +213,33 @@ function init_letsencrypt_options()
 	</script>
 |*endif|
 
-	<tr><td class=listtitle align=center><input type=radio name=type value="paste" |PASTECHECKED| onClick="setRequest('off');"></td><td class=listtitle colspan=2>|LANG_PASTE|</td></tr>
-	<tr><td class=list>&nbsp;</td>
+	<tr><td class=listtitle align=center><input type=radio name=type value="paste" |PASTECHECKED| onClick="setRequest('off'); setPaste('on');"></td><td class=listtitle colspan=2>|LANG_PASTE|</td></tr>
+	<tr id='paste_visibility' |*if PASTECHECKED!="checked"|style="display: none"|*endif|>
+		<td class=list>&nbsp;</td>
 		<td class=list align=center colspan=2>
 			<textarea class="code_edit ssl_text" name=certificate rows=16>|KEY||CERTIFICATE|</textarea><br>
 			<input type=button value="|LANG_PASTE_FROM|" onClick="pasteCertificate(document.info.certificate)">
 			<input type=button value="|LANG_COPY_TO|" onClick="copyCertificate(document.info.certificate)"> |LANG_IE_ONLY|
 		|*if LETSENCRYPT_RENEWAL_DAYS!=""|
-			<div style='padding: 20px; font-weight: bold;'>|LANG_LETSENCRYPT_IN_USE_AUTO_RENEWAL| |LETSENCRYPT_RENEWAL_DAYS| |LANG_LETSENCRYPT_DAYS|.</div>
+			<div style='padding: 20px; padding-bottom: 5px; font-weight: bold;'>|LANG_LETSENCRYPT_IN_USE_AUTO_RENEWAL| |LETSENCRYPT_RENEWAL_DAYS| |LANG_LETSENCRYPT_DAYS|.</div>
+			<div style='padding-bottom: 20px'><input type=submit name='disable_letsencrypt_autorenew' value="|LANG_LE_DISABLE_AUTORENEW|"></div>
 		|*endif|
 
 		</td>
 	</tr>
+	|*if CERTIFICATE_HOSTS!=""|
+		<tr>
+			<td class=list>&nbsp;</td>
+			<td class=list>|LANG_CERTIFICATE_HOSTS|</td>
+			<td class=listwrap>|CERTIFICATE_HOSTS|</td>
+		</tr>
+		<tr>
+			<td class=list>&nbsp;</td>
+			<td class=list>|LANG_CERTIFICATE_EXPIRY|</td>
+			<td class=list>|NOT_AFTER|</td>
+		</tr>
+	|*endif|
+
 	<tr><td class=listtitle colspan=3 align=right>
 		<input type=submit name=submit value="|LANG_SAVE|">
 	</td></tr>
@@ -224,6 +248,16 @@ function init_letsencrypt_options()
 </table>
 <br>
 <a href="/CMD_SSL?DOMAIN=|DOMAIN|&view=cacert">|LANG_CLICK_HERE|<br><br>
+
+
+|*if EXIM_SNI_HOSTS_TABLE|
+	<table>
+	<tr>
+		<td class="list" colspan=2>|EXIM_SNI_HOSTS_TABLE|</td>
+	</tr>
+	</table>
+|*endif|
+
 
 |LANG_NOTE|
 |HTM_USER_BOTTOM|

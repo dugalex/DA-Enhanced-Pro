@@ -7,6 +7,21 @@
 .step { white-space: nowrap; border: 1px solid light gray;}
 </style>
 
+<script language="Javascript">
+<!--
+
+function set_custom_path()
+{
+	if (document.getElementById('append_path').value == 'custom')
+		document.getElementById('custom_path').className = 'path_visible';
+	else
+		document.getElementById('custom_path').className = 'path_hidden';
+}
+
+//-->
+</script>
+
+
 <table class=list cellspacing=6 cellpadding=8>
 <tr><td align=center colspan=3><b>|LANG_MODIFY_BACKUP|</b></td></tr>
 <form name=tableform1 action="/CMD_USER_BACKUP" method="POST">
@@ -119,6 +134,18 @@
 							<tr><td class=list align=right>|LANG_REMOTE_PORT|:</td><td class=list><input type=text name=ftp_port value="|ftp_port|"></td></tr>
 							<tr><td class=list align=right>|LANG_SECURE_FTP|:</td><td class=list>|FTP_SECURE_SELECT|</td></tr>
 						</table>
+					</td>
+				</tr>
+				<tr><td class=listtitle>&nbsp;</td>
+					<td class=listtitle>
+						- |LANG_APPEND_TO_PATH| |PATH_APPEND|
+					</td>
+				</tr>
+				<tr class="|CUSTOM_PATH_CLASS|" id="custom_path"><td></td>
+					<td class=list>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						|LANG_APPEND|: /<input type=text name="custom_append" value="|CUSTOM_APPEND_VALUE|" size=21>
+						<a target=_blank href="http://help.directadmin.com/item.php?id=539">(?)</a>&nbsp;
 					</td>
 				</tr>
 			</table>
