@@ -9,7 +9,7 @@ If installed as "enhanced" skin, it will be automatically updated on DirectAdmin
 ![Themes](https://github.com/dugalex/DA-Enhanced-Pro/blob/master/inc/images/skin-themes.jpg)
 
 
-#Installation & Update:
+# Install & Update:
 
 !!! WARNING !!! This will change the default "enhanced" skin but will not overwrite any existing DirectAdmin files if they are newer. Use the same command to update.
 ------------------------------------------------------------------------------------------
