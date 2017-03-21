@@ -9,13 +9,6 @@ If installed as "enhanced" skin, it will be automatically updated on DirectAdmin
 ![Themes](https://github.com/dugalex/DA-Enhanced-Pro/blob/master/inc/images/skin-themes.jpg)
 
 
-!!! NOTE !!!
-If you are using DirectAdmin over SSL you will have to add the option below to your directadmin.conf file for the skin to work properly.
-------------------------------------------------------------------------------------------
-```
-ssl_ignore_when_local=1
-```
-
 #Installation & Update:
 
 !!! WARNING !!! This will change the default "enhanced" skin but will not overwrite any existing DirectAdmin files if they are newer. Use the same command to update.
