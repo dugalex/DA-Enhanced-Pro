@@ -14,8 +14,9 @@ If you are using DirectAdmin over SSL you will have to add the option below to y
 ------------------------------------------------------------------------------------------
 ```
 ssl_ignore_when_local=1
-#Installation & Update:
 ```
+
+#Installation & Update:
 
 !!! WARNING !!! This will change the default "enhanced" skin but will not overwrite any existing DirectAdmin files if they are newer. Use the same command to update.
 ------------------------------------------------------------------------------------------
