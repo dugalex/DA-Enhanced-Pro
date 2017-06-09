@@ -139,6 +139,28 @@ function selectAllDNS()
 	<td class=list2 align=center><input type=submit name=add value="|LANG_ADD|" ></td></tr>
 </form>
 |*endif|
+
+|*if DNS_TLSA="yes"|
+<form action='/CMD_DNS_ADMIN' method='POST'>
+	<input type=hidden name=action value=add>
+	<input type=hidden name=domain value="|DOMAIN|">
+	<input type=hidden name=type value="TLSA">
+	<tr><td class=list2><input type=text name=name value=""></td><td class=list2 align=center>TLSA</td><td class=list2><input type=text name=value size=26 ></td>
+	<td class=list2 align=center><input type=submit name=add value="|LANG_ADD|" ></td></tr>
+</form>
+|*endif|
+|*if DNS_CAA="yes"|
+<form action='/CMD_DNS_ADMIN' method='POST'>
+	<input type=hidden name=action value=add>
+	<input type=hidden name=domain value="|DOMAIN|">
+	<input type=hidden name=type value="CAA">
+	<tr><td class=list2><input type=text name=name value=""></td><td class=list2 align=center>CAA</td><td class=list2><input type=text name=value size=26 ></td>
+	<td class=list2 align=center><input type=submit name=add value="|LANG_ADD|" ></td></tr>
+</form>
+|*endif|
+
+
+
 |*if DNS_DS="yes"|
 <form action='/CMD_DNS_ADMIN' method='POST'>
 	<input type=hidden name=action value=add>

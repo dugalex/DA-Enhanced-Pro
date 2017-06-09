@@ -52,3 +52,4 @@
 52=Error writing %s: %s
 53=SNI Host '%s' does not belong to you
 54=Back
+55=SNI is disabled for this doamin

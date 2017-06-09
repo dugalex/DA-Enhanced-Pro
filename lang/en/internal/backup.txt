@@ -34,7 +34,7 @@
 34=User %s has been backed up.
 35=You have not selected any Users.  Please go back and select some before creating the backup.
 36=User %s does not exist on the system.
-37=User %s is not on your list.  You cannot make a backup for him.
+37=User %s is not on your list.  You cannot make a backup for them.
 38=Invalid IP/Domain for the ftp connection
 39=Invalid ftp username
 40=Invalid ftp path
