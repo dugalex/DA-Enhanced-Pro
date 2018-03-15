@@ -30,8 +30,34 @@
 		<input type="hidden" name="name" value="|name|">
 		<tr><td class=list colspan=2>|LANG_UPLOAD_LOGO|: |CUSTOM_LOGO_TOKEN|</td></tr>
 		<tr><td class=list>|LANG_FILE|:</td><td class=list><input type=file name="file" size=40> <input type=submit name=save value="|LANG_UPLOAD|"></td></tr>
-		<tr><td class=listtitle align=right colspan=2>&nbsp;</td></tr>
+		<!-- <tr><td class=listtitle align=right colspan=2>&nbsp;</td></tr> -->
 	</form>
 </table>
+
+|CUSTOM_COLOR_TABLE|
+<script>
+function check_color(color_num)
+{
+	var select = "color_check_";
+	with (document.tableform)
+	{
+		for (i=0; i < elements.length; i++)
+			if (elements[i].type == 'checkbox' && !elements[i].disabled)
+				if (elements[i].name.substring(0, select.length) == select)
+					if (elements[i].value == color_num)
+						elements[i].checked = true;
+	}
+}
+function update_color_dropdown(color_num, value)
+{
+	document.getElementById("color_"+color_num+"_choice").style.background=value;
+	check_color(color_num);
+}
+function update_color_picker(color_num, value)
+{
+	document.getElementById("picker_id_"+color_num).innerHTML=value;
+	check_color(color_num);
+}
+</script>
 
 |HTM_FOOTER_FULL|

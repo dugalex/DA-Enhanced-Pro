@@ -22,13 +22,13 @@
 |*if AJAX="1"|
       		<tr><td class=list>|LANG_USERNAME|:</td>
       			<td class=list>
-					<input type=text name=username onkeydown="showResult(this.value, 'CMD_AJAX_USERS')" onblur="hideit(1, 'CMD_AJAX_USERS')" autocomplete="off">
+					<input type=text name=username onkeydown="showResult(this.value, 'CMD_AJAX_USERS')" onblur="hideit(1, 'CMD_AJAX_USERS')" autocomplete="off" autocapitalize="none">
 					<div id="livecontainer"><div id="livesearch"></div></div>
 				</td></tr>
 
 
 |*else|
-			<tr><td class=list>|LANG_USERNAME|:</td><td class=list><input type=text name=username></td></tr>
+			<tr><td class=list>|LANG_USERNAME|:</td><td class=list><input type=text name=username autocapitalize="none"></td></tr>
 |*endif|
       		<tr><td class=list>|LANG_ENTER_PASS|:</td><td class=list><input type=password id=passwd name=passwd |CHECK_PASS|><div id=passwd_result class=warning></td></tr>
 			<tr><td class=list>|LANG_RE-ENTER_PASS|:</td><td class=list><input type=password id=passwd2 name=passwd2 onChange="checkPass()"></td></tr>

@@ -137,3 +137,5 @@
 137=Backing up Databases
 138=Backing up User Configs
 139=No
+140=Tried to restore '%s' to '%s', but this path is not in the %s
+141=Account created in directory '%s'

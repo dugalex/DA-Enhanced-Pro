@@ -77,6 +77,9 @@ function setText(inputid,checkbx)
 
 		<tr><td class=list>|LANG_SKIN|</td>			<td class=list align=center>|SKINS|</td>			<td class=list></td></tr>
 		<tr><td class=list2>|LANG_LANGUAGE|</td>			<td class=list2 align=center>|LANGUAGESELECT|</td>	<td class=list2></td></tr>
+|*if CREATE_USER_HOME_OVERRIDE|
+		<tr><td class=list>|LANG_HOME_DIR|</td>	<td class=list align=center>|CREATE_USER_HOME_OVERRIDE|</td><td class=list>|LANG_LOCATION_FOR_THIS_ACCOUNT|</td></tr>
+|*endif|
 
 |*if CUSTOM_ITEM_1|
 		<tr><td class=list>|CUSTOM_ITEM_1_STR|</td>	<td class=list align=center>|CUSTOM_ITEM_1|</td>	<td class=list>|CUSTOM_ITEM_1_DESC|</td></tr>
@@ -92,6 +95,15 @@ function setText(inputid,checkbx)
 |*endif|
 |*if CUSTOM_ITEM_5|
 		<tr><td class=list>|CUSTOM_ITEM_5_STR|</td>	<td class=list align=center>|CUSTOM_ITEM_5|</td>	<td class=list>|CUSTOM_ITEM_5_DESC|</td></tr>
+|*endif|
+|*if CUSTOM_ITEM_6|
+		<tr><td class=list2>|CUSTOM_ITEM_6_STR|</td>	<td class=list2 align=center>|CUSTOM_ITEM_6|</td>	<td class=list2>|CUSTOM_ITEM_6_DESC|</td></tr>
+|*endif|
+|*if CUSTOM_ITEM_7|
+		<tr><td class=list>|CUSTOM_ITEM_7_STR|</td>	<td class=list align=center>|CUSTOM_ITEM_7|</td>	<td class=list>|CUSTOM_ITEM_7_DESC|</td></tr>
+|*endif|
+|*if CUSTOM_ITEM_8|
+		<tr><td class=list2>|CUSTOM_ITEM_8_STR|</td>	<td class=list2 align=center>|CUSTOM_ITEM_8|</td>	<td class=list2>|CUSTOM_ITEM_8_DESC|</td></tr>
 |*endif|
 
 	<tr ><td class=listtitle align=right colspan=3>|LANG_PACK_NAME|: <input type=text name=packagename value="|PACKAGENAME|"> <input type=submit value='|LANG_SAVE|' name=add> <input type=submit value='|LANG_CANCEL|' name=cancel></td ></tr >

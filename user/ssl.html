@@ -189,13 +189,13 @@ function init_letsencrypt_options()
 			|*endif|
 			</td>
 	</tr>
-	<tr id=country_visibility><td class=list>&nbsp;</td><td class=list>|LANG_COUNTRY|</td><td class=list><input type=input name=country size=2 maxlength=2></td></tr>
-	<tr id=province_visibility><td class=list>&nbsp;</td><td class=list>|LANG_STATE|</td><td class=list><input type=input name=province></td></tr>
-	<tr id=city_visibility><td class=list>&nbsp;</td><td class=list>|LANG_CITY|</td><td class=list><input type=input name=city></td></tr>
-	<tr id=company_visibility><td class=list>&nbsp;</td><td class=list>|LANG_COMPANY|</td><td class=list><input type=input name=company></td></tr>
-	<tr id=division_visibility><td class=list>&nbsp;</td><td class=list>|LANG_COMPANY_DIV|</td><td class=list><input type=input name=division></td></tr>
+	<tr id=country_visibility><td class=list>&nbsp;</td><td class=list>|LANG_COUNTRY|</td><td class=list><input type=input name=country size=2 maxlength=2 value="|COUNTRY|"></td></tr>
+	<tr id=province_visibility><td class=list>&nbsp;</td><td class=list>|LANG_STATE|</td><td class=list><input type=input name=province value="|PROVINCE|"></td></tr>
+	<tr id=city_visibility><td class=list>&nbsp;</td><td class=list>|LANG_CITY|</td><td class=list><input type=input name=city value="|CITY|"></td></tr>
+	<tr id=company_visibility><td class=list>&nbsp;</td><td class=list>|LANG_COMPANY|</td><td class=list><input type=input name=company value="|COMPANY|"></td></tr>
+	<tr id=division_visibility><td class=list>&nbsp;</td><td class=list>|LANG_COMPANY_DIV|</td><td class=list><input type=input name=division value="|DIVISION|"></td></tr>
 	<tr><td class=list>&nbsp;</td><td class=list>|LANG_COMMON_NAME|</td><td class=list><input type=input name=name value="www.|DOMAIN|"></td></tr>
-	<tr><td class=list>&nbsp;</td><td class=list>|LANG_EMAIL|</td><td class=list><input type=input name=email></td></tr>
+	<tr><td class=list>&nbsp;</td><td class=list>|LANG_EMAIL|</td><td class=list><input type=input name=email value="|EMAIL|"></td></tr>
 	<tr><td class=list>&nbsp;</td><td class=list>|LANG_KEYSIZE|</td><td class=list><select class=selectclass name=keysize><option>2048</option><option selected>4096</option></select></td></tr>
 	<tr><td class=list>&nbsp;</td><td class=list>|LANG_CERT_TYPE|</td><td class=list><select class=selectclass name=encryption><option value="rsa">SHA1</option><option value="sha256" selected>SHA256</option></select></td></tr>
 |*if LETSENCRYPT="1"|

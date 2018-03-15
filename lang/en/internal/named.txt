@@ -29,3 +29,4 @@
 29=Unable to read zonefile for %s
 30=Unable to write zonefile for %s
 31=DNSSEC Keys generated
+32=There is only 1 %s record for %s=%s, not removing it

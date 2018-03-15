@@ -93,7 +93,7 @@
 93=You must provide a valid name and it must exist.
 94=You must provide a list name
 95=Listname must be all lower case letters
-96=Listname must be 20 characters or less
+96=Listname must be %d characters or less
 97=A list alias already exists with that name
 98=A pop account already exists with that name
 99=A forwarder already exists with that name

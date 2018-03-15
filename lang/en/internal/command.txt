@@ -580,7 +580,7 @@
 580=Custom Skin Logos are not enabled
 581=Custom Skin Logo uploaded
 582=Error with Mail SNI
-583=exim_sni is not enabled
+583=mail_sni is not enabled
 584=Mail SNI entries added
 585=Mail SNI entries removed
 586=Failed Referer Check
@@ -588,3 +588,9 @@
 588=The referer request set (%s) is not in the allowed list: %s
 589=The referer used is not safe as it can be controlled by a User: %s
 590=Unable to Logout
+591=%sOther Disk Usage
+592=Restore will run in the background
+593=Home path '%s' is not in the allowed home_override_list
+594=Home Directory
+595=Does not match setting: %s
+596=Server

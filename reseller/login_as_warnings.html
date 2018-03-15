@@ -1,0 +1,24 @@
+|?WARN_URL=https://www.directadmin.com/features.php?id=2062|
+|?WARN_INFO=Notifying you that if you 'Login As' this account, you might be using a skin who's code under their control.  Click for more info|
+		|*if IS_RESELLER_SKIN="1"|
+		<a href="|WARN_URL|" target=_blank class='no_decore'>
+		<div title="|WARN_INFO|" class='trim'>
+		<b class='warning'>|LANG_RESELLER_SKIN_OWNED| |RESELLER_SKIN_OWNER|</b>
+		<br>|RESELLER_SKIN|</a></div></a>
+		|*endif|
+
+		|*if IS_RESELLER_SKIN="2"|
+		<a href="|WARN_URL|" target=_blank class='no_decore'>
+		<div title="|WARN_INFO|" class='trim'>
+		|RESELLER_SKIN|
+		<br>|LANG_WILL_USE_YOURS|
+		<input type=hidden name='use_current_skin' value='yes'></div></a>
+		|*endif|
+
+		|*if IS_RESELLER_SKIN="-1"|
+		<a href="|WARN_URL|" target=_blank class='no_decore'>
+		<div title="|WARN_INFO|" class='trim'>
+		<b title="|WARN_INFO|" class='warning'>|LANG_CANNOT_CONFIRM_OWNER|</b>
+		<br>|IS_RESELLER_SKIN_ERROR|
+		<br>|RESELLER_SKIN|</div></a>
+		|*endif|

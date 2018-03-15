@@ -90,3 +90,4 @@
 90=Your database username (%s) contains invalid characters (%s).  MySQL account will not be created on %s.
 91=Your database name (%s) contains invalid characters (%s).
 92=Error Granting Main Username access to database:
+93=Value is too long.  Max=%d

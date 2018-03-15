@@ -191,8 +191,16 @@
 						|LANG_BLACKLIST_IP|
 				</td>
 				<td class="list top-border">
-						<input type=checkbox name=bruteforce value="yes" |BRUTEFORCECHECKED|>
-						&nbsp;&nbsp;|LANG_BLACKLIST_AFTER| <input type=text name=brutecount value="|BRUTECOUNT|" size=4> |LANG_LOGIN_ATTEMPTS| <a target=_blank href="http://help.directadmin.com/item.php?id=404">(?)</a>
+					<table cellpadding=0 cellspacing=0>
+						<tr>
+							<td><input type=checkbox name=bruteforce value="yes" |BRUTEFORCECHECKED|></td>
+							<td>|LANG_BLACKLIST_AFTER| <input type=text name=brutecount value="|BRUTECOUNT|" size=4> |LANG_LOGIN_ATTEMPTS| <a target=_blank href="http://help.directadmin.com/item.php?id=404">(?)</a></td>
+						</tr>
+						<tr>
+							<td align=center>|LANG_BRUTE_OR|</td>
+							<td>|LANG_BLACKLIST_AFTER| <input type=text name=brute_dos_count value="|BRUTE_DOS_COUNT|" size=4> |LANG_UNAUTH_CONN| <a target=_blank href="http://help.directadmin.com/item.php?id=2069">(?)</a></td>
+						</tr>
+					</table>
 				</td>
 		</tr>
 		<tr>

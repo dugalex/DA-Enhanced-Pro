@@ -53,3 +53,7 @@
 53=SNI Host '%s' does not belong to you
 54=Back
 55=SNI is disabled for this doamin
+56=Cannot find domain in the certificate.
+57=Not setting up Mail SNI.
+58=Cannot find any SAN values in the certificate.
+59=Certificate is Self-Signed

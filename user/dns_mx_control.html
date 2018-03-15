@@ -30,6 +30,10 @@ function selectAllDNS()
 // -->
 </script>
 
+|*if LOGIN_AS_DNSCONTROL="ON"|
+<br><span class="warning">|LANG_LOGIN_AS_DNS_CONTROL|</span>
+|*endif|
+
 <table class=list  cellpadding=3 cellspacing=1>
 <form name=tableform action='/CMD_DNS_MX' method='POST'>
 <tr>

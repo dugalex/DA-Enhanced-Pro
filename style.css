@@ -241,10 +241,10 @@ td.listtitle
 .blue_gradient, td.listtitle
 {
 	background: #425984;
-	background: -webkit-linear-gradient(#406e99, #6d8ba8, #345b80, #2c4a67); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#406e99, #6d8ba8, #345b80, #2c4a67); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#406e99, #6d8ba8, #345b80, #2c4a67); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#406e99, #6d8ba8, #345b80, #2c4a67); /* Standard syntax */
+	background: -webkit-linear-gradient(#406e99, #6d8ba8, |CUSTOM_COLOR_1|, #2c4a67); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#406e99, #6d8ba8, |CUSTOM_COLOR_1|, #2c4a67); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#406e99, #6d8ba8, |CUSTOM_COLOR_1|, #2c4a67); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#406e99, #6d8ba8, |CUSTOM_COLOR_1|, #2c4a67); /* Standard syntax */
 }
 
 .white
@@ -508,4 +508,23 @@ td.message_info
 	display:inline-block;
 	box-shadow: 1px 1px 3px #727272;
 	margin: 5px;
+}
+.color_box {
+	margin-right: 10px;
+	padding-right: 100px;
+	border: 1px solid black;
+}
+.color_picker {
+	width: 105px;
+	margin-right: 10px;
+}
+.no_decore {
+	TEXT-DECORATION: none;
+}
+.warning_info {
+	background: #ffffcc;
+	border: 1px solid #ff9900;
+	color: #4d3300;
+	text-align: center;
+	padding: 10px;
 }

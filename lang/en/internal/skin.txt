@@ -25,3 +25,16 @@
 25=You may need to press F5 to reload the logo
 26=Skin has been customized
 27=Customize the skin
+28=Custom Color
+29=Clear Customization
+30=Default
+31=Color has been customized
+32=Save
+33=No colors have been selected
+34='%s' is not a valid css hex color
+35=Skin '%s' does not have any custom color variables to set
+36=Color %s (%s) is not from the list: %s
+37=Write error with %s: %s
+38=Read error with %s: %s
+39=Error removing %s: %s"
+40=Uploaded %s value is not valid json
