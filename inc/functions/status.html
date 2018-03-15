@@ -2,66 +2,116 @@
 |?SK_ROOT=getenv('DOCUMENT_ROOT')."/"|
 
 |$|SK_PHP|
-<?php
 
-define('ROOT', getenv("DOCUMENT_ROOT").'/');
+<?php	
 
-$sk = new skclass();
+class skclass{
+	private function getApi($cmd, $post = false) {
+		//var_dump($_SERVER);
+		if (is_array($post)) {
+			$is_post = true;
+			$str = "";
+			foreach($post as $var => $value) {
+				if (strlen($str) > 0) $str.= "&";
+				$str.= $var . "=" . urlencode($value);
+			}
 
-class skclass {
-
-	function api_get($cmd,$post=false){
-		if(is_array($post)) {
-			$args = http_build_query($post,'','&');
-			$header  = "POST {$cmd} HTTP/1.1\r\n";
-			$header .= "Host: 127.0.0.1:{$_SERVER[SERVER_PORT]}\r\n";
-			$header .= "Cookie: session={$_SERVER[SESSION_ID]}; key={$_SERVER[SESSION_KEY]}\r\n";
-			$header .= "Content-type: application/x-www-form-urlencoded\r\n";
-			$header .= "Content-length: ".strlen($args)."\r\n\r\n";
-			$header .= $args;
+			$post = $str;
+		}
+		else {
+			$is_post = false;
+		}
+		if( isset( $_SERVER["SERVER_PORT"] ) ) {
+		    $_SERVER_PORT = $_SERVER["SERVER_PORT"];
 		} else {
-			$header  = "GET {$cmd} HTTP/1.1\r\n";
-			$header .= "Host: 127.0.0.1:{$_SERVER[SERVER_PORT]}\r\n";
-			$header .= "Cookie: session={$_SERVER[SESSION_ID]}; key={$_SERVER[SESSION_KEY]}\r\n\r\n";
+		    $_SERVER_PORT = $_ENV["SERVER_PORT"];
 		}
-		if ($_SERVER['SSL'] == 1) $before = 'ssl://127.0.0.1'; else $before = '127.0.0.1';
-		$socket = @fsockopen($before, $_SERVER['SERVER_PORT'], $sock_errno, $sock_errstr, 2);
-		if ($sock_errno || $sock_errstr) return '';
-		fwrite($socket, $header, strlen($header));
-		$status = socket_get_status($socket);
-		if($status['timed_out']) return '';
-		$result = '';
-		while (!feof($socket)) {
-			$result .= fgets($socket,32768);
+
+		if( isset( $_SERVER["SESSION_KEY"] ) ) {
+		    $_SESSION_KEY = $_SERVER["SESSION_KEY"];
+		} else {
+		    $_SESSION_KEY = $_ENV["SESSION_KEY"];
+		}    
+
+		if( isset( $_SERVER["SESSION_ID"] ) ) {
+		    $_SESSION_ID = $_SERVER["SESSION_ID"];
+		} else {
+		    $_SESSION_ID = $_ENV["SESSION_ID"];
 		}
-		@fclose($socket);
-		$result = explode("\r\n\r\n",$result,2);
-		return $result[1];
+		
+		$headers = array();
+		$headers["Host"] = "127.0.0.1:" . $_SERVER_PORT;
+		$headers["Cookie"] = "session=" . $_SESSION_ID . "; key=" . $_SESSION_KEY;
+		if ($is_post) {
+			$headers["Content-type"] = "application/x-www-form-urlencoded";
+			$headers["Content-length"] = strlen($post);
+		}
+
+		$send = ($is_post ? "POST " : "GET ") . $cmd . " HTTP/1.1\r\n";
+		foreach($headers as $var => $value) $send.= $var . ": " . $value . "\r\n";
+		$send.= "\r\n";
+		if ($is_post && strlen($post) > 0) $send.= $post . "\r\n\r\n";
+
+		    $sIP = "127.0.0.1";
+
+		// connect
+		$res = @fsockopen($sIP, $_SERVER_PORT, $sock_errno, $sock_errstr, 5);
+		if($sock_errno || $sock_errstr) {
+			return false;
+		}
+		if ($res) {
+		    // send query
+		    @fputs($res, $send, strlen($send));
+		    // get reply
+		    $result = '';
+		    while(!feof($res)) {
+		            $result .= fgets($res, 32768);
+		    }
+                    
+		    @fclose($res);
+
+		    // remove header
+		    $data = explode("\r\n\r\n", $result, 2);
+
+		    if(count($data) == 2) {
+		        return $data[1];
+		     } else {
+		        return false;
+		     }
+		} else {
+			return false;
+		}
+ 
+	}
+        
+	public function checkLocalSsl() {
+		if(( $_SERVER["SSL"] == 1 ) && (strstr($this->getApi("/CMD_API_LOAD_AVERAGE"), "use https"))) {
+			return true;
+		} else {
+			return false; 
+		}
 	}
 
-	function getServices() {
-		$str = $this->api_get('/CMD_API_SHOW_SERVICES');
-		if(strpos($str, 'directadmin') == false) return false;
-		parse_str(urldecode($str), $servArr);
+	public function getServices() {
+		if (!$str = $this->getApi("/CMD_API_SHOW_SERVICES")){return false;}
+		parse_str(urldecode($str) , $servArr);
 		return $servArr;
 	}
 
 }
 
-function server_addr() {
-	return $_SERVER['SERVER_ADDR'] ? $_SERVER['SERVER_ADDR'] : $_SERVER['LOCAL_ADDR'];
-}
+$sk = new skclass();
 
 $servArr=$sk->getServices();
 
 if(is_array($servArr) && count($servArr)>1) {
 	foreach($servArr as $service => $val) {
 		if(trim($val)=='on') {
-			$img = '<span class="service_on"></span>';
+			$class = '<span class="service_on"></span>';
 		} else {
-			$img = '<span class="service_off"></span>';
+			$class = '<span class="service_off"></span>';
 		}
-		echo '<div style="display:inline-block"><span class="statsl">'.ucfirst($service).'</span><span class="statsr">'.$img.'</span></div>';
+		echo '<div style="display:inline-block"><span class="statsl">'.ucfirst($service).'</span><span class="statsr">'.$class.'</span></div>';
 	}
 }
 
