@@ -102,7 +102,7 @@ function submitForm()
 		<tr><td class=list>|LANG_BANDWIDTH|</td><td class=list align=center><input type=text name=bandwidth value="1000" disabled></td><td class=list><input type="checkbox" name="ubandwidth" value="unlimited" checked onClick='setText( document.info.bandwidth,this)' >|LANG_SAME_AS_MAIN|</td ></tr>
 		<tr><td class=list>|LANG_DISK_SPACE|</td><td class=list align=center><input type=text name=quota value="0" disabled></td><td class=list><input type="checkbox" name="uquota" value="unlimited" checked onClick='setText( document.info.quota,this)' >|LANG_SAME_AS_MAIN|</td ></tr>
 |*if USERSSL="ON"|
-		<tr><td class=list>|LANG_SECURE_SSL|</td><td class=list align=center><input type="checkbox" name=ssl value="ON"></td><td class=list>|LANG_IGNORED|</td></tr>
+		<tr><td class=list>|LANG_SECURE_SSL|</td><td class=list align=center><input type="checkbox" name=ssl value="ON" checked></td><td class=list>|LANG_IGNORED|</td></tr>
 |*endif|
 |*if USERCGI="ON"|
 		<tr><td class=list>|LANG_CGI| |LANG_ACCESS|</td><td class=list align=center><input type="checkbox" name=cgi value="ON" checked></td><td class=list>|LANG_IGNORED|</td></tr>

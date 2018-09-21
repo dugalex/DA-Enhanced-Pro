@@ -57,3 +57,9 @@
 57=Not setting up Mail SNI.
 58=Cannot find any SAN values in the certificate.
 59=Certificate is Self-Signed
+60=Your request will run in the background. Once completed, you'll be notified in the Message System.
+61=LetsEncrypt request successful
+62=Error with LetsEncrypt request
+63=Note: the previous Let's Encrypt config is still set to renew in %d days.
+64=If you do not wish to overwrite the current certificate, please disable the auto-renewal.
+65=Disable Auto-Renew

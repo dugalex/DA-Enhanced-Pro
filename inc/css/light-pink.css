@@ -55,10 +55,10 @@ td.head, td.menu, td.footer, .blue_gradient {
 td.listtitle, .stats {
 	background:rgb(255,225,235);
 }
-td.list, td.listwrap {
+td.list, td.listwrap, tr:nth-child(odd) > td.list_alt, tr:nth-child(odd) > td.listwrap_alt {
 	background:rgba(255,225,235,.30);
 }
-td.list2, td.listwrap2 {
+td.list2, td.listwrap2, tr:nth-child(even) > td.list_alt, tr:nth-child(even) > td.listwrap_alt {
 	background:rgba(255,225,235,.20);
 }
 .listhighlight, .list2highlight, .listwraphighlight, .listwrap2highlight {

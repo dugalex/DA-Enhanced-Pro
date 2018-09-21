@@ -129,7 +129,7 @@ function set_custom_path()
 						<table cellpadding=0 cellspacing=1>
 							<tr><td class=list align=right>|LANG_IP|:</td><td class=list><input type=text name=ftp_ip value="|ftp_ip|"></td></tr>
 							<tr><td class=list align=right>|LANG_USERNAME|:</td><td class=list><input type=text name=ftp_username value="|ftp_username|"></td></tr>
-							<tr><td class=list align=right>|LANG_PASSWORD|:</td><td class=list><input type=password name=ftp_password value="|ftp_password_plain|"></td></tr>
+							<tr><td class=list align=right>|LANG_PASSWORD|:</td><td class=list><input type=password name=ftp_password value="|ftp_password_plain|" autocomplete="new-password"></td></tr>
 							<tr><td class=list align=right>|LANG_REMOTE_PATH|:</td><td class=list><input type=text name=ftp_path value="|ftp_path|"></td></tr>
 							<tr><td class=list align=right>|LANG_REMOTE_PORT|:</td><td class=list><input type=text name=ftp_port value="|ftp_port|"></td></tr>
 							<tr><td class=list align=right>|LANG_SECURE_FTP|:</td><td class=list>|FTP_SECURE_SELECT|</td></tr>
@@ -148,6 +148,30 @@ function set_custom_path()
 						<a target=_blank href="http://help.directadmin.com/item.php?id=539">(?)</a>&nbsp;
 					</td>
 				</tr>
+
+				|*if ALLOW_BACKUP_ENCRYPTION="1"|
+				<tr>
+					<td class=listtitle></td>
+					<td class=listtitle>
+						|LANG_BACKUP_ENCRYPTION|
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<table cellpadding=0 cellspacing=1 width=100%>
+							<tr>
+								<td class=list align=right>|LANG_PASSWORD|:</td>
+								<td class=list>
+									<input type=password name='encryption_password' value="|encryption_password|" placeholder='|LANG_OMIT_NO_ENC|' autocomplete="new-password">
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+
+				|*endif|
+
 			</table>
 
 

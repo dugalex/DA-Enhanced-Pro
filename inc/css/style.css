@@ -320,7 +320,9 @@ td.list, td.list2 {
 td.list, td.listwrap, td.list2, td.listwrap2, td.themes,
 td.greenlist, td.greenlistwrap, td.greenlist2, td.greenlistwrap2,
 td.redlist, td.redlistwrap, td.redlist2, td.redlistwrap2,
-.listhighlight, .list2highlight, .listwraphighlight, .listwrap2highlight
+.listhighlight, .list2highlight, .listwraphighlight, .listwrap2highlight,
+td.list_alt, tr:nth-child(odd) > td.list_alt, tr:nth-child(odd) > td.listwrap_alt,
+tr:nth-child(even) > td.list_alt, tr:nth-child(even) > td.listwrap_alt
 {
 	border-radius:2px;
 	-moz-border-radius:2px;
@@ -329,10 +331,10 @@ td.redlist, td.redlistwrap, td.redlist2, td.redlistwrap2,
 	-moz-box-shadow:inset 0px 0px 1px 0px rgba(0,0,0,.25);
 	-webkit-box-shadow:inset 0px 0px 1px 0px rgba(0,0,0,.25);
 }
-td.list, td.listwrap {
+td.list, td.listwrap, tr:nth-child(odd) > td.list_alt, tr:nth-child(odd) > td.listwrap_alt {
 	background:rgba(65,140,200,.3);
 }
-td.list2, td.listwrap2 {
+td.list2, td.listwrap2, tr:nth-child(even) > td.list_alt, tr:nth-child(even) > td.listwrap_alt {
 	background:rgba(65,140,200,.2);
 }
 .listhighlight, .list2highlight, .listwraphighlight, .listwrap2highlight {

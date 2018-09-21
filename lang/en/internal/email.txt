@@ -209,3 +209,7 @@
 209=minutes
 210=hours
 211=Purge
+212=Last Login: %s
+213=Last Login IP: %s
+214=Password Changed: %s
+215=Changed by IP: %s

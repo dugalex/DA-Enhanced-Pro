@@ -28,3 +28,4 @@
 28=Print
 29=The code is valid, but for a different time.<br>Check the time on both your server and your phone.<br>Time slice discrepancy = %d<br>
 30=%s Trust this device for %d days
+31=Please generate a secret before adding the scratch codes

@@ -139,3 +139,7 @@
 139=No
 140=Tried to restore '%s' to '%s', but this path is not in the %s
 141=Account created in directory '%s'
+142=Encryption of %s has failed
+143=Decryption of %s has failed
+144=Invalid encryption password
+145=Unable to lock the '%s' account actions

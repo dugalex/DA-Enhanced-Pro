@@ -30,3 +30,4 @@
 30=Unable to write zonefile for %s
 31=DNSSEC Keys generated
 32=There is only 1 %s record for %s=%s, not removing it
+33=Error adding DS records for %s to remote parent zone: %s

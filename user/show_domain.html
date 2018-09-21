@@ -100,7 +100,15 @@
 <a href="|WEBAPPS_SSL|://|HOSTNAME|/atmail" target="_blank">|LANG_WEBMAIL_ATMAIL|</a><br>
 |*endif|
 
-|*if USERDNSCONTROL="ON"|
+|?CAN_MX=ON|
+|*if USERDNSCONTROL!="ON"|
+|?CAN_MX=OFF|
+|*endif|
+|*if LOCAL_MAILSERVER_WITHOUT_DNSCONTROL="1"|
+|?CAN_MX=ON|
+|*endif|
+
+|*if CAN_MX="ON"|
 			<a href="/CMD_DNS_MX?domain=|domain|">|LANG_MX_RECORDS|</a><br>
 |*endif|
 		</td>

@@ -55,10 +55,10 @@ td.head, td.menu, td.footer, .blue_gradient {
 td.listtitle, .stats {
 	background:url('/IMG_SKIN_BRUSHED_STEEL') center;
 }
-td.list, td.listwrap {
+td.list, td.listwrap, tr:nth-child(odd) > td.list_alt, tr:nth-child(odd) > td.listwrap_alt {
 	background:url('/IMG_SKIN_BRUSHED_STEEL_L1') center top;
 }
-td.list2, td.listwrap2 {
+td.list2, td.listwrap2, tr:nth-child(even) > td.list_alt, tr:nth-child(even) > td.listwrap_alt {
 	background:url('/IMG_SKIN_BRUSHED_STEEL_L2') center bottom;
 }
 .listhighlight, .list2highlight, .listwraphighlight, .listwrap2highlight {

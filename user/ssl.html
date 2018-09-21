@@ -63,6 +63,34 @@ function setPaste(onoff)
 		paste.style.display = 'none';
 }
 
+function wildcard_checked()
+{
+	|*if WILDCARD="1"|
+		return document.getElementById('wildcard').checked;
+	|*else|
+		return false;
+	|*endif|
+}
+
+function wildcard_changed()
+{
+	var le_o_id =  document.getElementById('letsencrypt_options');
+	var le_wc_o_id = document.getElementById('letsencrypt_wc_options');
+	
+	if (wildcard_checked())
+	{
+		le_o_id.style.display = 'none';
+		le_wc_o_id.style.display = '';
+	}
+	else
+	{
+		le_o_id.style.display = '';
+		le_wc_o_id.style.display = 'none';
+	}
+	
+	count_letsencrypt_options();
+}
+
 function set_letsencrypt_other_options(disp)
 {
 	document.getElementById('country_visibility').style.display = disp;
@@ -70,6 +98,9 @@ function set_letsencrypt_other_options(disp)
 	document.getElementById('city_visibility').style.display = disp;
 	document.getElementById('company_visibility').style.display = disp;
 	document.getElementById('division_visibility').style.display = disp;
+	document.getElementById('email_visibility').style.display = disp;
+	
+	document.getElementById('wildcard_span').style.display = (disp=='none')?'':'none';
 }
 
 function set_letsencrypt_options()
@@ -94,6 +125,8 @@ function set_letsencrypt_options()
 				}
 				break;
 			}
+			
+		wildcard_changed();
 	}
 	|*endif|
 }
@@ -102,9 +135,10 @@ function count_letsencrypt_options()
 {
 	with (document.info)
 	{
-		var select='le_select';
+		var select=wildcard_checked()?'le_wc_select':'le_select';
 		var le_count=0;
 		var has_main_domain = false;
+		var has_wild_main_domain = false;
 		var i=0;
 
 		var le_warning='';
@@ -119,6 +153,12 @@ function count_letsencrypt_options()
 
 						if (elements[i].value == '|domain|')
 							has_main_domain = true;
+
+						if (wildcard_checked())
+						{
+							if (elements[i].value == '*.|domain|')
+								has_wild_main_domain = true;
+						}
 					}
 				}
 
@@ -131,8 +171,13 @@ function count_letsencrypt_options()
 		if (le_count > |LETSENCRYPT_MAX_REQUESTS|)
 			le_warning += '|LANG_LE_CANNOT_EXCEED| |LETSENCRYPT_MAX_REQUESTS| |LANG_LE_REQUESTS_PER_WEEK|<br>';
 
+		/*
 		if (!has_main_domain)
 			le_warning += '|LANG_LE_MUST_INCLUDE_MAIN_DOMAIN| |domain|.<br>';
+			
+		if (wildcard_checked() && !has_wild_main_domain)
+			le_warning += '|LANG_LE_MUST_INCLUDE_MAIN_DOMAIN| *.|domain|.<br>';
+		*/
 
 		warning_element = document.getElementById('le_options_warning');
 		warning_element.innerHTML = le_warning;
@@ -146,11 +191,20 @@ function init_letsencrypt_options()
 	select_url_element.href='javascript:void(0);';
 	select_url_element.onclick=function() { selectAll('le_select'); count_letsencrypt_options(); };
 
+	var select_wc_url_element = document.getElementById('le_wc_select_url_id');
+	select_wc_url_element.href='javascript:void(0);';
+	select_wc_url_element.onclick=function() { selectAll('le_wc_select'); count_letsencrypt_options(); };
+
 	with (document.info)
 	{
 		var select='le_select';
 		var i=0;
-
+		for (i=0; i < elements.length; i++)
+			if (elements[i].type == 'checkbox' && !elements[i].disabled)
+				if (elements[i].name.substring(0, select.length) == select)
+					elements[i].onclick = function() { count_letsencrypt_options(); };
+					
+		var select='le_wc_select';
 		for (i=0; i < elements.length; i++)
 			if (elements[i].type == 'checkbox' && !elements[i].disabled)
 				if (elements[i].name.substring(0, select.length) == select)
@@ -176,6 +230,7 @@ function init_letsencrypt_options()
 	<form name=info action="CMD_SSL" method="post">
 		<input type=hidden name=domain value="|DOMAIN|">
 		<input type=hidden name=action value="save">
+		<input type=hidden name=background value="auto">
 
 	<tr><td class=listtitle align=center><input type=radio name=type value="server" |SERVERCHECKED| onClick="setRequest('off'); setPaste('off');"></td><td class=listtitle colspan=2>|LANG_USE_SERVERS|</td></tr>
 	<tr><td class=list>&nbsp;</td><td class=list colspan=2>|LANG_USE_SHARED|</td></tr>
@@ -194,17 +249,31 @@ function init_letsencrypt_options()
 	<tr id=city_visibility><td class=list>&nbsp;</td><td class=list>|LANG_CITY|</td><td class=list><input type=input name=city value="|CITY|"></td></tr>
 	<tr id=company_visibility><td class=list>&nbsp;</td><td class=list>|LANG_COMPANY|</td><td class=list><input type=input name=company value="|COMPANY|"></td></tr>
 	<tr id=division_visibility><td class=list>&nbsp;</td><td class=list>|LANG_COMPANY_DIV|</td><td class=list><input type=input name=division value="|DIVISION|"></td></tr>
-	<tr><td class=list>&nbsp;</td><td class=list>|LANG_COMMON_NAME|</td><td class=list><input type=input name=name value="www.|DOMAIN|"></td></tr>
-	<tr><td class=list>&nbsp;</td><td class=list>|LANG_EMAIL|</td><td class=list><input type=input name=email value="|EMAIL|"></td></tr>
+	<tr><td class=list>&nbsp;</td><td class=list>|LANG_COMMON_NAME|</td>
+		<td class=list>
+			<input type=input name=name value="www.|DOMAIN|">
+			|*if WILDCARD="1"|
+			<span id='wildcard_span' style='padding-left: 10px; display: none;'>
+				<input type='checkbox' id='wildcard' name='wildcard' value='yes' onchange='wildcard_changed();' |WILDCARD_CHECKED|> Wildcard
+			</span>
+			|*endif|
+		</td>
+	</tr>
+	<tr id=email_visibility><td class=list>&nbsp;</td><td class=list>|LANG_EMAIL|</td><td class=list><input type=input name=email value="|EMAIL|"></td></tr>
 	<tr><td class=list>&nbsp;</td><td class=list>|LANG_KEYSIZE|</td><td class=list><select class=selectclass name=keysize><option>2048</option><option selected>4096</option></select></td></tr>
-	<tr><td class=list>&nbsp;</td><td class=list>|LANG_CERT_TYPE|</td><td class=list><select class=selectclass name=encryption><option value="rsa">SHA1</option><option value="sha256" selected>SHA256</option></select></td></tr>
+	<tr><td class=list>&nbsp;</td><td class=list>|LANG_CERT_TYPE|</td><td class=list><select class=selectclass name=encryption><option value="sha256" selected>SHA256</option></select></td></tr>
 |*if LETSENCRYPT="1"|
 	<tr id=letsencrypt_visibility style="display: none;">
 		<td class=list>&nbsp;</td>
 		<td class=list colspan=2>
 			<h2>|LANG_LE_SELECTED|: <span id=le_selected_count>X</span> &nbsp;&nbsp; |LANG_LE_MAX|: |LETSENCRYPT_MAX_REQUESTS|</h2><span id='le_options_warning' class='warning'></span>
 			<div style="overflow: auto; height: 160px; width: 100%;">
-				|LETSENCRYPT_OPTIONS|
+				<div id='letsencrypt_options'>
+					|LETSENCRYPT_OPTIONS|
+				</div>
+				<div id='letsencrypt_wc_options' style='display: none;'>
+					|LETSENCRYPT_WC_OPTIONS|
+				</div>
 			</div>
 		</td>
 	</tr>

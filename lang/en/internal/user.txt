@@ -123,3 +123,13 @@
 123=E-Mail account already exists
 124=Invalid Subdomain
 125=Subdomain already exists
+126=Forwarder already exists
+127=Invalid FTP account
+128=FTP account already exists
+129=Invalid DNS name
+130=Invalid DNS value
+131=Invalid MX value
+132=Error reading %s: %s
+133=A %s record already exists with that name
+134=Full format name '%s' does not end with zone name
+135=MX priority should be an positive number

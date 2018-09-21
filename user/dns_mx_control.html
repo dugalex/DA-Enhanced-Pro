@@ -38,19 +38,29 @@ function selectAllDNS()
 <form name=tableform action='/CMD_DNS_MX' method='POST'>
 <tr>
 <td class=listtitle>|LANG_NAME|</td >
+|?TTL_INPUT=|
+|?COLSPAN=4|
+|?BLANK_TD=|
+
+|*if DNS_TTL="yes"|
+|?COLSPAN=5|
+|?TTL_INPUT=<td class=list align=center><input type=text name=ttl size=6 value="`TTL_VALUE`" placeholder="`LANG_TTL_BLANK_FOR_DEFAULT`" title="`LANG_TTL_BLANK_FOR_DEFAULT`" `DNS_DISABLED`></td>|
+|?BLANK_TD=<td class=list></td>|
+<td class=listtitle align=center >|LANG_TTL|</td >
+|*endif|
 <td class=listtitle align=center >|LANG_TYPE|</td >
 <td class=listtitle>|LANG_VALUE|</td >
 <td class=listtitle align=center ><a class=listtitle href="javascript:selectAllDNS();">|LANG_SELECT|</a></td >
 </tr>
 |DNS_ROWS|
-<tr><td class=listtitle align=right colspan=4><input type=submit value='|LANG_DELETE_SELECTED|' name=delete |DNS_DISABLED|></td></tr>
+<tr><td class=listtitle align=right colspan=|COLSPAN|><input type=submit value='|LANG_DELETE_SELECTED|' name=delete |DNS_DISABLED|></td></tr>
 <input type=hidden name=action value=select>
 </form>
-<tr><td class=list colspan=4>|LANG_ADD_ANOTHER_MX|</td></tr>
+<tr><td class=list colspan=|COLSPAN|>|LANG_ADD_ANOTHER_MX|</td></tr>
 <form action='/CMD_DNS_MX' method='POST'>
 	<input type=hidden name=action value=add>
 	<input type=hidden name=domain value="|DOMAIN|">
-	<tr><td class=list><input type=text name=name |*if HAVE_FULL_MX_RECORDS="1"|value='|domain|.'|*endif|></td><td class=list align=center>MX</td><td class=list>
+	<tr><td class=list><input type=text name=name |*if HAVE_FULL_MX_RECORDS="1"|value='|domain|.'|*endif| |DNS_DISABLED|></td>|TTL_INPUT|<td class=list align=center>MX</td><td class=list>
 	<select name=value |DNS_DISABLED|>
 		<option>0</option>
 		<option selected>10</option>
@@ -64,17 +74,18 @@ function selectAllDNS()
 		<option>90</option>
 	</select>
 	|*if HAVE_FULL_MX_RECORDS="1"|
-	<input type=text name=mx_value>
+	<input type=text name=mx_value |DNS_DISABLED|>
 	|*endif|
 	</td>
-	<td class=list align=center><input type=submit name=add value="|LANG_ADD|"></td></tr>
+	<td class=list align=center><input type=submit name=add value="|LANG_ADD|" |DNS_DISABLED|></td></tr>
 </form>
 <form action='/CMD_DNS_MX' method='POST'>
 <input type=hidden name=action value="internal">
 <input type=hidden name=domain value="|DOMAIN|">
-<tr><td class=listtitle colspan=4>|LANG_LOCAL_MAIL_SERVER|</td></tr>
+<tr><td class=listtitle colspan=|COLSPAN|>|LANG_LOCAL_MAIL_SERVER|</td></tr>
 <tr><td class=list align=center><input type=checkbox name=internal value="yes" |LOCAL_CHECKED|></td>
 <td class=list colspan=2>|LANG_USE_THIS_SERVER|</td>
+|BLANK_TD|
 <td class=list><input type=submit value="|LANG_SAVE|"></td></tr>
 </form>
 </table>
