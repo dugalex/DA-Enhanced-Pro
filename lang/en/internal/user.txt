@@ -59,7 +59,7 @@
 59=This Reseller account is unable to allocate unlimited %s, yet that amount has alredy been allocated.
 60=Unable to allocate unlimited %s. This account is not allowed to create that amount.
 61=Domains
-62=Pop Accounts
+62=E-Mail Accounts
 63=Ftp Accounts
 64=You cannot create more Users than you are allowed domains.
 65=You currently have %s Users and a maximum of %s domains.

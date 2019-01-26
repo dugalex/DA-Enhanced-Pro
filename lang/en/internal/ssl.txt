@@ -63,3 +63,4 @@
 63=Note: the previous Let's Encrypt config is still set to renew in %d days.
 64=If you do not wish to overwrite the current certificate, please disable the auto-renewal.
 65=Disable Auto-Renew
+66=Domain is already processing an SSL request.  Please allow it to finish before making other changes.

@@ -130,6 +130,9 @@
 |*endif|
 			<a href="/CMD_MIME_TYPES?domain=|domain|">|LANG_MIMETYPES|</a><br>
 			<a href="/CMD_HANDLERS?domain=|domain|">|LANG_APACHE_HANDLERS|</a><br>
+|*if USERSSH="ON"|
+			<a href="/CMD_SSH_KEYS">|LANG_SSH_KEYS|</a><br>
+|*endif|
 |$/usr/local/bin/php
 <?php
 $data = <<<END
@@ -186,4 +189,6 @@ DONE|
 	</tr>
 </table>
 
+<!-- SitePad --><div id="sitepad_div1"></div><script src="/CMD_PLUGINS/sitepad/index.raw?act=top"></script><!-- SitePad -->
+<!-- Softaculous --><div id="soft_div1"></div><script src="/CMD_PLUGINS/softaculous/index.raw?act=top"></script><!-- Softaculous -->
 |HTM_USER_BOTTOM|

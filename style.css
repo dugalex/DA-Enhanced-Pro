@@ -255,6 +255,9 @@ td.listtitle
 	padding-left: 10px;
 }
 
+.mb20 {	margin-bottom: 20px; }
+.mb15 {	margin-bottom: 15px; }
+
 .bar-row1
 {
 	BACKGROUND: #3D6C98;
@@ -486,6 +489,10 @@ td.message_info
 	color: #C1C1C1;
 }
 
+.float_left {
+	float: left;
+}
+
 .pencil {
 	background: url("IMG_PENCIL") 0px 1px no-repeat;
 	width: 20px;
@@ -530,4 +537,10 @@ td.message_info
 #true_values_tr td {
 	padding: 10px;
 	BACKGROUND: #CCCCCC;
+}
+table.underline {
+	border-collapse: collapse;
+}
+table.underline > tbody > tr:not(:last-child) > td {
+	border-bottom: 1px solid #cccccc;
 }

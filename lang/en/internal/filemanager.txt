@@ -84,3 +84,4 @@
 85=Uploaded file is not valid for copy
 86=Script Output
 87=Password must be more than %d characters
+88=Maximum number of files listed (%d).  Suppressing further output.

@@ -12,6 +12,20 @@ function setText( textfld, checkbx)
         if (!checkbx.checked)
                 textfld.disabled = false;
 }
+function toggle_www_show()
+{
+	var www_checked = document.getElementById('www_checkbox_id').checked;
+	var show_www = document.getElementById('show_www');	
+
+	if (www_checked)
+	{
+		show_www.style.display = '';
+	}
+	else
+	{
+		show_www.style.display = 'none';
+	}
+}
 //-->
 </script>
 
@@ -19,6 +33,7 @@ function setText( textfld, checkbx)
 	<form name=info action="/CMD_DOMAIN" method="post">
 		<input type=hidden name=action value="modify">
 		<input type=hidden name=domain value="|domain|">
+		<input type=hidden name=form_version value="1.1">
 
 		<tr ><td class=listtitle colspan=3>|LANG_MODIFY| |domain|</td></tr>
 		<tr><td class=list>|LANG_BANDWIDTH| |LANG_MB|</td><td class=list align=center><input type=text name=bandwidth value="|BANDWIDTH|" |BANDWIDTHDISABLED|></td><td class=list><input type="checkbox" name="ubandwidth" value="unlimited" onClick='setText( document.info.bandwidth,this)' |BANDWIDTHCHECKED|>|LANG_SAME_AS_MAIN|</td ></tr>
@@ -32,7 +47,9 @@ function setText( textfld, checkbx)
 |*if USERPHP="ON"|
 		<tr><td class=list>|LANG_PHP| |LANG_ACCESS|</td><td class=list align=center><input type="checkbox" name=php value="ON" |PHPCHECKED|></td><td class=list></td></tr>
 |*endif|
-
+|*if USERPOINTERSMAX!="0"|
+		<tr><td class=list>|LANG_POINTERS_WWW_REDIRECT|</td><td class=list align=center><input type="checkbox" id='www_checkbox_id' name=www_pointers value="yes" onClick='toggle_www_show()' |WWWPOINTERSCHECKED|></td><td class=list>|LANG_REDIRECT_TO| <span id='show_www'>www.</span>|DOMAIN|</td></tr>
+|*endif|
 
 |*if CUSTOM_ITEM_1|
 		<tr><td class=list2>|CUSTOM_ITEM_1_STR|</td>	<td class=list2 align=center>|CUSTOM_ITEM_1|</td><td class=list2>|CUSTOM_ITEM_1_DESC|</td></tr>
@@ -105,6 +122,7 @@ function confirmit()
 |*endif|
 		<tr><td class=list><input type=radio name=val value="directory" |SSLDISABLED| |DIRECTORY_CHECKED|></td><td class=list>|LANG_USE_DIR|</td></tr>
 		<tr><td class=list2><input type=radio name=val value="symlink" |SSLDISABLED| |SYMLINK_CHECKED|></td><td class=list2>|LANG_USE_SYMLINK|</td></tr>
+		<tr><td class=list2><input type="checkbox" name="force_ssl" value="yes" |SSLDISABLED| |FORCE_SSL_CHECKED|></td><td class=list2>|LANG_FORCE_SSL_REDIRECT|</td></tr>
 		<tr><td class=listtitle colspan=3 align=right>
 			<input type=button value='|LANG_SAVE|' |SSLDISABLED| onClick="confirmit();">
 		</td></tr>

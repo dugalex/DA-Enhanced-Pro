@@ -1,0 +1,60 @@
+|LF_STANDARD|
+|LF_SSH_KEYS|
+|?TREE=&raquo; <a class=tree href="/CMD_SSH_KEYS">`LANG_SSH_KEYS`</a>|
+|?HELP_SECTION=`USER_HELPER`/misc.html#ssh_keys|
+|HTM_HEADER_FULL|
+
+<script>
+function set_new_option_type(name, type)
+{
+	//either value or checkbox.
+	var input = document.getElementById('opt_input_id');
+	var checkbox = document.getElementById('opt_checkbox_id');
+	var input_span = document.getElementById('new_option_input');
+	var checkbox_span = document.getElementById('new_option_checkbox');
+
+	if (type == '...')
+	{
+		checkbox.disabled = false;
+		checkbox_span.style.display = 'none';
+		input.disabled = false;
+		input_span.style.display = 'none';
+	}
+	
+	if (type == 'checkbox')
+	{
+		checkbox.disabled = false;
+		checkbox_span.style.display = '';
+		input.disabled = true;
+		input_span.style.display = 'none';
+	}
+	
+	if (type == 'value')
+	{
+		checkbox.disabled = true;
+		checkbox_span.style.display = 'none';
+		input.disabled = false;
+		input_span.style.display = '';
+	}	
+
+	console.log("name: "+name);
+	var new_option_name = document.getElementById('new_option_name');
+	new_option_name.value = name;
+}
+
+function toggle_users_list(checked)
+{
+	console.log(checked);
+	var users_list = document.getElementById('users_list');
+	if (checked)
+		users_list.style.display = '';
+	else
+		users_list.style.display = 'none';
+}
+</script>
+
+<b>|LANG_EDIT_AUTH_KEY|</b>
+|AUTHORIZED_KEYS|
+
+
+|HTM_FOOTER_FULL|

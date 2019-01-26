@@ -213,3 +213,7 @@
 213=Last Login IP: %s
 214=Password Changed: %s
 215=Changed by IP: %s
+216=Forwarder %s@%s deleted as it had zero recipients remaining.
+217=Forwarder %s cannot point to itself
+218=Forwarder contains a local_part_suffix character: '%s' meaning everything after it will be ignored and the forwarder will never match.
+219=Error writing %s

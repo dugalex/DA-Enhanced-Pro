@@ -22,24 +22,24 @@ function setText(inputid,checkbx)
 	<form name=package action='/CMD_MANAGE_USER_PACKAGES' method='POST'>
 	<tr ><td class=listtitle colspan=3>|LANG_USER_PACK|: |PACKAGENAME|</td ></tr >
 
-		<tr ><td class=list>|LANG_BANDWIDTH| |LANG_MB|</td ><td class=list><input type=text id="bandwidth" name=bandwidth value="|BANDWIDTH|"></td ><td class=list style="width: 65%"><input type="checkbox" name="ubandwidth" value="ON" onClick='setText("bandwidth",this)' |BANDWIDTHCHECKED|>|LANG_UNLIMITED|</td></tr>
-		<tr ><td class=list2>|LANG_DISK_SPACE| |LANG_MB|</td ><td class=list2><input type=text id="quota" name=quota value="|QUOTA|"></td ><td class=list2><input type="checkbox" name="uquota" value="ON" onClick='setText("quota",this)' |QUOTACHECKED|>|LANG_UNLIMITED|</td></tr >
+		<tr ><td class=list>|LANG_BANDWIDTH| |LANG_MB|</td ><td class=list><input type=text id="bandwidth" name=bandwidth value="|BANDWIDTH|" |BANDWIDTH_DISABLED|></td ><td class=list style="width: 65%"><input type="checkbox" name="ubandwidth" value="ON" onClick='setText("bandwidth",this)' |BANDWIDTHCHECKED|>|LANG_UNLIMITED|</td></tr>
+		<tr ><td class=list2>|LANG_DISK_SPACE| |LANG_MB|</td ><td class=list2><input type=text id="quota" name=quota value="|QUOTA|" |QUOTA_DISABLED|></td ><td class=list2><input type="checkbox" name="uquota" value="ON" onClick='setText("quota",this)' |QUOTACHECKED|>|LANG_UNLIMITED|</td></tr >
 |*if HAVE_INODE="yes"|
 		<tr ><td class=list>|LANG_INODES|</td ><td class=list><input type=text id="inode" name=inode value="|INODE|" |INODE_DISABLED|></td ><td class=list><input type="checkbox" name="uinode" value="ON" onClick='setText("inode",this)' |INODECHECKED|>|LANG_UNLIMITED|</td></tr >
 |*endif|
-		<tr ><td class=list2>|LANG_DOMAINS|</td ><td class=list2><input type=text id="vdomains" name=vdomains value="|VDOMAINS|"></td ><td class=list2><input type="checkbox" name="uvdomains" value="ON" onClick='setText("vdomains",this)' |VDOMAINSCHECKED|>|LANG_UNLIMITED|</td></tr >
-		<tr ><td class=list>|LANG_SUBDOMAINS|</td ><td class=list><input type=text id="nsubdomains" name=nsubdomains value="|NSUBDOMAINS|"></td ><td class=list><input type="checkbox" name="unsubdomains" value="ON" onClick='setText("nsubdomains",this)' |NSUBDOMAINSCHECKED|>|LANG_UNLIMITED|</td></tr >
+		<tr ><td class=list2>|LANG_DOMAINS|</td ><td class=list2><input type=text id="vdomains" name=vdomains value="|VDOMAINS|" |VDOMAINS_DISABLED|></td ><td class=list2><input type="checkbox" name="uvdomains" value="ON" onClick='setText("vdomains",this)' |VDOMAINSCHECKED|>|LANG_UNLIMITED|</td></tr >
+		<tr ><td class=list>|LANG_SUBDOMAINS|</td ><td class=list><input type=text id="nsubdomains" name=nsubdomains value="|NSUBDOMAINS|" |NSUBDOMAINS_DISABLED|></td ><td class=list><input type="checkbox" name="unsubdomains" value="ON" onClick='setText("nsubdomains",this)' |NSUBDOMAINSCHECKED|>|LANG_UNLIMITED|</td></tr >
 
-		<tr ><td class=list2>|LANG_EMAIL_ACCOUNTS|</td ><td class=list2><input type=text id="nemails" name=nemails value="|NEMAILS|"></td ><td class=list2><input type="checkbox" name="unemails" value="ON" onClick='setText("nemails",this)' |NEMAILSCHECKED|>|LANG_UNLIMITED|</td></tr >
-		<tr ><td class=list>|LANG_EMAIL_FORWARDERS|</td ><td class=list><input type=text id="nemailf" name=nemailf value="|NEMAILF|"></td ><td class=list><input type="checkbox" name="unemailf" value="ON" onClick='setText("nemailf",this)' |NEMAILFCHECKED|>|LANG_UNLIMITED|</td></tr >
-		<tr ><td class=list2>|LANG_MAILING_LISTS|</td ><td class=list2><input type=text id="nemailml" name=nemailml value="|NEMAILML|"></td ><td class=list2><input type="checkbox" name="unemailml" value="ON" onClick='setText("nemailml",this)' |NEMAILMLCHECKED|>|LANG_UNLIMITED|</td></tr >
-		<tr ><td class=list>|LANG_AUTO_RESPONDERS|</td ><td class=list><input type=text id="nemailr" name=nemailr value="|NEMAILR|"></td ><td class=list><input type="checkbox" name="unemailr" value="ON" onClick='setText("nemailr",this)' |NEMAILRCHECKED|>|LANG_UNLIMITED|</td></tr >
+		<tr ><td class=list2>|LANG_EMAIL_ACCOUNTS|</td ><td class=list2><input type=text id="nemails" name=nemails value="|NEMAILS|" |NEMAILS_DISABLED|></td ><td class=list2><input type="checkbox" name="unemails" value="ON" onClick='setText("nemails",this)' |NEMAILSCHECKED|>|LANG_UNLIMITED|</td></tr >
+		<tr ><td class=list>|LANG_EMAIL_FORWARDERS|</td ><td class=list><input type=text id="nemailf" name=nemailf value="|NEMAILF|" |NEMAILF_DISABLED|></td ><td class=list><input type="checkbox" name="unemailf" value="ON" onClick='setText("nemailf",this)' |NEMAILFCHECKED|>|LANG_UNLIMITED|</td></tr >
+		<tr ><td class=list2>|LANG_MAILING_LISTS|</td ><td class=list2><input type=text id="nemailml" name=nemailml value="|NEMAILML|" |NEMAILML_DISABLED|></td ><td class=list2><input type="checkbox" name="unemailml" value="ON" onClick='setText("nemailml",this)' |NEMAILMLCHECKED|>|LANG_UNLIMITED|</td></tr >
+		<tr ><td class=list>|LANG_AUTO_RESPONDERS|</td ><td class=list><input type=text id="nemailr" name=nemailr value="|NEMAILR|" |NEMAILR_DISABLED|></td ><td class=list><input type="checkbox" name="unemailr" value="ON" onClick='setText("nemailr",this)' |NEMAILRCHECKED|>|LANG_UNLIMITED|</td></tr >
 
-		<tr ><td class=list2>|LANG_MYSQL_DBS|</td ><td class=list2><input type=text id="mysql" name=mysql value="|MYSQL|"></td ><td class=list2><input type="checkbox" name="umysql" value="ON" onClick='setText("mysql",this)' |MYSQLCHECKED|>|LANG_UNLIMITED|</td></tr >
+		<tr ><td class=list2>|LANG_MYSQL_DBS|</td ><td class=list2><input type=text id="mysql" name=mysql value="|MYSQL|" |MYSQL_DISABLED|></td ><td class=list2><input type="checkbox" name="umysql" value="ON" onClick='setText("mysql",this)' |MYSQLCHECKED|>|LANG_UNLIMITED|</td></tr >
 
-		<tr ><td class=list>|LANG_DOMAIN_PTRS|</td ><td class=list><input type=text id="domainptr" name=domainptr value="|DOMAINPTR|"></td><td class=list><input type="checkbox" name="udomainptr" value="ON" onClick='setText("domainptr",this)' |DOMAINPTRCHECKED|>|LANG_UNLIMITED|</td></tr >
+		<tr ><td class=list>|LANG_DOMAIN_PTRS|</td ><td class=list><input type=text id="domainptr" name=domainptr value="|DOMAINPTR|" |DOMAINPTR_DISABLED|></td><td class=list><input type="checkbox" name="udomainptr" value="ON" onClick='setText("domainptr",this)' |DOMAINPTRCHECKED|>|LANG_UNLIMITED|</td></tr >
 
-		<tr ><td class=list2>|LANG_FTP_ACCOUNTS|</td ><td class=list2><input type=text id="ftp" name=ftp value="|FTP|"></td ><td class=list2><input type="checkbox" name="uftp" value="ON" onClick='setText("ftp",this)' |FTPCHECKED|>|LANG_UNLIMITED|</td></tr >
+		<tr ><td class=list2>|LANG_FTP_ACCOUNTS|</td ><td class=list2><input type=text id="ftp" name=ftp value="|FTP|" |FTP_DISABLED|></td ><td class=list2><input type="checkbox" name="uftp" value="ON" onClick='setText("ftp",this)' |FTPCHECKED|>|LANG_UNLIMITED|</td></tr >
 |*if RESELLERAFTP="ON"|
 		<tr ><td class=list>|LANG_ANON_FTP_ACCOUNTS|</td ><td class=list align=center><input type=checkbox name=aftp value="ON" |AFTPCHECKED|></td ><td class=list></td></tr >
 |*endif|
@@ -106,7 +106,10 @@ function setText(inputid,checkbx)
 		<tr><td class=list2>|CUSTOM_ITEM_8_STR|</td>	<td class=list2 align=center>|CUSTOM_ITEM_8|</td>	<td class=list2>|CUSTOM_ITEM_8_DESC|</td></tr>
 |*endif|
 
-	<tr ><td class=listtitle align=right colspan=3>|LANG_PACK_NAME|: <input type=text name=packagename value="|PACKAGENAME|"> <input type=submit value='|LANG_SAVE|' name=add> <input type=submit value='|LANG_CANCEL|' name=cancel></td ></tr >
+	<tr ><td class=listtitle align=right colspan=3>
+				|*if NEW_PACKAGE!="yes"|<input type='hidden' name='old_packagename' value='|PACKAGENAME|'><span class=float_left><input type=checkbox name='rename' value='yes'>|LANG_RENAME|</span>|*endif|
+				|LANG_PACK_NAME|: <input type=text name=packagename value="|PACKAGENAME|"> <input type=submit value='|LANG_SAVE|' name=add> <input type=submit value='|LANG_CANCEL|' name=cancel>
+				</td ></tr >
 	</form>
 </table >
 

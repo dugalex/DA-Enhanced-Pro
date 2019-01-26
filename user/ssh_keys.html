@@ -1,0 +1,42 @@
+|LF_STANDARD|
+|?TREE=&raquo; <a class=tree href="/CMD_SSH_KEYS">`LANG_SSH_KEYS`</a>|
+|?HELP_SECTION=`USER_HELPER`/misc.html#ssh_keys|
+|HTM_HEADER_FULL|
+
+<b>|LANG_AUTH_KEYS|</b>
+|AUTHORIZED_KEYS|
+
+<br><br>
+<b>|LANG_PUB_KEYS|</b>
+|PUBLIC_KEYS|
+
+<br><br>
+<hr>
+<br>
+
+<table class=list  cellpadding=3 cellspacing=1>
+<form name=info action='CMD_SSH_KEYS' method='POST'>
+<input type=hidden name=action value="create">
+<input type=hidden name=type value="rsa">
+<tr><td class=listtitle colspan=3><b>|LANG_CREATE_SSH_KEY|</b><span style='float: right'><input type=checkbox name='authorize' value='yes'> |LANG_AUTHORIZE|</span></td></tr>
+<tr><td class=list>|LANG_KEY_ID|</td><td class=list><input type=text size=4 name=id placeholder='id'>_rsa</td><td class=list>|LANG_FILENAME_OF_NEW_KEY|</td></tr>
+<tr><td class=list>|LANG_COMMENT|</td><td class=list><input type=text size=24 name=comment value='descriptive@comment.com'></td><td class=list>|LANG_DESCRIPTOR_FOR_KEY|</td></tr>
+<tr><td class=list>|LANG_KEY_SIZE|</td><td class=list>|KEYSIZE_SELECT|</td><td class=list></td></tr>
+<tr><td class=list>|LANG_PASSWORD|</td><td class=list><input type=password name=passwd></td><td class=list>|LANG_OPTIONAL_PASSWORD|</td></tr>
+<tr><td class=list>|LANG_PASSWORD_AGAIN|</td><td class=list><input type=password name=passwd2></td><td class=list>|LANG_REPEAT_PASSWORD|</td></tr>
+<tr><td colspan=3 class=listtitle align=right><input type=submit value="|LANG_CREATE|"></td></tr>
+</form>
+</table>
+<br>
+<table class=list  cellpadding=3 cellspacing=1>
+<form name=info action='CMD_SSH_KEYS' method='POST'>
+<input type=hidden name=action value="authorize">
+<input type=hidden name=type value="paste">
+<tr><td class=listtitle colspan=2><b>|LANG_PASTE_AUTH_KEY|</b></td></tr>
+<tr><td class=list>Line</td><td class=list><input type=text size=100 name='text' placeholder='(options) ssh-rsa ... comment'> <a target=_blank href='https://man.openbsd.org/sshd#AUTHORIZED_KEYS_FILE_FORMAT'>(?)</a></td></tr>
+<tr><td colspan=3 class=listtitle align=right><input type=submit value="|LANG_CREATE|"></td></tr>
+</form>
+</table>
+
+
+|HTM_FOOTER_FULL|

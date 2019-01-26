@@ -37,3 +37,4 @@
 37=Enabled
 38=Disabled
 39=Off
+40=Error reading %s: %s

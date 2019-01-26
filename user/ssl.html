@@ -319,6 +319,19 @@ function init_letsencrypt_options()
 <a href="/CMD_SSL?DOMAIN=|DOMAIN|&view=cacert">|LANG_CLICK_HERE|<br><br>
 
 
+<table class=mb15 cellpadding=3 cellspacing=1>
+	<form name=https action="/CMD_DOMAIN" method="post">
+		<input type=hidden name=action value="private_html">
+		<input type=hidden name=domain value="|DOMAIN|">
+		<tr><td><input type="checkbox" name="force_ssl" value="yes" |FORCE_SSL_CHECKED|></td>
+			<td>|LANG_FORCE_SSL_REDIRECT|</td>
+			<td><input type=submit value='|LANG_SAVE|'></td>
+		</tr>
+	</form>
+</table>
+
+
+
 |*if EXIM_SNI_HOSTS_TABLE|
 	<table>
 	<tr>

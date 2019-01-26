@@ -18,3 +18,10 @@
 18=You may not use an IP for a domain name
 19=Error reading domain config files
 20=IP in domain config file (%s) is not valid.
+21=Local Mail
+22=Yes
+23=No
+24=Local Mail
+25=Remote Mail
+26=Set selected to
+27=Pointer '%s' does not belong to you.

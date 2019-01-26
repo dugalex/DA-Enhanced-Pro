@@ -56,3 +56,4 @@
 56=Invalid delete_messages_days or delete_tickets_days.  Too big.  Max = 
 57=Unable to read ticket config file
 58=Unable to write ticket config
+59=Script Output

@@ -76,3 +76,4 @@
 76=Process Monitor
 77=Admin Plugins
 78=Brute Force Monitor
+79=SSH Keys
