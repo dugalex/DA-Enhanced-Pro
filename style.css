@@ -544,3 +544,12 @@ table.underline {
 table.underline > tbody > tr:not(:last-child) > td {
 	border-bottom: 1px solid #cccccc;
 }
+.text_align_left {
+	text-align: left;
+}
+.w64chars {
+	width: 550px;
+}
+.h34rows {
+	height: 550px;
+}

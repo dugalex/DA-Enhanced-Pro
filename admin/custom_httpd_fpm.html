@@ -20,12 +20,22 @@
 </tr>
 <tr>
 	<td class=list align=center>|LANG_INSTRUCTIONS|<br>
-		<b>&#124;CUSTOM1&#124;</b><br>
+		<b title='|LANG_GLOBAL_TITLE|'>php-fpm |LANG_GLOBAL| &#124;CUSTOM1&#124;</b><br>
+		<textarea class="code_edit" cols=160 rows=4 wrap=off name=global_custom1>|GLOBAL_CUSTOM1|</textarea>
+
+		<br><br>
+
+		<b title='|LANG_GLOBAL_TITLE|'>php-fpm |LANG_GLOBAL| &#124;CUSTOM2&#124;</b><br>
+		<textarea class="code_edit" cols=160 rows=4 wrap=off name=global_custom2>|GLOBAL_CUSTOM2|</textarea>
+
+		<br><br>
+
+		<b>php-fpm |php-fpm| &#124;CUSTOM1&#124;</b><br>
 		<textarea class="code_edit" cols=160 rows=4 wrap=off name=custom1>|CUSTOM1|</textarea>
 
 		<br><br>
 
-		<b>&#124;CUSTOM2&#124;</b><br>
+		<b>php-fpm |php-fpm| &#124;CUSTOM2&#124;</b><br>
 		<textarea class="code_edit" cols=160 rows=4 wrap=off name=custom2>|CUSTOM2|</textarea>
 
 		<br><br>
@@ -45,7 +55,11 @@
 	</td>
 </tr>
 <tr>
-	<td class=listtitle align=right><input type=submit value="|LANG_SAVE|"></td>
+	<td class=listtitle align=right>
+		<span class='right-pad' title='|LANG_SAVE_ALL_PHP_WARNING|
+|LANG_SAVE_ALL_PHP_WARNING2|'><input type=checkbox name='all_php_versions' value='yes'> |LANG_SAVE_ALL_PHP_VERSIONS|</span>
+		<input type=submit value="|LANG_SAVE|">
+	</td>
 </tr>
 </form>
 </table>

@@ -40,12 +40,12 @@ function selectAllDNS()
 <td class=listtitle>|LANG_NAME|</td >
 |?TTL_INPUT=|
 |?COLSPAN=4|
-|?BLANK_TD=|
+|?USE_LOCAL_COLSPAN=2|
 
 |*if DNS_TTL="yes"|
 |?COLSPAN=5|
 |?TTL_INPUT=<td class=list align=center><input type=text name=ttl size=6 value="`TTL_VALUE`" placeholder="`LANG_TTL_BLANK_FOR_DEFAULT`" title="`LANG_TTL_BLANK_FOR_DEFAULT`" `DNS_DISABLED`></td>|
-|?BLANK_TD=<td class=list></td>|
+|?USE_LOCAL_COLSPAN=3|
 <td class=listtitle align=center >|LANG_TTL|</td >
 |*endif|
 <td class=listtitle align=center >|LANG_TYPE|</td >
@@ -84,12 +84,25 @@ function selectAllDNS()
 <input type=hidden name=domain value="|DOMAIN|">
 <tr><td class=listtitle colspan=|COLSPAN|>|LANG_LOCAL_MAIL_SERVER|</td></tr>
 <tr><td class=list align=center><input type=checkbox name=internal value="yes" |LOCAL_CHECKED|></td>
-<td class=list colspan=2>|LANG_USE_THIS_SERVER|</td>
-|BLANK_TD|
+<td class=list colspan=|USE_LOCAL_COLSPAN|>|LANG_USE_THIS_SERVER|</td>
 <td class=list><input type=submit value="|LANG_SAVE|"></td></tr>
 </form>
-</table>
 
+|*if MX_TEMPLATES="1"|
+<tr><td class=listtitle colspan=5>|LANG_SET_REMOTE_MX|</td></tr>
+<form action='/CMD_DNS_MX' method='POST'>
+<input type=hidden name='action' value='mx_template'>
+<input type=hidden name='domain' value="|DOMAIN|">
+<tr>
+	<td class=list colspan=2>Select your remote email provider</td>
+	<td class=list>|MX_TEMPLATES_SELECT|</td>
+	<td class=list><input type=submit value="|LANG_SAVE|"></td>
+</form>
+</tr>
+|*endif|
+
+</table>
+<br>
 |LANG_NOTE|
 
 |HTM_USER_BOTTOM|

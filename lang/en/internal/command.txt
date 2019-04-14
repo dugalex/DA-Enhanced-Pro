@@ -624,3 +624,9 @@
 624=SSH Key Modified
 625=Default
 626=Limit Notice
+627=%s account %s has just been created
+628=Reseller
+629=Admin
+630=Account %s has just created %s %s from IP %s
+631=MX Template set
+632=Error setting MX Template

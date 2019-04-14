@@ -133,3 +133,8 @@
 133=A %s record already exists with that name
 134=Full format name '%s' does not end with zone name
 135=MX priority should be an positive number
+136=There is already a mailing list alias with that name
+137=Disabled Reseller settings will be applied to Users and Packages in the background.
+138=Error activating data for %s: %s
+139=An error occurred while applying settings to your Users
+140=IP List is empty

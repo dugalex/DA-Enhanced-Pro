@@ -23,8 +23,15 @@
 	<tr><td class=list>|LANG_MESSAGE|</td><td class=list colspan=3><textarea name=message rows=16 cols=65></textarea></td></tr>
 
 	<tr><td class=listtitle colspan=4 align=right>
+|?SHOW_ALL_EMAIL_CHECKBOX=display:none|
+|*if EML_ONLY_CHEKCED="checked"|
+|?SHOW_ALL_EMAIL_CHECKBOX=|
+|*endif|
 |*if SHOW_EML_ONLY="yes"|
-   <input type=checkbox name=email_only value='yes' |EML_ONLY_CHEKCED|> |LANG_EMAIL_ONLY|&nbsp;
+	<span id='all_email_id' style='|SHOW_ALL_EMAIL_CHECKBOX|' title='|LANG_ALL_EMAIL_ACCOUNTS_DESC|'>
+		<input type=checkbox name=all_email_accounts value='yes' |EML_ALL_EMAIL_ACCOUNTS_CHECKED|> |LANG_ALL_EMAIL_ACCOUNTS| &nbsp;
+	</span>
+   <input type=checkbox name=email_only value='yes' |EML_ONLY_CHEKCED| onChange="document.getElementById('all_email_id').style.display=(this.checked)?'inline':'none';"> |LANG_EMAIL_ONLY| &nbsp;
 |*endif|
 		<input type=submit name=submit value="|LANG_SAVE|">
 	</td></tr>

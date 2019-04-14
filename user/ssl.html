@@ -251,7 +251,7 @@ function init_letsencrypt_options()
 	<tr id=division_visibility><td class=list>&nbsp;</td><td class=list>|LANG_COMPANY_DIV|</td><td class=list><input type=input name=division value="|DIVISION|"></td></tr>
 	<tr><td class=list>&nbsp;</td><td class=list>|LANG_COMMON_NAME|</td>
 		<td class=list>
-			<input type=input name=name value="www.|DOMAIN|">
+			<input type=input name=name value="|WWW_DOMAIN|">
 			|*if WILDCARD="1"|
 			<span id='wildcard_span' style='padding-left: 10px; display: none;'>
 				<input type='checkbox' id='wildcard' name='wildcard' value='yes' onchange='wildcard_changed();' |WILDCARD_CHECKED|> Wildcard

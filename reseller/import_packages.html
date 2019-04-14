@@ -1,0 +1,28 @@
+<table class=list cellpadding=3 cellspacing=1>
+<form action='?' method=POST>
+<input type='hidden' name='action' value='import'>
+<tr>
+	<td class=listtitle>
+		<span class=expand_toggle_plus id=import_toggle onclick="toggle_expand('import_toggle', 'import_visibility');">+</span>
+		|LANG_IMPORT_PACKAGES|
+	</td>
+</tr>
+<tr id=import_visibility style="display: none;">
+	<td style='padding: 0px; margins: 0px;'>
+	<table style='width: 100%;'>
+		<tr>
+			<td class=list align=center>
+				<textarea name='import' class='code_edit w64chars h34rows' placeholder='|LANG_B64_ENC_PACKAGES_LIST|'></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td class=listtitle align=right>
+				<input type='submit' value='|LANG_IMPORT|'>
+			</td>
+		</tr>
+	</table>
+	</td>
+</tr>
+</form>
+</table>
+<script type="text/javascript" src="JS_VISIBILITY"></script>

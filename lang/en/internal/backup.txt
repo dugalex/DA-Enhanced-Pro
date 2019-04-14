@@ -143,3 +143,4 @@
 143=Decryption of %s has failed
 144=Invalid encryption password
 145=Unable to lock the '%s' account actions
+146=User '%s' removed from the backup list.

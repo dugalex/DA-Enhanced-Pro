@@ -404,8 +404,23 @@ progress {
 	margin-top:6px;
 	margin-bottom:6px;
 	width:220px;
-	height:6px;
+	height:5px;
 	color:rgb(65,140,200);
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	progress {
+		height:9px;
+	}  
+}
+@-moz-document url-prefix() {
+	progress {
+		height:5px;
+	}  
+}
+@supports (-ms-ime-align:auto) {
+	progress {
+		height:5px;
+	}  
 }
 progress::-webkit-progress-bar {
 	background-image:none;

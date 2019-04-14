@@ -1,10 +1,17 @@
-<table class=list cellpadding=3 cellspacing=1>
-<tr><td class=listtitle colspan=4>Upload Files to <b>/</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Max Filesize : 10.0 MB</td></tr>
-	<form name=uploadform action="/CMD_API_FILE_MANAGER" enctype="multipart/form-data" method="POST">
+<html>
+	<form action="/CMD_CHANGE_INFO?json=yes"  method="POST">
 		<input type="hidden" name="MAX_FILE_SIZE" value="10485760">
-		<input type=hidden name="action" value="upload">
-		<input type=hidden name="path" value="/test/upload">
-<tr><td class=list colspan=1>1: <input type=file name="file[]" size=40 multiple="multiple"></td>
-<tr><td class=listtitle colspan=4 align=center><input type=submit value="Upload Files"></tr>
+		<input type=text name="json" value="yes"><br>
+		<input type=text name="nvalue" value="Fred"><br>
+		<input type=text name="evalue" value="admin@es5.com"><br>
+		<input type=text name="skinvalue" value="enhanced"><br>
+		<input type=text name="domain" value="dkimdomain.com"><br>
+		<input type=text name="set_multiple" value="yes"><br>
+		<input type=text name="send_usage_message" value="yes"><br>
+		<input type=text name="send_usage_message_value" value="2"><br>
+		<input type=text name="name" value="yes"><br>
+		<input type=text name="email" value="yes"><br>
+		<input type=text name="skin" value="yes"><br>
+		<input type=submit>	
 	</form>
-</table>
+</html>

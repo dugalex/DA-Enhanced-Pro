@@ -13,13 +13,14 @@ $data = str_replace("</b>", "", $data);
 echo  $data;
 ?>
 DONE|
-
+<br/>
 <table style="width:100%" class=list cellpadding=3 cellspacing=1>
 	<tr><td class=listtitle>Skin Info</td></tr>
 	<tr><td class=list>|LANG_CURRENTLY_USING| <b>|SKIN| v|HTM_SKIN_VERSION|</b></td></tr>
-	<tr><td class=barbg_yellow>|LANG_SSL_LOCAL_INFO|</td></tr>
+	<tr><td class=list2>|LANG_GLOBLAL_DOCSROOT| <b>|GLOBAL_DOCSROOT|</b></td></tr>
+	<tr><td class=listtitle><span style="color:red">|LANG_SSL_LOCAL_INFO|</span></td></tr>
 </table>
-
+<br/>
 <table style="width:100%" class=list cellpadding=3 cellspacing=1>
 	<form name=uploadform action="CMD_SKINS" enctype="multipart/form-data" method="POST">
 	<input type="hidden" name="MAX_FILE_SIZE" value="10485760">

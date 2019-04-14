@@ -31,3 +31,7 @@
 31=DNSSEC Keys generated
 32=There is only 1 %s record for %s=%s, not removing it
 33=Error adding DS records for %s to remote parent zone: %s
+34=Select MX Template
+35=Local Default
+36=Template does not exist
+37=MX Templates are disabled

@@ -36,3 +36,7 @@
 36=Apply to existing Domains
 37=Variable 'ip' is missing from the submission
 38=Couldn't find any IPs of any type to give User.  Ensure the Reseller's ip.list has some usable IPs.
+39=That IP does not exist in your list
+40=That IP is already owned
+41=Set Global Shared
+42=Error reading %s: %s

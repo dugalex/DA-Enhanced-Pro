@@ -85,3 +85,4 @@
 86=Script Output
 87=Password must be more than %d characters
 88=Maximum number of files listed (%d).  Suppressing further output.
+89=Error writing %s: %s
