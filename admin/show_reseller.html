@@ -3,6 +3,11 @@
 |?HELP_SECTION=`ADMIN_HELPER`/listr.html|
 |HTM_HEADER_FULL|
 
+|?DISABLE_SELF=|
+|*if user=USERNAME|
+|?DISABLE_SELF=disabled|
+|*endif|
+
 <b>|LANG_DETAILS_FOR| |user|</b><br>
 <br>
 <table width=100% cellpadding=0 cellspacing=3>
@@ -10,7 +15,7 @@
 	<td align=center valign=top>
 		<form action="CMD_LOGIN" method="POST">
 		<input type=hidden name=username value="|LOGIN_AS_MASTER_NAME|\||user|">
-		<input type=submit value="|LANG_LOGIN_AS| |user|"><br>
+		<input type=submit value="|LANG_LOGIN_AS| |user|" |DISABLE_SELF|><br>
 
 |HTM_LOGIN_AS_WARNINGS|
 
@@ -24,7 +29,7 @@
 	<td align=center valign=top>
 		<form name=tableform action='CMD_SELECT_USERS' method='GET'>
 			<input type=hidden name=select0 value="|user|">
-			<input type=submit value='|LANG_DELETE_RES| |user|' name=delete>
+			<input type=submit value='|LANG_DELETE_RES| |user|' name=delete |DISABLE_SELF|>
 		</form>
 	</td>
 	<td align=center valign=top>

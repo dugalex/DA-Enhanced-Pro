@@ -8,7 +8,12 @@
 <tr><td class=list2>|LANG_LICE_NAME|</td><td class=list2>|name|</td></tr>
 <tr><td class=list>|LANG_LID|</td><td class=list>|lid|</td></tr>
 <tr><td class=list2>|LANG_CID|</td><td class=list2>|uid|</td></tr>
-
+|*if nusers>"0"|
+<tr><td class=list2>|LANG_ACCOUNT_LIMIT|</td><td class=list2>|CURRENT_ACCOUNTS| / |nusers|</td></tr>
+|*endif|
+|*if vdomains>"0"|
+<tr><td class=list2>|LANG_DOMAIN_LIMIT|</td><td class=list2>|CURRENT_DOMAINS| / |vdomains|</td></tr>
+|*endif|
 |*if internal="Y"|
 <tr><td class=list>|LANG_LTYPE|</td><td class=list style='white-space: normal;'>|LANG_INTERNAL|</td></tr>
 |*endif|
@@ -34,6 +39,9 @@
 
 <tr><td class=listtitle colspan=2>|LANG_DA_VALS|</a></td></tr>
 <tr><td class=list>|LANG_COMPILED_FOR|</td><td class=list>|OS_NAME|</td></tr>
+|*if eol|
+<tr><td class=list2><b>|LANG_END_OF_LIFE|</b></td><td class=list2><b>|eol|</b></td></tr>
+|*endif|
 <tr><td class=list2>|LANG_COMPILE_DATE|</td><td class=list2>|compile_time|</td></tr>
 <tr><td class=list>|LANG_SERVER_VER|</td><td class=list>|version|</td></tr>
 <tr><td class=list2>|LANG_CURRENT_VER|</td><td class=list2>|currentversion|</td></tr>
@@ -41,5 +49,4 @@
 <tr><td class=list2>|LANG_LAST_RESTART|</td><td class=list2>|startup_time|</td></tr>
 <tr><td class=list align=center colspan=2><a href="/CMD_LICENSE?update=program">|LANG_UPDATE_DA|</a></td></tr>
 </table>
-
 |HTM_ADMIN_BOTTOM|

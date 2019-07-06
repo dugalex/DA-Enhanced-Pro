@@ -49,3 +49,4 @@
 49=Blocked
 50=user_brutecount disabled
 51=Stopped
+52=Reload

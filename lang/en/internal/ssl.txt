@@ -65,3 +65,4 @@
 65=Disable Auto-Renew
 66=Domain is already processing an SSL request.  Please allow it to finish before making other changes.
 67=Cannot find the letsencrypt.sh script
+68=There have been %d renew failures, thus no more attempts will be made.%s

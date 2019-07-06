@@ -630,3 +630,7 @@
 630=Account %s has just created %s %s from IP %s
 631=MX Template set
 632=Error setting MX Template
+633=Un-Set
+634=Stats links removed
+635=Reload Requested
+636=Login as %s

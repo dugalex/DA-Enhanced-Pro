@@ -138,3 +138,5 @@
 138=Error activating data for %s: %s
 139=An error occurred while applying settings to your Users
 140=IP List is empty
+141=License is limited to %d accounts, and you currently have %d
+142=License is limited to %d domains, and you currently have %d

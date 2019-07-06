@@ -47,9 +47,16 @@ function toggle_www_show()
 |*if USERPHP="ON"|
 		<tr><td class=list>|LANG_PHP| |LANG_ACCESS|</td><td class=list align=center><input type="checkbox" name=php value="ON" |PHPCHECKED|></td><td class=list></td></tr>
 |*endif|
-|*if USERPOINTERSMAX!="0"|
-		<tr><td class=list>|LANG_POINTERS_WWW_REDIRECT|</td><td class=list align=center><input type="checkbox" id='www_checkbox_id' name=www_pointers value="yes" onClick='toggle_www_show()' |WWWPOINTERSCHECKED|></td><td class=list>|LANG_REDIRECT_TO| <span id='show_www'>www.</span>|DOMAIN|</td></tr>
-|*endif|
+
+		<tr>
+			<td class=list>|LANG_WWW_REDIRECT|</td>
+			<td class=list align=left>
+				<input type="radio" name="force_redirect" value='none' |FORCE_REDIRECT_NONE_CHECKED|> |LANG_NO_REDIRECT|<br>
+				<input type="radio" name="force_redirect" value='www' |FORCE_REDIRECT_WWW_CHECKED|> www.|DOMAIN|<br>
+				<input type="radio" name="force_redirect" value='non-www' |FORCE_REDIRECT_NON_WWW_CHECKED|> |DOMAIN|
+			</td>
+			<td class=list>|LANG_REDIRECT_TO|</td>
+		</tr>
 
 |*if CUSTOM_ITEM_1|
 		<tr><td class=list2>|CUSTOM_ITEM_1_STR|</td>	<td class=list2 align=center>|CUSTOM_ITEM_1|</td><td class=list2>|CUSTOM_ITEM_1_DESC|</td></tr>

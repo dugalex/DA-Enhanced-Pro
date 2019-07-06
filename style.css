@@ -553,3 +553,8 @@ table.underline > tbody > tr:not(:last-child) > td {
 .h34rows {
 	height: 550px;
 }
+.mt10 { margin-top: 10px; }
+.mt20 { margin-top: 20px; }
+.inline {
+	display: inline;
+}

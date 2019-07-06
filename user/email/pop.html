@@ -12,4 +12,17 @@
 
 |POPACCOUNTS|
 
+<form action='?' method='POST'>
+	<input type='hidden' name='domain' value='|DOMAIN|'>
+	<input type='hidden' name='action' value='set_dkim'>
+|*if DKIM_ENABLED="1"|
+	|LANG_DKIM_ENABLED|
+	<input class='mt20' type='submit' name='disable' value='Disable DKIM'>
+|*endif|
+|*if DKIM_ENABLED="0"|
+	|LANG_DKIM_DISABLED|
+	<input class='mt20' type='submit' name='enable' value='Enable DKIM'>
+|*endif|
+</form>
+
 |HTM_FOOTER_FULL|

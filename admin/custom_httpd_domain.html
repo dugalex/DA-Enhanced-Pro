@@ -38,7 +38,7 @@
 function show_additional_custom_tokens()
 {
 	document.getElementById('addition_custom_tokens').style.display = 'none';
-	for (i=1; i<=4; i++)
+	for (i=1; i<=|NUM_CUSTOM_TOKENS|; i++)
 	{
 		document.getElementById('custom'+i+'_toggle_tr').style.display = '';
 	}
@@ -66,6 +66,15 @@ function trigger_toggle()
 |*endif|
 |*if CUSTOM4!=""|
 	toggle_custom(4);
+|*endif|
+|*if CUSTOM5!=""|
+	toggle_custom(5);
+|*endif|
+|*if CUSTOM6!=""|
+	toggle_custom(6);
+|*endif|
+|*if CUSTOM7!=""|
+	toggle_custom(7);
 |*endif|
 }
 //-->
@@ -141,6 +150,57 @@ function trigger_toggle()
 		|*endif|
 	</td>
 </tr>
+<tr id=custom5_toggle_tr style="display: none;">
+	<td class=list2><span class=expand_toggle_plus id=custom5_toggle onclick="toggle_custom(5);">+</span> CUSTOM5</td>
+</tr>
+<tr id=custom5_tr style="display: none;">
+	<td class=list align=center>
+		|LANG_LAST_ENTRY|
+		|*if CUSTOM5_PRE|
+			<div><textarea class="code_edit" cols=120 rows=2 wrap=off readonly>|CUSTOM5_PRE|</textarea></div>
+		|*endif|
+
+		<div><textarea class="code_edit" cols=120 rows=4 wrap=off name=custom5>|CUSTOM5|</textarea></div>
+
+		|*if CUSTOM5_POST|
+			<div><textarea class="code_edit" cols=120 rows=2 wrap=off readonly>|CUSTOM5_POST|</textarea></div>
+		|*endif|
+	</td>
+</tr>
+<tr id=custom6_toggle_tr style="display: none;">
+	<td class=list2><span class=expand_toggle_plus id=custom6_toggle onclick="toggle_custom(6);">+</span> CUSTOM6</td>
+</tr>
+<tr id=custom6_tr style="display: none;">
+	<td class=list align=center>
+		|LANG_LAST_ENTRY|
+		|*if CUSTOM6_PRE|
+			<div><textarea class="code_edit" cols=120 rows=2 wrap=off readonly>|CUSTOM6_PRE|</textarea></div>
+		|*endif|
+
+		<div><textarea class="code_edit" cols=120 rows=4 wrap=off name=custom6>|CUSTOM6|</textarea></div>
+
+		|*if CUSTOM6_POST|
+			<div><textarea class="code_edit" cols=120 rows=2 wrap=off readonly>|CUSTOM6_POST|</textarea></div>
+		|*endif|
+	</td>
+</tr>
+<tr id=custom7_toggle_tr style="display: none;">
+	<td class=list2><span class=expand_toggle_plus id=custom7_toggle onclick="toggle_custom(7);">+</span> CUSTOM7</td>
+</tr>
+<tr id=custom7_tr style="display: none;">
+	<td class=list align=center>
+		|LANG_LAST_ENTRY|
+		|*if CUSTOM7_PRE|
+			<div><textarea class="code_edit" cols=120 rows=2 wrap=off readonly>|CUSTOM7_PRE|</textarea></div>
+		|*endif|
+
+		<div><textarea class="code_edit" cols=120 rows=4 wrap=off name=custom7>|CUSTOM7|</textarea></div>
+
+		|*if CUSTOM7_POST|
+			<div><textarea class="code_edit" cols=120 rows=2 wrap=off readonly>|CUSTOM7_POST|</textarea></div>
+		|*endif|
+	</td>
+</tr>
 <script language="Javascript">
 <!--
 trigger_toggle();
@@ -181,7 +241,7 @@ trigger_toggle();
 				</td>
 			</tr>
 
-			<tr><td class=list2 colspan=2><span class=expand_toggle_plus id=vh4_toggle onclick="toggle_expand('vh4_toggle', 'vh4_visibility');">+</span> |VH4_NAME| |*if VH4_CUSTOM="1"|<a href="CMD_TEMPLATE_DIFF?name=|VH4_NAME_SHORT|">|LANG_CUSTOM_TEMPLATE|</a>|*endif|</td></tr>
+			<tr |*if VH4_NAME=""|style="display: none;"|*endif|><td class=list2 colspan=2><span class=expand_toggle_plus id=vh4_toggle onclick="toggle_expand('vh4_toggle', 'vh4_visibility');">+</span> |VH4_NAME| |*if VH4_CUSTOM="1"|<a href="CMD_TEMPLATE_DIFF?name=|VH4_NAME_SHORT|">|LANG_CUSTOM_TEMPLATE|</a>|*endif|</td></tr>
 			<tr id=vh4_visibility style="display: none;">
 				<td class=list2>
 					<textarea class="code_edit" cols=|VH_COLS| rows=40 wrap=off readonly>|VH4|</textarea>

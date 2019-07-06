@@ -4,6 +4,11 @@
 |?HELP_SECTION=`RESELLER_HELPER`/modify.html|
 |HTM_HEADER_FULL|
 
+|?DISABLE_SELF=|
+|*if user=USERNAME|
+|?DISABLE_SELF=disabled|
+|*endif|
+
 <b>|LANG_DETAILS| |user|</b><br>
 <br>
 <table width=100% cellpadding=5 cellspacing=0>
@@ -12,7 +17,7 @@
 	<td align=center>
 
 		<input type=hidden name=username value="|LOGIN_AS_MASTER_NAME|\||user|">
-		<input type=submit value="|LANG_LOGIN_AS| |user|"><br>
+		<input type=submit value="|LANG_LOGIN_AS| |user|" |DISABLE_SELF|><br>
 
 |HTM_LOGIN_AS_WARNINGS|
 
@@ -24,26 +29,26 @@
 		<input type=button value="|LANG_MODIFY_USER| |user|" onClick="location.href='CMD_MODIFY_USER?user=|user|'">
 	</td>
 	</form>
-	<form name=tableform action='CMD_SELECT_USERS' method='GET'>
+	<form name=tableform action='CMD_SELECT_USERS' method='POST'>
 	<td align=center>
 			<input type=hidden name=select0 value="|user|">
-			<input type=submit value='|LANG_DELETE_USER| |user|' name=delete>
+			<input type=submit value='|LANG_DELETE_USER| |user|' name=delete |DISABLE_SELF|>
 	</td>
 	</form>
 </tr>
 <tr>
-	<form action="CMD_SELECT_USERS" method='GET'>
+	<form action="CMD_SELECT_USERS" method='POST'>
 	<td align=center>
 			<input type=hidden name=select0 value="|user|">
 			<input type=hidden name=location value="CMD_SHOW_USER?user=|user|">
-			<input type=submit value="|LANG_SUSPEND|" name=dosuspend>
+			<input type=submit value="|LANG_SUSPEND|" name=dosuspend |DISABLE_SELF|>
 	</td>
 	</form>
-	<form action="CMD_SELECT_USERS" method='GET'>
+	<form action="CMD_SELECT_USERS" method='POST'>
 	<td align=center>
 			<input type=hidden name=select0 value="|user|">
 			<input type=hidden name=location value="CMD_SHOW_USER?user=|user|">
-			<input type=submit value="|LANG_UNSUSPEND|" name=dounsuspend>
+			<input type=submit value="|LANG_UNSUSPEND|" name=dounsuspend |DISABLE_SELF|>
 	</td>
 	</form>
 </tr>

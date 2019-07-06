@@ -217,3 +217,5 @@
 217=Forwarder %s cannot point to itself
 218=Forwarder contains a local_part_suffix character: '%s' meaning everything after it will be ignored and the forwarder will never match.
 219=Error writing %s
+220=DKIM disabled
+221=DKIM enabled
